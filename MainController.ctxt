@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=int\ main(java.lang.String[])
+comment0.text=\r\n\ Main\ entry-point.\ Does\ the\ work\ of\ the\ assignment.\r\n\ \r\n\ @param\ \ args\ \ \ any\ command-line\ args\r\n\ @return\ \ \ \ \ 0,\ no\ errors\r\n
+numComments=1

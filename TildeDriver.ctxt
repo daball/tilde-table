@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TildeDriver()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ TildeDriver\r\n
+comment1.params=path
+comment1.target=boolean\ open(java.lang.String)
+comment1.text=\r\n\ Opens\ a\ file\ with\ the\ path\ specified.\r\n\ \r\n\ @param\ \ path\ \ \ \ replaces\ connection\ string,\ indicates\ file\ to\ load.\r\n\ @return\ \ \ \ \ \ \ \ true\ if\ opened,\ false\ otherwise,\ may\ throw\ an\ Exception\ if\ it\ wants\ to\r\n
+comment2.params=
+comment2.target=void\ close()
+comment2.text=\r\n\ Closes\ an\ open\ data\ connection.\r\n
+comment3.params=
+comment3.target=boolean\ isOpen()
+comment3.text=\r\n\ Checks\ to\ see\ if\ a\ file\ is\ ready\ for\ read.\r\n\ \r\n\ @return\ \ \ \ \ \ \ \ true\ if\ stream\ is\ ready,\ false\ otherwise\r\n
+comment4.params=
+comment4.target=java.lang.String[]\ processNextLine()
+comment4.text=\r\n\ Reads\ the\ next\ line\ and\ splits\ by\ tilde\ or\ returns\ null\ when\ file\ is\ not\ ready\ or\ no\ data\r\n\ is\ found.\r\n\ \r\n\ @return\ \ String\ array\ with\ cells/columns\ or\ null.\r\n
+comment5.params=queryString
+comment5.target=Relation\ query(java.lang.String)
+comment5.text=\r\n\ Overloaded\:\ Gets\ the\ default\ Relation.\r\n\ \r\n\ @param\ \ queryString\ \ entirely\ ignored\ for\ this\ particular\ driver\r\n\ @return\ \ Relation\ or\ null\ if\ connection\ is\ not\ open\ or\ no\ data\ is\ found.\r\n
+comment6.params=
+comment6.target=Relation\ query()
+comment6.text=\r\n\ Overloaded\:\ Gets\ the\ default\ Relation.\r\n\ \r\n\ @return\ \ Relation\ or\ null\ if\ connection\ is\ not\ open\ or\ no\ data\ is\ found.\r\n
+comment7.params=
+comment7.target=Row\ nextRow()
+comment7.text=\r\n\ Gets\ the\ next\ row.\r\n\ \r\n\ @return\ \ Row\ or\ null\ when\ no\ more\ rows.\r\n
+numComments=8

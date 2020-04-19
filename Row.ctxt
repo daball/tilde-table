@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=cells
+comment0.target=Row(java.lang.String[])
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Row\r\n
+comment1.params=index
+comment1.target=java.lang.String\ get(int)
+comment1.text=\r\n\ Returns\ the\ value\ of\ the\ cell\ at\ index\ or\ null\ if\ index\ is\ out\ of\ range.\r\n\ \r\n\ @param\ \ index\ \ \ the\ cell\ index\ to\ retrieve\ data\r\n\ @return\ \ \ \ \ the\ data\ is\ cell\ at\ index\ or\ null\ if\ index\ is\ out\ of\ range\r\n
+comment2.params=
+comment2.target=int\ columnCount()
+comment2.text=\r\n\ Returns\ the\ number\ of\ columns\ in\ the\ row.\r\n
+numComments=3
