@@ -1,4 +1,4 @@
-/**
+ /**
  * Abstract class Driver - Can be any type of data model driver.
  * 
  * @author David Ball
@@ -39,4 +39,9 @@ public abstract class Driver
      * @return  Row or null when no more rows.
      */
     public abstract Row nextRow();
+    
+    /**
+     * Rewinds back to the beginning of the result set. If not possible, throw an Exception.
+     */
+    public abstract void rewind();
 }

@@ -34,4 +34,19 @@ public class Row
     {
         return this.cells.length;
     }
+    
+    /**
+     * Returns a string with each cell seperated by tildes.
+     */
+    public String toString()
+    {
+        StringBuilder sb = new StringBuilder();
+        for (String cell: this.cells)
+        {
+            sb.append(cell);
+            sb.append("~");
+        }   
+        sb.deleteCharAt(sb.length()-1);
+        return sb.toString();
+    }
 }

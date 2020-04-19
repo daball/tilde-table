@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Relation is created for data queries.
  * 
@@ -13,25 +15,30 @@
  * the new table.
  * 
  * That said, I'm not sure if the following solution represents a true pipeline. I have simply
- * enabled the consumer to 'limit' the projection by column names. (See the Relation.limit()
+ * enabled the consumer to limit the projection by column names. (See the Relation.project()
  * method for details.)
  * 
  * I think its a form of demand-driven pipelining, aka 'lazy' evaluation. The actual pipelining
  * takes place in the Relation.next() method.
  * 
  * The consumer may query the available columns using getColumn() and columnCount() prior to calling
- * limit() to ensure only valid column names are used to limit the projection.
+ * project() to ensure only valid column names are used to limit the projection.
+ * 
+ * The Relation supports a number of other possible filters, though nothing really comes to mind
+ * at the moment. Perhaps some type of foreign key filter could be realized as well.
  * 
  * @author David Ball
  */
-public class Relation
+public class Relation implements Cloneable
 {
     private Driver driver;
-    private String[] actualColumns;
     private String[] columns;
     
     //this maps the projection, used to accelerate row selection algorithm
-    private Integer[] projectionMap;
+    private ArrayList<Filter> filters = new ArrayList<Filter>();
+    
+    //counter
+    private int countRowsReturned = 0;
 
     /**
      * Creates a relation with list of columns and current driver.
@@ -43,15 +50,45 @@ public class Relation
     Relation(Driver driver, String[] columns)
     {
         this.driver = driver;
-        this.columns = this.actualColumns = columns;
-        //set projection map to put columns projected in the order that they appear
-        this.projectionMap = new Integer[columns.length];
-        for (int i = 0; i < columns.length; i++)
-            this.projectionMap[i] = i;
+        this.columns = columns;
+    }
+    
+    /**
+     * Copies the relation to a new object.
+     */
+    public Relation clone()
+    {
+        Relation copy = new Relation(this.driver, this.columns);
+        copy.filters = new ArrayList<Filter>();
+        for (Filter f: this.filters)
+        {
+            copy.filters.add(f.clone());
+        }
+        copy.countRowsReturned = this.countRowsReturned;
+        return copy;
     }
 
     /**
-     * Gets the projected column name at index.
+     * Gets the projected/filtered columns.
+     * 
+     * @return  String with column name
+     */
+    public String[] getColumns()
+    {
+        if (this.columns == null)
+            return null;
+        else
+            //check for filters
+            if (this.filters.size() == 0)
+                //if none, use initial layout
+                return this.columns;
+            else
+                //otherwise ask the last filter in the chain what's up
+                return this.filters.get(this.filters.size()-1).getColumns();
+    }
+    
+    /**
+     * Gets the projected/filtered column name at index.
      * 
      * @param  index   the column index to retrieve name
      * @return  String with column name
@@ -61,25 +98,11 @@ public class Relation
         if (this.columns == null)
             return null;
         else
-            return this.columns[index];
+            return this.getColumns()[index];
     }
-    
+        
     /**
-     * Gets the actual column name at index (before the projection is limited).
-     * 
-     * @param  index   the column index to retrieve name
-     * @return  String with column name
-     */
-    public String getActualColumn(int index)
-    {
-        if (this.actualColumns == null)
-            return null;
-        else
-            return this.actualColumns[index];
-    }
-    
-    /**
-     * Gets the projected column index at name.
+     * Gets the projected/filtered column index at name.
      * 
      * @param  index   the column index to retrieve name
      * @return  Column index or -1 if not found
@@ -98,66 +121,173 @@ public class Relation
     }
     
     /**
-     * Gets the actual column index at name (before the projection is limited).
-     * 
-     * @param  index   the column index to retrieve name
-     * @return  Column index or -1 if not found
-     */
-    public int getActualColumnIndex(String name)
-    {
-        if (this.actualColumns != null)
-        {
-            for (int i = 0; i < this.actualColumnCount(); i++)
-            {
-                if (this.getActualColumn(i).toUpperCase().equals(name.toUpperCase()))
-                    return i;
-            }
-        }
-        return -1;
-    }
-
-    /**
-     * Returns the projected number of columns.
+     * Returns the projected/filtered number of columns.
      */
     public int columnCount()
     {
         if (this.columns != null)
-            return this.columns.length;
+            return this.getColumns().length;
         else
             return 0;
     }
-    
+        
     /**
-     * Returns the actual number of columns (before the projection is limited).
+     * Gets the list of filters.
      */
-    public int actualColumnCount()
+    public ArrayList<Filter> getFilters()
     {
-        if (this.actualColumns != null)
-            return this.actualColumns.length;
-        else
-            return 0;
+        return this.filters;
     }
     
-
     /**
      * Limits the columns (and column order) in the projection.
+     * 
+     * @return  The Relation object so daisy-chaining operations is easier to code.
      */
-    public void limitColumns(String[] columns) throws Exception
+    public Relation project(String[] columns) throws Exception
     {
-        Integer proposedProjectionMap[] = new Integer[columns.length];
-        for (int c = 0; c < columns.length; c++)
-        {
-            String column = columns[c];
-            //map projection to actual columns needed in result set.
-            int actualColumnAt = this.getActualColumnIndex(column);
-            if (actualColumnAt == -1)
-                throw new Exception("Requested column \"" + column + "\" is not a valid column.");
-            else
-                proposedProjectionMap[c] = actualColumnAt;
-        }
-        //as long as we pass without error, update the instance data
-        this.projectionMap = proposedProjectionMap;
-        this.columns = columns;
+        //create filter
+        ProjectFilter filter = new ProjectFilter(this.getColumns(), columns);
+        //add filter to filter list
+        Relation copy = this.clone();
+        copy.filters.add(filter);
+        return copy;
+    }
+    
+    /**
+     * Restricts row output on a column where cell values are valid.
+     * 
+     * @return  The Relation object so daisy-chaining operations is easier to code.
+     */
+    public Relation restrict(String column, String[] validValues) throws Exception
+    {
+        //create filter
+        RestrictFilter filter = new RestrictFilter(this.getColumns(), column, validValues);
+        //add filter to filter list
+        Relation copy = this.clone();
+        copy.filters.add(filter);
+        return copy;
+    }
+    
+    /**
+     * Omits row output on a column where cell values are valid.
+     * 
+     * @return  The Relation object so daisy-chaining operations is easier to code.
+     */
+    public Relation omit(String column, String[] blockValues) throws Exception
+    {
+        //create filter
+        OmitFilter filter = new OmitFilter(this.getColumns(), column, blockValues);
+        //add filter to filter list
+        Relation copy = this.clone();
+        copy.filters.add(filter);
+        return copy;
+    }
+    
+    /**
+     * Overloaded: Restricts row output to distinct rows. Uses whole row for search index.
+     * 
+     * @return  The Relation object so daisy-chaining operations is easier to code.
+     */
+    public Relation distinct() throws Exception
+    {
+        //create filter
+        DistinctFilter filter = new DistinctFilter(this.getColumns());
+        //add filter to filter list
+        Relation copy = this.clone();
+        copy.filters.add(filter);
+        return copy;
+    }
+    
+    /**
+     * Overloaded: Restricts row output to distinct rows. Provide search columns to use as index key.
+     * 
+     * @return  The Relation object so daisy-chaining operations is easier to code.
+     */
+    public Relation distinct(String[] columns) throws Exception
+    {
+        //create filter
+        DistinctFilter filter = new DistinctFilter(this.getColumns(), columns);
+        //add filter to filter list
+        Relation copy = this.clone();
+        copy.filters.add(filter);
+        return copy;
+    }
+    
+    /**
+     * Sorts row output by sort columns used as index key. Materializes view in memory, be sure
+     * to limit projection prior to sorting.
+     * 
+     * @return  The Relation object so daisy-chaining operations is easier to code.
+     */
+    public Relation sort(String[] columns) throws Exception
+    {
+        //create filter
+        SortFilter filter = new SortFilter(this.getColumns(), columns);
+        //add filter to filter list
+        Relation copy = this.clone();
+        copy.filters.add(filter);
+        return copy;
+    }
+    
+    /**
+     * Reverses row output. Materializes view in memory, be sure to limit projection prior to sorting.
+     * 
+     * @return  The Relation object so daisy-chaining operations is easier to code.
+     */
+    public Relation reverse()
+    {
+        //create filter
+        ReverseFilter filter = new ReverseFilter(this.getColumns());
+        //add filter to filter list
+        Relation copy = this.clone();
+        copy.filters.add(filter);
+        return copy;
+    }
+    
+    /**
+     * Skips the number of rows specified.
+     * 
+     * @return  The Relation object so daisy-chaining operations is easier to code.
+     */
+    public Relation skip(int rowsToSkip) throws Exception
+    {
+        //create filter
+        SkipFilter filter = new SkipFilter(this.getColumns(), rowsToSkip);
+        //add filter to filter list
+        Relation copy = this.clone();
+        copy.filters.add(filter);
+        return copy;
+    }
+    
+    /**
+     * Allows the number of rows specified.
+     * 
+     * @return  The Relation object so daisy-chaining operations is easier to code.
+     */
+    public Relation limit(int rowsToAllow) throws Exception
+    {
+        //create filter
+        LimitFilter filter = new LimitFilter(this.getColumns(), rowsToAllow);
+        //add filter to filter list
+        Relation copy = this.clone();
+        copy.filters.add(filter);
+        return copy;
+    }
+    
+    /**
+     * Counts output rows into a column as specified.
+     * 
+     * @return  The Relation object so daisy-chaining operations is easier to code.
+     */
+    public Relation count(String countColumn) throws Exception
+    {
+        //create filter
+        CountFilter filter = new CountFilter(this.getColumns(), countColumn);
+        //add filter to filter list
+        Relation copy = this.clone();
+        copy.filters.add(filter);
+        return copy;
     }
     
     /**
@@ -167,23 +297,57 @@ public class Relation
      */
     public Row next()
     {
-        //get unprocessed row from driver
-        Row actualRow = driver.nextRow();
+        boolean isRowSkipped;
+        do
+        {            
+            //start by not skipping the row
+            isRowSkipped = false;
+            
+            //get unprocessed row from driver
+            Row row = driver.nextRow();
         
-        //if at end of set, stop processing and echo that result
-        if (actualRow == null) return null;
+            //run the row through any and all filters to first make sure we're not skipping it
+            for (int f = 0; f < this.filters.size(); f++)
+            {
+                row = this.filters.get(f).transformRow(row);
+                isRowSkipped = this.filters.get(f).isRowSkipped(row);
+                if (isRowSkipped) break; //if row is skipped, break out of for loop and try the next one
+            }
 
-        //hold projected cells
-        String[] cells = new String[this.columnCount()];
-        
-        //remap the cells based on limit (and order) from limit()
-        for (int c = 0; c < this.columnCount(); c++)
-        {
-            cells[c] = actualRow.get(this.projectionMap[c]);
-        }
-        
-        //generate and return a new Row
-        Row row = new Row(cells);
-        return row;
+            if (!isRowSkipped) //if row is not skipped
+            {
+                if (row != null)
+                //{
+                    //increment counter
+                    this.countRowsReturned++;
+                
+                //return valid row
+                return row;
+            }
+        } while (true); //loop forever ;-), or until null, or until valid row breaks out of loop
+    }
+    
+    /**
+     * Gets the number of rows returned.
+     * 
+     * @return  The number of rows returned so far.
+     */
+    public int rowsReturned()
+    {
+        return this.countRowsReturned;
+    }
+    
+    /**
+     * Rewinds back to the beginning of the data set.
+     */
+    public void rewind()
+    {
+        this.driver.rewind();
+        this.countRowsReturned = 0;
+    }
+    
+    public void close()
+    {
+        this.driver.close();
     }
 }

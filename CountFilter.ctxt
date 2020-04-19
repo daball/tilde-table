@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=columns\ countColumnName
+comment0.target=CountFilter(java.lang.String[],\ java.lang.String)
+comment0.text=\n\ Counts\ every\ row\ into\ a\ new\ row\ number\ such\ that\ for\ every\ row\ each\ row\ will\ be\ uniquely\n\ incremented.\n
+comment1.params=
+comment1.target=CountFilter\ clone()
+comment1.text=\n\ Copies\ the\ current\ CountFilter.\n
+comment2.params=
+comment2.target=java.lang.String[]\ getColumns()
+comment2.text=\n\ Gets\ the\ new\ column\ names\ provided\ when\ the\ count\ filter\ was\ created.\n
+comment3.params=row
+comment3.target=Row\ transformRow(Row)
+comment3.text=\n\ Transforms\ the\ row\ data\ as\ it\ passes\ through\ the\ filter.\n
+comment4.params=row
+comment4.target=boolean\ isRowSkipped(Row)
+comment4.text=\n\ No\ rows\ are\ skipped\ in\ this\ filter.\ Always\ returns\ false.\ Resets\ counter\ when\ null\ comes\ around.\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\n\ Describes\ the\ filter\ in\ terms\ of\ Java.\n
+numComments=6

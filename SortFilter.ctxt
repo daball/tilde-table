@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=columns\ indexedColumns
+comment0.target=SortFilter(java.lang.String[],\ java.lang.String[])
+comment0.text=\n\ Sorts\ rows\ based\ on\ the\ cell\ input(s)\ used\ as\ a\ key.\n
+comment1.params=
+comment1.target=SortFilter\ clone()
+comment1.text=\n\ Copies\ the\ filter.\n
+comment2.params=name
+comment2.target=int\ getActualColumnIndex(java.lang.String)
+comment2.text=\n\ Helper\:\ Gets\ the\ actual\ column\ index\ at\ name\ (before\ the\ projection\ is\ limited).\n\ \n\ @param\ \ index\ \ \ the\ column\ index\ to\ retrieve\ name\n\ @return\ \ Column\ index\ or\ -1\ if\ not\ found\n
+comment3.params=row
+comment3.target=java.lang.String\ generateRowKey(Row)
+comment3.text=\n\ Returns\ a\ string\ with\ each\ cell\ seperated\ by\ tildes.\n
+comment4.params=
+comment4.target=java.lang.String[]\ getColumns()
+comment4.text=\n\ Gets\ the\ column\ names\ provided\ when\ the\ filter\ was\ initialized.\n
+comment5.params=row
+comment5.target=Row\ transformRow(Row)
+comment5.text=\n\ Returns\ null\ on\ every\ actual\ row,\ and\ stores\ that\ row\ in\ a\ R-B\ tree.\n\ \n\ Once\ null\ is\ reached\ on\ the\ input,\ it\ will\ start\ returning\ the\ sorted\ rows.\n
+comment6.params=row
+comment6.target=boolean\ isRowSkipped(Row)
+comment6.text=\n\ Literally\ skips\ all\ rows\ until\ null\ is\ reached\ in\ the\ data\ set.\ Then\ it\ doesn't\ skip\ any\ rows.\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\n\ Describes\ the\ filter\ in\ terms\ of\ Java.\n
+numComments=8

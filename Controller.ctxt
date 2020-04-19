@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment0.text=\n\ Main\ entry-point.\ Does\ the\ work\ of\ the\ assignment.\n\ \n\ @param\ \ args\ \ \ any\ command-line\ args\n\ @return\ \ \ \ \ 0,\ no\ errors\n
+comment1.params=relationName
+comment1.target=Relation\ getRelation(java.lang.String)
+comment1.text=\n\ Returns\ the\ relation\ by\ the\ name.\n
+numComments=2

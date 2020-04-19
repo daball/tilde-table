@@ -1,17 +1,20 @@
 #BlueJ class context
 comment0.params=connectionString
 comment0.target=boolean\ open(java.lang.String)
-comment0.text=\r\n\ Opens\ a\ data\ connection.\r\n\ \r\n\ @param\ \ connectionString\ \ \ \ any\ valid\ connection\ string,\ varies\ by\ driver\r\n\ @return\ \ \ \ \ \ \ \ true\ if\ opened,\ false\ otherwise,\ may\ throw\ an\ Exception\ if\ it\ wants\ to\r\n
+comment0.text=\n\ Opens\ a\ data\ connection.\n\ \n\ @param\ \ connectionString\ \ \ \ any\ valid\ connection\ string,\ varies\ by\ driver\n\ @return\ \ \ \ \ \ \ \ true\ if\ opened,\ false\ otherwise,\ may\ throw\ an\ Exception\ if\ it\ wants\ to\n
 comment1.params=
 comment1.target=void\ close()
-comment1.text=\r\n\ Closes\ an\ open\ data\ connection.\r\n
+comment1.text=\n\ Closes\ an\ open\ data\ connection.\n
 comment2.params=
 comment2.target=boolean\ isOpen()
-comment2.text=\r\n\ Checks\ to\ see\ if\ a\ connection\ is\ still\ alive.\r\n\ \r\n\ @return\ \ \ \ \ \ \ \ true\ if\ opened,\ false\ otherwise\r\n
+comment2.text=\n\ Checks\ to\ see\ if\ a\ connection\ is\ still\ alive.\n\ \n\ @return\ \ \ \ \ \ \ \ true\ if\ opened,\ false\ otherwise\n
 comment3.params=queryString
 comment3.target=Relation\ query(java.lang.String)
-comment3.text=\r\n\ Runs\ a\ query.\r\n\ \r\n\ @param\ \ queryString\ \ any\ valid\ query\ string,\ varies\ by\ driver\r\n\ @return\ \ Relation\ or\ null.\r\n
+comment3.text=\n\ Runs\ a\ query.\n\ \n\ @param\ \ queryString\ \ any\ valid\ query\ string,\ varies\ by\ driver\n\ @return\ \ Relation\ or\ null.\n
 comment4.params=
 comment4.target=Row\ nextRow()
-comment4.text=\r\n\ Gets\ the\ next\ row.\r\n\ \r\n\ @return\ \ Row\ or\ null\ when\ no\ more\ rows.\r\n
-numComments=5
+comment4.text=\n\ Gets\ the\ next\ row.\n\ \n\ @return\ \ Row\ or\ null\ when\ no\ more\ rows.\n
+comment5.params=
+comment5.target=void\ rewind()
+comment5.text=\n\ Rewinds\ back\ to\ the\ beginning\ of\ the\ result\ set.\ If\ not\ possible,\ throw\ an\ Exception.\n
+numComments=6

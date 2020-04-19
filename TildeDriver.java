@@ -130,4 +130,16 @@ public class TildeDriver extends Driver
         else
             return null;
     }
+    
+    /**
+     * Rewinds back to the beginning of the tilde table. (Actually closes and reopens it.)
+     */
+    public void rewind()
+    {
+        String path = this.path;
+        this.close();
+        this.open(path);
+        //roll ahead one line for the header
+        processNextLine();
+    }
 }

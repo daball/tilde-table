@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ runSample()
+comment0.text=\n\ Runs\ the\ sample\ specified\ in\ the\ assignment.\n\ To\ call\ it\ run\ app\ with\ --sample\ or\ issue\ sample\ command\ at\ main\ prompt.\n
+comment1.params=args
+comment1.target=void\ runLoop(java.lang.String[])
+comment1.text=\n\ Runs\ the\ main\ program\ view\ loop.\ User\ must\ type\ exit\ to\ break\ out.\n\ \n\ @param\ \ args\ \ \ any\ command-line\ args\n\ @return\ \ \ \ \ 0,\ no\ errors\n
+comment2.params=commandLine
+comment2.target=void\ dispatchCommandLine(java.lang.String)
+comment2.text=\n\ Dispatches/routes\ any\ command\ provided\ to\ the\ proper\ command\ handler.\n
+comment3.params=
+comment3.target=void\ printBanner()
+comment3.text=\n\ Prints\ opening\ banner.\n
+comment4.params=
+comment4.target=void\ printHelp()
+comment4.text=\n\ Prints\ help\ page.\n
+comment5.params=prompt
+comment5.target=java.lang.String\ promptUser(java.lang.String)
+comment5.text=\n\ Asks\ user\ for\ input.\ Returns\ command\ line\ entered.\n
+numComments=6

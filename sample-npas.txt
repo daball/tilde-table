@@ -1,0 +1,801 @@
+NPA~Type of Code~Assignable~Explanation~Reserved~Assigned?~Asgt Date~Use~Service~Location~Country~In Service?~In Svc Date~Status~PL~Overlay~Overlay Complex~Parent~Time Zone~Map~Is NPA in Jeoparady?~Is Relief Planning in Progress~Home NPA Local Calls~Home NPA Toll Calls~Foreign NPA Local Calls~Foreign NPA Toll Calls~perm HNPA local~perm HNPA toll~perm FNPA local~dp Notes
+200~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+201~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~NJ~US~Yes~01/01/1947 12:00:00 AM~~277~Yes~201/551~~E~277~No~No~10D~10D~1+10D~1+10D~1+10D~NA~1+10D~Calls between the 551 and 201 NPAs may be dialed as 10D.
+202~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~DC~US~Yes~01/01/1947 12:00:00 AM~~~No~~~E~~No~No~7D~NA~10D~1+10D~NA~NA~NA~
+203~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~CT~US~Yes~01/01/1947 12:00:00 AM~~388 255 217 138~Yes~203/475~~E~217~Yes~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+204~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~Manitoba~CANADA~Yes~01/01/1947 12:00:00 AM~Active~419~Yes~204/431~~C~~Yes~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+205~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~AL~US~Yes~01/01/1947 12:00:00 AM~~289 284~Yes~205/659~~C~284~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+206~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~WA~US~Yes~01/01/1947 12:00:00 AM~Suspended~298 239~No~~~P~~No~Yes~7D~1+10D~10D~1+10D~10D~NA~NA~
+207~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~ME~US~Yes~01/01/1947 12:00:00 AM~~~No~~~E~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+208~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~ID~US~Yes~01/01/1947 12:00:00 AM~Active~~No~~~MP~~No~Yes~7D~1+10D~7D~1+10D~NA~NA~NA~
+209~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~01/01/1958 12:00:00 AM~~~No~~916~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+210~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~11/01/1992 12:00:00 AM~~~No~~512~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+211~Easily Recognizable Code~No~N11 Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+212~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~NY~US~Yes~01/01/1947 12:00:00 AM~~314~Yes~212/646/917~~E~~No~No~1+10D~1+10D~1+10D~1+10D~10D~NA~NA~
+213~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~01/01/1947 12:00:00 AM~~~No~~~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+214~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~TX~US~Yes~01/01/1947 12:00:00 AM~~~Yes~214/469/972~~C~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+215~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~PA~US~Yes~01/01/1947 12:00:00 AM~~332 274 267 237 134~Yes~215/267~~E~237~No~No~10D~10D~(see note)~1+10D~1+10D~NA~1+10D~All calls within and between the 215, 267, 484, and 610 NPAs can be dialed as 10D or 1+10D.  Calls to other NPAs must be dialed as 1+10D.
+216~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~OH~US~Yes~01/01/1947 12:00:00 AM~~~No~~~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+217~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~IL~US~Yes~01/01/1947 12:00:00 AM~Active~~Yes~217/447~~C~~Yes~Yes~7D~1+10D~1+10D~1+10D~NA~NA~NA~
+218~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MN~US~Yes~01/01/1947 12:00:00 AM~~~No~~~C~~No~No~7D~1+10D~7D~1+10D~NA~NA~NA~
+219~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~IN~US~Yes~01/01/1947 12:00:00 AM~~309 296~No~~~EC~309~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+220~General Purpose Code~Yes~~Yes~No~~G~~~US~No~~~~No~~~~~No~No~~~~~~~~
+221~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+222~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+223~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+224~General Purpose Code~Yes~~No~Yes~05/01/1998 12:00:00 AM~G~~IL~US~Yes~01/05/2002 12:00:00 AM~~305 157 127~Yes~847/224~847~C~305~No~No~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+225~General Purpose Code~Yes~~No~Yes~~G~~LA~US~Yes~08/17/1998 12:00:00 AM~~187 156 123~No~~504~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+226~General Purpose Code~Yes~~No~Yes~04/26/2002 12:00:00 AM~G~~Ontario~CANADA~Yes~10/21/2006 12:00:00 AM~~350 343 342~Yes~519/226~519~E~342~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+227~General Purpose Code~Yes~~No~Yes~01/17/2001 12:00:00 AM~G~~MD~US~No~~Active~~Yes~301/240/227~240~E~~No~Yes~~~~~~~~
+228~General Purpose Code~Yes~~No~Yes~~G~~MS~US~Yes~09/15/1997 12:00:00 AM~~079~No~~601~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+229~General Purpose Code~Yes~~No~Yes~10/01/1999 12:00:00 AM~G~~GA~US~Yes~08/01/2000 12:00:00 AM~~288 202~No~~912~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+230~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+231~General Purpose Code~Yes~~No~Yes~~G~~MI~US~Yes~06/05/1999 12:00:00 AM~~167~No~~616~E~~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+232~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+233~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+234~General Purpose Code~Yes~~No~Yes~11/05/1999 12:00:00 AM~G~~OH~US~Yes~10/30/2000 12:00:00 AM~~213~Yes~330/234~330~E~213~No~No~10D~1+10D~10D~1+10D~1+10D~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+235~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+236~General Purpose Code~Yes~~Yes~Yes~07/28/2011 12:00:00 AM~G~~British Columbia~CANADA~No~06/01/2013 12:00:00 AM~~428~Yes~604/778/236 250/778/236~604~P~361~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+237~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+238~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+239~General Purpose Code~Yes~~No~Yes~09/06/2001 12:00:00 AM~G~~FL~US~Yes~03/11/2002 12:00:00 AM~~307~No~~941~E~307~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+240~General Purpose Code~Yes~~No~Yes~~G~~MD~US~Yes~06/01/1997 12:00:00 AM~Active~IL96/07-004 IL96/06-009~Yes~301/240/227~301~E~IL96/06-009~No~Yes~10D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+241~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+242~General Purpose Code~Yes~~No~Yes~~G~~Bahamas~BAHAMAS~Yes~10/01/1996 12:00:00 AM~~IL95/11-009~No~~809~E~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+243~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+244~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+245~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+246~General Purpose Code~Yes~~No~Yes~~G~~Barbados~BARBADOS~Yes~07/01/1996 12:00:00 AM~~IL95/12-006~No~~809~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+247~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+248~General Purpose Code~Yes~~No~Yes~~G~~MI~US~Yes~05/10/1997 12:00:00 AM~~320 283 227 209 012~Yes~248/947~810~E~283~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+249~General Purpose Code~Yes~~Yes~Yes~10/06/2009 12:00:00 AM~G~~Ontario~CANADA~Yes~03/19/2011 12:00:00 AM~Active~414 398R1 398~Yes~705/249~705~E~398~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+250~General Purpose Code~Yes~~No~Yes~~G~~British Columbia~CANADA~Yes~10/19/1996 12:00:00 AM~~428 361 IL95/08-007 IL96/02-007~Yes~250/778/236~604~P~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+251~General Purpose Code~Yes~~No~Yes~10/03/2000 12:00:00 AM~G~~AL~US~Yes~06/18/2001 12:00:00 AM~~254~No~~334~C~254~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~Other dialing plans may apply at the discretion of the local service provider.
+252~General Purpose Code~Yes~~No~Yes~~G~~NC~US~Yes~03/22/1998 12:00:00 AM~~114 112~No~~919~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+253~General Purpose Code~Yes~~No~Yes~~G~~WA~US~Yes~04/27/1997 12:00:00 AM~Suspended~298 239 019~No~~206~P~~No~Yes~7D~1+10D~10D~1+10D~10D~NA~NA~
+254~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~05/25/1997 12:00:00 AM~~064 034~No~~817~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+255~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+256~General Purpose Code~Yes~~No~Yes~10/10/1997 12:00:00 AM~G~~AL~US~Yes~03/23/1998 12:00:00 AM~Active~389 114 110~Yes~256/938~205~C~~No~Yes~10D~1+10D~10D~1+10D~10D~NA~NA~
+257~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+258~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+259~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+260~General Purpose Code~Yes~~No~Yes~06/20/2001 12:00:00 AM~G~~IN~US~Yes~01/15/2002 12:00:00 AM~~309 296~No~~219~E~309~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+261~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+262~General Purpose Code~Yes~~No~Yes~03/19/1999 12:00:00 AM~G~~WI~US~Yes~09/25/1999 12:00:00 AM~Active~174~No~~414~C~~No~Yes~7D~1+10D~1+10D~1+10D~NA~NA~NA~
+263~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+264~General Purpose Code~Yes~~No~Yes~~G~~Anguilla~ANGUILLA~Yes~03/31/1997 12:00:00 AM~~015~No~~809~A~~No~No~7D~1+10D~NA~1+10D~4D~NA~NA~
+265~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+266~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+267~General Purpose Code~Yes~~No~Yes~~G~~PA~US~Yes~07/01/1999 12:00:00 AM~~332 274 267 237 134~Yes~215/267~215~E~237~No~No~10D~10D~(see note)~1+10D~1+10D~NA~1+10D~All calls within and between the 215, 267, 484, and 610 NPAs can be dialed as 10D or 1+10D.  Calls to other NPAs must be dialed as 1+10D.
+268~General Purpose Code~Yes~~No~Yes~~G~~Antigua/Barbuda~ANTIGUA/BARBUDA~Yes~04/01/1996 12:00:00 AM~~IL96/03-005~No~~809~A~~No~No~7D~1+10D~NA~1+10D~4D~NA~NA~
+269~General Purpose Code~Yes~~No~Yes~06/05/2001 12:00:00 AM~G~~MI~US~Yes~07/13/2002 12:00:00 AM~~324 294~No~~616~E~294~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+270~General Purpose Code~Yes~~No~Yes~~G~~KY~US~Yes~04/19/1999 12:00:00 AM~Active~415 408 391 376 371 365 155~No~~502~EC~~Yes~Yes~7D~1+10D~7D~1+10D~NA~NA~NA~
+271~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+272~General Purpose Code~Yes~~No~Yes~07/19/2010 12:00:00 AM~G~~PA~US~No~~~409~Yes~570/272~570~E~~No~No~10D~10D~1+10D~1+10D~~~~
+273~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+274~General Purpose Code~Yes~~No~Yes~11/06/2008 12:00:00 AM~G~~WI~US~No~02/22/2014 12:00:00 AM~Active~417 385~Yes~920/274~920~C~385~No~Yes~10D~1+10D~1+10D~1+10D~NA~NA~NA~
+275~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+276~General Purpose Code~Yes~~No~Yes~03/07/2001 12:00:00 AM~G~~VA~US~Yes~09/01/2001 12:00:00 AM~~319 285 275~No~~540~E~275~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+277~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+278~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+279~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+280~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+281~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~11/02/1996 12:00:00 AM~Active~006~Yes~713/281/832~713~C~~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+282~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+283~General Purpose Code~Yes~~No~Yes~10/31/2000 12:00:00 AM~G~~OH~US~No~~Suspended~316 286 264~Yes~513/283~513~E~264~No~Yes~10D~1+10D~10D~1+10D~1+10D~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+284~General Purpose Code~Yes~~No~Yes~~G~~British Virgin Islands~BRITISH VIRGIN ISLANDS~Yes~10/01/1997 12:00:00 AM~~020~No~~809~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+285~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+286~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+287~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+288~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+289~General Purpose Code~Yes~~No~Yes~08/17/2000 12:00:00 AM~G~~Ontario~CANADA~Yes~06/09/2001 12:00:00 AM~Active~420 243~Yes~905/289/365~905~E~243~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+290~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~H
+291~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+292~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+293~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+294~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+295~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+296~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+297~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+298~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+299~Easily Recognizable Code~No~Expansion Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+300~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+301~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MD~US~Yes~01/01/1947 12:00:00 AM~Active~IL96/06-009~Yes~301/240/227~~E~IL96/06-009~No~Yes~10D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+302~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~DE~US~Yes~01/01/1947 12:00:00 AM~~~No~~~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+303~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~CO~US~Yes~01/01/1947 12:00:00 AM~~~Yes~303/720~~M~~No~No~10D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+304~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~WV~US~Yes~01/01/1947 12:00:00 AM~~375~Yes~304/681~~E~375~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+305~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~FL~US~Yes~01/01/1947 12:00:00 AM~Active~287~Yes~305/786~~E~~Yes~Yes~10D~1+10D~10D~1+10D~NA~NA~1+10D~The Florida Keys retain 7D local dialing
+306~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~Saskatchewan~CANADA~Yes~01/01/1947 12:00:00 AM~~~Yes~306/639~~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+307~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~WY~US~Yes~01/01/1947 12:00:00 AM~~~No~~~M~~No~No~7D~1+10D~7D~1+10D~NA~NA~NA~
+308~General Purpose Code~Yes~~No~Yes~01/01/1955 12:00:00 AM~G~~NE~US~Yes~01/01/1955 12:00:00 AM~~~No~~~CM~~No~No~7D~1+10D~7D~1+10D~10D~NA~10D~
+309~General Purpose Code~Yes~~No~Yes~01/01/1957 12:00:00 AM~G~~IL~US~Yes~01/01/1957 12:00:00 AM~~~No~~~C~~No~No~7D~1+10D~1+10D~1+10D~NA~NA~NA~
+310~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~11/02/1991 12:00:00 AM~~347 250 IL90/08-055~Yes~310/424~213~P~347~No~No~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+311~Easily Recognizable Code~No~N11 Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+312~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~IL~US~Yes~01/01/1947 12:00:00 AM~Active~392 390 195~Yes~312/872~~C~~No~Yes~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+313~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MI~US~Yes~01/01/1947 12:00:00 AM~Active~~Yes~313/679~~E~~No~Yes~7D~1+10D~10D~1+10D~10D~NA~NA~
+314~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MO~US~Yes~01/01/1947 12:00:00 AM~Suspended~303 279 261~Yes~314/557~~C~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+315~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~NY~US~Yes~01/01/1947 12:00:00 AM~Active~~No~~~E~~No~Yes~7D~7D~1+10D~1+10D~NA~NA~NA~
+316~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~KS~US~Yes~01/01/1947 12:00:00 AM~~245~No~~~C~245~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+317~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~IN~US~Yes~01/01/1947 12:00:00 AM~~~No~~~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+318~General Purpose Code~Yes~~No~Yes~01/01/1957 12:00:00 AM~G~~LA~US~Yes~01/01/1957 12:00:00 AM~~~No~~~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+319~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~IA~US~Yes~01/01/1947 12:00:00 AM~~253~No~~~C~253~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+320~General Purpose Code~Yes~~No~Yes~~G~~MN~US~Yes~03/17/1996 12:00:00 AM~~IL95/09-007 IL96/01-017~No~~612~C~~No~No~7D~1+10D~7D~1+10D~NA~NA~NA~
+321~General Purpose Code~Yes~~No~Yes~02/10/1999 12:00:00 AM~G~~FL~US~Yes~11/01/1999 12:00:00 AM~~325 323 168~No~~407~E~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~Home NPA local calls are 7D in Brevard County.
+322~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+323~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~06/13/1998 12:00:00 AM~~080 062~No~~213~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+324~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+325~General Purpose Code~Yes~~No~Yes~03/13/2002 12:00:00 AM~G~~TX~US~Yes~04/05/2003 12:00:00 AM~~322~No~~915~C~322~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+326~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+327~General Purpose Code~Yes~~Yes~Yes~12/15/2009 12:00:00 AM~G~~AR~US~No~05/18/2013 12:00:00 AM~~400~Yes~870/327~870~C~400~No~No~10D~1+10D~10D~1+10D~~~~
+328~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+329~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+330~General Purpose Code~Yes~~No~Yes~~G~~OH~US~Yes~03/09/1996 12:00:00 AM~~213 IL95/11-008~Yes~330/234~216~E~213~No~No~10D~1+10D~10D~1+10D~1+10D~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+331~General Purpose Code~Yes~~No~Yes~07/23/1999 12:00:00 AM~G~~IL~US~Yes~10/07/2007 12:00:00 AM~~362 357 195~Yes~630/331~630~C~~No~No~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+332~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+333~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+334~General Purpose Code~Yes~~No~Yes~~G~~AL~US~Yes~01/15/1995 12:00:00 AM~~254 IL94/01-033~No~~205~C~254~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+335~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+336~General Purpose Code~Yes~~No~Yes~~G~~NC~US~Yes~12/15/1997 12:00:00 AM~Active~114 100~No~~910~E~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+337~General Purpose Code~Yes~~No~Yes~04/15/1999 12:00:00 AM~G~~LA~US~Yes~10/11/1999 12:00:00 AM~~188~No~~318~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+338~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+339~General Purpose Code~Yes~~No~Yes~05/03/2000 12:00:00 AM~G~~MA~US~Yes~05/02/2001 12:00:00 AM~~234~Yes~781/339~781~E~234~No~No~10D~1+10D~10D~1+10D~1+10D~1+10D~NA~
+340~General Purpose Code~Yes~~No~Yes~~G~~USVI~US~Yes~06/01/1997 12:00:00 AM~~056~No~~809~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+341~General Purpose Code~Yes~~Yes~No~~G~~~US~No~~~~No~~~~~No~No~~~~~TBD~~~
+342~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+343~General Purpose Code~Yes~~Yes~Yes~09/10/2008 12:00:00 AM~G~~Ontario~CANADA~Yes~05/17/2010 12:00:00 AM~Active~386~Yes~613/343~613~~386~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+344~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+345~General Purpose Code~Yes~~No~Yes~~G~~Cayman Islands~CAYMAN ISLANDS~Yes~09/01/1996 12:00:00 AM~~002~No~~809~E~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+346~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+347~General Purpose Code~Yes~~No~Yes~02/19/1999 12:00:00 AM~G~~NY~US~Yes~10/01/1999 12:00:00 AM~~402 314 185~Yes~718/347/917/929~718~E~~No~No~1+10D~1+10D~1+10D~1+10D~10D~NA~NA~
+348~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+349~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+350~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+351~General Purpose Code~Yes~~No~Yes~05/03/2000 12:00:00 AM~G~~MA~US~Yes~05/02/2001 12:00:00 AM~~234~Yes~978/351~978~E~234~No~No~10D~1+10D~10D~1+10D~1+10D~1+10D~NA~
+352~General Purpose Code~Yes~~No~Yes~~G~~FL~US~Yes~12/03/1995 12:00:00 AM~~IL95/09-008~No~~904~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+353~General Purpose Code~Yes~~Yes~No~~G~~~US~No~~~~No~~~~~No~No~~~~~~~~
+354~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+355~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+356~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+357~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+358~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+359~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+360~General Purpose Code~Yes~~No~Yes~~G~~WA~US~Yes~01/15/1995 12:00:00 AM~Suspended~298 239 196~Yes~360/564~206~P~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+361~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~02/13/1999 12:00:00 AM~~154~No~~512~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+362~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+363~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+364~General Purpose Code~Yes~~Yes~No~~G~~~US~No~~~~No~~~~~No~No~~~~~NA~NA~NA~
+365~General Purpose Code~Yes~~Yes~Yes~04/13/2010 12:00:00 AM~G~~Ontario~CANADA~No~03/25/2013 12:00:00 AM~Active~420~Yes~905/289/365~905~E~243~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+366~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+367~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+368~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+369~General Purpose Code~Yes~~Yes~No~~G~~~US~No~~~~No~~~~~No~No~TBD~TBD~TBD~TBD~TBD~TBD~TBD~
+370~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+371~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+372~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+373~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+374~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+375~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+376~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+377~Easily Recognizable Code~No~Reserved by INC~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+378~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+379~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+380~General Purpose Code~Yes~~No~Yes~06/20/2001 12:00:00 AM~G~~OH~US~No~~Suspended~317 297 290~Yes~614/380~614~E~290~No~Yes~10D~1+10D~10D~1+10D~1+10D~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+381~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+382~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+383~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+384~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+385~General Purpose Code~Yes~~No~Yes~05/03/2000 12:00:00 AM~G~~UT~US~Yes~03/29/2009 12:00:00 AM~~366 363 337 326 308 248 231~Yes~801/385~801~M~231~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+386~General Purpose Code~Yes~~No~Yes~11/09/2000 12:00:00 AM~G~~FL~US~Yes~02/15/2001 12:00:00 AM~~260 252~No~~904~E~252~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+387~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+388~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+389~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+390~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+391~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+392~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+393~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+394~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+395~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+396~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+397~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+398~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+399~Easily Recognizable Code~No~Expansion Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+400~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+401~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~RI~US~Yes~01/01/1947 12:00:00 AM~~~No~~~E~~No~No~7D~7D~1+10D~1+10D~NA~1+10D~NA~
+402~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~NE~US~Yes~01/01/1947 12:00:00 AM~Active~410 397 393~Yes~402/531~~C~393~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+403~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~Alberta~CANADA~Yes~01/01/1947 12:00:00 AM~~374 364 176 148 084~Yes~403/780/587~~M~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+404~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~GA~US~Yes~01/01/1947 12:00:00 AM~Active~~Yes~404/678/470~~E~~No~Yes~10D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+405~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~OK~US~Yes~01/01/1947 12:00:00 AM~Active~~No~~~C~~No~Yes~7D~1+10D~7D~1+10D~NA~NA~NA~
+406~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MT~US~Yes~01/01/1947 12:00:00 AM~~~No~~~M~~No~No~7D~1+10D~7D~1+10D~NA~NA~NA~
+407~General Purpose Code~Yes~~No~Yes~~G~~FL~US~Yes~04/16/1988 12:00:00 AM~Suspended~325 323 168 IL87/03-033~Yes~407/689~305~E~323~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+408~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~01/01/1959 12:00:00 AM~Active~149 206~Yes~408/669~415~P~~Yes~Yes~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+409~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~11/01/1982 12:00:00 AM~~~No~~713~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+410~General Purpose Code~Yes~~No~Yes~~G~~MD~US~Yes~10/06/1991 12:00:00 AM~Active~427 299  IL96/06-008 IL90/12-049~Yes~410/443/667~301~E~IL96/06-008~Yes~Yes~10D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+411~Easily Recognizable Code~No~N11 Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+412~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~PA~US~Yes~01/01/1947 12:00:00 AM~~281 222 198~Yes~412/878~~E~~No~No~10D~10D~(see note)~(see note)~1+10D~NA~1+10D~All calls within and between NPAs 412, 724, and 878 can be dialed as 10D or 1+10D.  Calls to other NPAs must be dialed as 1+10D.
+413~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MA~US~Yes~01/01/1947 12:00:00 AM~~~No~~~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+414~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~WI~US~Yes~01/01/1947 12:00:00 AM~Active~~No~~~C~~No~Yes~7D~1+10D~1+10D~1+10D~NA~NA~NA~
+415~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~01/01/1947 12:00:00 AM~~421 206 191~No~~~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+416~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~Ontario~CANADA~Yes~01/01/1947 12:00:00 AM~~426 218~Yes~416/647/437~~E~218~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+417~General Purpose Code~Yes~~No~Yes~01/01/1950 12:00:00 AM~G~~MO~US~Yes~01/01/1950 12:00:00 AM~Active~~No~~~C~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+418~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~Quebec~CANADA~Yes~01/01/1947 12:00:00 AM~~373R1 367~Yes~418/581~~E~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+419~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~OH~US~Yes~01/01/1947 12:00:00 AM~~249~Yes~419/567~~E~249~No~No~10D~1+10D~10D~1+10D~1+10D~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+420~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+421~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+422~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+423~General Purpose Code~Yes~~No~Yes~~G~~TN~US~Yes~09/11/1995 12:00:00 AM~~IL94/11-018~No~~615~EC~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+424~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~08/26/2006 12:00:00 AM~~347 250 125~Yes~310/424~310~P~347~No~No~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+425~General Purpose Code~Yes~~No~Yes~~G~~WA~US~Yes~04/27/1997 12:00:00 AM~Suspended~298 239 019~No~~206~P~~No~Yes~7D~1+10D~10D~1+10D~10D~NA~NA~
+426~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+427~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+428~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+429~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+430~General Purpose Code~Yes~~No~Yes~12/24/2001 12:00:00 AM~G~~TX~US~Yes~02/15/2003 12:00:00 AM~~313~Yes~903/430~903~C~313~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+431~General Purpose Code~Yes~~No~Yes~07/28/2010 12:00:00 AM~G~~Manitoba~CANADA~No~11/03/2012 12:00:00 AM~Active~419~Yes~204/431~204~~~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+432~General Purpose Code~Yes~~No~Yes~03/13/2002 12:00:00 AM~G~~TX~US~Yes~04/05/2003 12:00:00 AM~~322~No~~915~C~322~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+433~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+434~General Purpose Code~Yes~~No~Yes~12/14/2000 12:00:00 AM~G~~VA~US~Yes~06/01/2001 12:00:00 AM~~257~No~~804~E~257~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+435~General Purpose Code~Yes~~No~Yes~~G~~UT~US~Yes~09/21/1997 12:00:00 AM~~126 065~No~~801~M~~No~No~7D~1+10D~7D~1+10D~NA~NA~NA~
+436~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+437~General Purpose Code~Yes~~Yes~Yes~07/25/2011 12:00:00 AM~G~~Ontario~CANADA~No~03/25/2013 12:00:00 AM~~426~Yes~416/647/437~647~E~~No~No~10D~1+10D~10D~1+10D~~~~
+438~General Purpose Code~Yes~~No~Yes~01/18/2001 12:00:00 AM~G~~Quebec~CANADA~Yes~11/04/2006 12:00:00 AM~~349 341 333 315~Yes~514/438~514~E~341 333~No~No~10D~1+10D~10D~1+10D~~~~
+439~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+440~General Purpose Code~Yes~~No~Yes~~G~~OH~US~Yes~08/16/1997 12:00:00 AM~Active~045~No~~216~E~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+441~General Purpose Code~Yes~~No~Yes~~G~~Bermuda~BERMUDA~Yes~10/01/1995 12:00:00 AM~~IL94/11-016~No~~809~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+442~General Purpose Code~Yes~~No~Yes~07/22/1999 12:00:00 AM~G~~CA~US~Yes~11/21/2009 12:00:00 AM~Active~381 377 238 194 160~Yes~760/442~760~P~377 381~No~Yes~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+443~General Purpose Code~Yes~~No~Yes~~G~~MD~US~Yes~06/01/1997 12:00:00 AM~Active~427 299 266 IL96/06-008~Yes~410/443/667~410~E~IL96/06-008~Yes~Yes~10D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+444~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+445~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~332 274 267 237~No~~~~~No~No~~~~~~~~
+446~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+447~General Purpose Code~Yes~~No~Yes~08/17/2006 12:00:00 AM~G~~IL~US~No~~Active~~Yes~217/447~217~C~~No~Yes~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+448~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+449~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+450~General Purpose Code~Yes~~No~Yes~~G~~Quebec~CANADA~Yes~06/13/1998 12:00:00 AM~~401 395 076~Yes~450/579~514~E~~No~No~10D~1+10D~1+10D~1+10D~NA~NA~NA~
+451~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+452~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+453~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+454~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+455~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+456~General Purpose Code~Yes~~No~Yes~~N~Inbound International~NANP area~~Yes~08/16/1993 12:00:00 AM~~~No~~~~~No~No~~~~~~~~
+457~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+458~General Purpose Code~Yes~~No~Yes~10/21/2008 12:00:00 AM~G~~OR~US~Yes~02/10/2010 12:00:00 AM~Active~383~Yes~541/458~541~MP~383~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+459~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+460~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+461~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+462~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+463~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+464~General Purpose Code~Yes~~No~Yes~07/23/1999 12:00:00 AM~G~~IL~US~No~~Active~195~Yes~708/464~708~C~~No~Yes~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+465~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+466~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+467~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+468~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+469~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~07/01/1999 12:00:00 AM~~161 142~Yes~214/469/972~214~C~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+470~General Purpose Code~Yes~~No~Yes~02/13/2001 12:00:00 AM~G~~GA~US~Yes~02/26/2010 12:00:00 AM~Active~269~Yes~404/770/678/470~678~E~269~No~Yes~10D~1+10D~10D~1+10D~~~~
+471~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+472~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+473~General Purpose Code~Yes~~No~Yes~~G~~Grenada~GRENADA~Yes~10/31/1997 12:00:00 AM~~024~No~~809~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+474~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+475~General Purpose Code~Yes~~No~Yes~10/04/1999 12:00:00 AM~G~~CT~US~Yes~12/12/2009 12:00:00 AM~~388 255 217~Yes~203/475~203~E~217~No~No~10D~1+10D~10D~1+10D~1+10D~~~Permissive at the Carrier's discretion
+476~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+477~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+478~General Purpose Code~Yes~~No~Yes~10/01/1999 12:00:00 AM~G~~GA~US~Yes~08/01/2000 12:00:00 AM~~288 235 202~No~~912~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+479~General Purpose Code~Yes~~No~Yes~07/10/2001 12:00:00 AM~G~~AR~US~Yes~01/19/2002 12:00:00 AM~~310 302 295~No~~501~C~302~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+480~General Purpose Code~Yes~~No~Yes~01/11/1999 12:00:00 AM~G~~AZ~US~Yes~03/01/1999 12:00:00 AM~~216 181 153~No~~602~M~~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+481~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+482~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+483~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+484~General Purpose Code~Yes~~No~Yes~~G~~PA~US~Yes~06/05/1999 12:00:00 AM~Active~344 237 199 135~Yes~610/484~610~E~~No~Yes~10D~10D~(see note)~1+10D~1+10D~NA~1+10D~All calls within and between the 215, 267, 484, and 610 NPAs can be dialed as 10D or 1+10D.  Calls to other NPAs must be dialed as 1+10D.
+485~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+486~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+487~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+488~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+489~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+490~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+491~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+492~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+493~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+494~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+495~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+496~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+497~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+498~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+499~Easily Recognizable Code~No~Expansion Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+500~Easily Recognizable Code~Yes~~No~Yes~05/19/1994 12:00:00 AM~N~Personal Communication Service~NANP area~~Yes~05/19/1994 12:00:00 AM~~424 416 411 406 399 394 382 379 372 IL-94/05-005~~500/533/544/566~~~~~No~~~~~~~~
+501~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~AR~US~Yes~01/01/1947 12:00:00 AM~~310 302 295 33~No~~~C~302~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+502~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~KY~US~Yes~01/01/1947 12:00:00 AM~~~No~~~E~~No~No~7D~1+10D~7D~1+10D~NA~NA~NA~
+503~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~OR~US~Yes~01/01/1947 12:00:00 AM~~3590203 182~Yes~503/971~~P~359~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+504~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~LA~US~Yes~01/01/1947 12:00:00 AM~~301 242~No~~~C~242~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+505~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~NM~US~Yes~01/01/1947 12:00:00 AM~~380 358 328 312 292~No~~~M~358~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+506~General Purpose Code~Yes~~No~Yes~01/01/1955 12:00:00 AM~G~~New Brunswick~CANADA~Yes~01/01/1955 12:00:00 AM~~~No~~~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+507~General Purpose Code~Yes~~No~Yes~01/01/1954 12:00:00 AM~G~~MN~US~Yes~01/01/1954 12:00:00 AM~~~No~~~C~~No~No~7D~1+10D~7D~1+10D~NA~NA~NA~
+508~General Purpose Code~Yes~~No~Yes~~G~~MA~US~Yes~07/16/1988 12:00:00 AM~~234 122 IL87/07-003~Yes~508/774~617~E~234~No~No~10D~1+10D~10D~1+10D~1+10D~1+10D~NA~
+509~General Purpose Code~Yes~~No~Yes~01/01/1957 12:00:00 AM~G~~WA~US~Yes~01/01/1957 12:00:00 AM~~~No~~~P~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+510~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~09/02/1991 12:00:00 AM~~413 206 190 IL90/06-023~No~~415~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+511~Easily Recognizable Code~No~N11 Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+512~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~TX~US~Yes~01/01/1947 12:00:00 AM~Suspended~233 158~Yes~512/737~~C~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+513~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~OH~US~Yes~01/01/1947 12:00:00 AM~Suspended~316 286 272 264~Yes~513/283~~E~286~No~Yes~7D~1+10D~10D~1+10D~10D, 1+10D~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+514~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~Quebec~CANADA~Yes~01/01/1947 12:00:00 AM~~349 341 333 315~Yes~514/438~~E~349~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~Dialing plan changes on 6/4/05 to introduce permissive 10D dialing in preparation for 438 overlay.
+515~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~IA~US~Yes~01/01/1947 12:00:00 AM~~228~No~~~C~~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+516~General Purpose Code~Yes~~No~Yes~01/01/1951 12:00:00 AM~G~~NY~US~Yes~01/01/1951 12:00:00 AM~Active~300 184~No~~~E~~No~Yes~7D~7D~1+10D~1+10D~NA~NA~NA~
+517~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MI~US~Yes~01/01/1947 12:00:00 AM~~251 244 226 212~No~~~E~212~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+518~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~NY~US~Yes~01/01/1947 12:00:00 AM~Active~~No~~~E~~No~Yes~7D~7D~1+10D~1+10D~NA~NA~NA~
+519~General Purpose Code~Yes~~No~Yes~01/01/1953 12:00:00 AM~G~~Ontario~CANADA~Yes~01/01/1953 12:00:00 AM~~350 343 342~Yes~519/226~~E~350~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+520~General Purpose Code~Yes~~No~Yes~~G~~AZ~US~Yes~03/19/1995 12:00:00 AM~~IL94-01-030~No~~602~M~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+521~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+522~Easily Recognizable Code~Yes~~Yes~No~~N~Personal Communication Service (Future)~~~No~~~~~~~~~~No~~~~~~~~
+523~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+524~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+525~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+526~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+527~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+528~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+529~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+530~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~11/01/1997 12:00:00 AM~~108 072~No~~916~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+531~General Purpose Code~Yes~~No~Yes~07/01/2009 12:00:00 AM~G~~NE~US~No~~Active~410 397 393~Yes~402/531~402~C~393~No~Yes~10D~1+10D~10D~1+10D~~~~
+532~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+533~Easily Recognizable Code~Yes~~No~Yes~01/03/2008 12:00:00 AM~N~Personal Communication Service~NANP Area~~Yes~09/26/2009 12:00:00 AM~~424 416 411 406 399 394 382 379 372~~500/533/544/566~500~~~~No~~~~~~~~
+534~General Purpose Code~Yes~~No~Yes~11/06/2008 12:00:00 AM~G~~WI~US~Yes~08/14/2010 12:00:00 AM~Active~384~Yes~715/534~715~C~384~No~Yes~10D~1+10D~1+10D~1+10D~NA~NA~NA~
+535~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+536~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+537~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+538~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+539~General Purpose Code~Yes~~Yes~Yes~01/04/2010 12:00:00 AM~G~~OK~US~Yes~04/01/2011 12:00:00 AM~~403~Yes~918/539~918~C~~No~No~10D~1+10D~10D~1+10D~~~~
+540~General Purpose Code~Yes~~No~Yes~~G~~VA~US~Yes~07/15/1995 12:00:00 AM~Active~319 285 275 207 IL94/08-005 IL95/04-007~No~~703~E~275~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+541~General Purpose Code~Yes~~No~Yes~~G~~OR~US~Yes~11/05/1995 12:00:00 AM~Active~383 IL95/05-007~Yes~541/458~503~MP~~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+542~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+543~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+544~Easily Recognizable Code~Yes~~Yes~Yes~06/30/2010 12:00:00 AM~N~Personal Communication Service~NANP Area~~Yes~12/15/2010 12:00:00 AM~~424 416 411 406~~500/533/544/566~533~~~~No~~~~~~~~
+545~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+546~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+547~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+548~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+549~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+550~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+551~General Purpose Code~Yes~~No~Yes~04/02/2001 12:00:00 AM~G~~NJ~US~Yes~12/29/2001 12:00:00 AM~~277~Yes~201/551~201~E~277~No~No~10D~10D~1+10D~1+10D~1+10D~NA~1+10D~Calls between the 551 and 201 NPAs may be dialed as 10D.
+552~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+553~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+554~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+555~Easily Recognizable Code~No~Directory Assistance~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+556~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+557~General Purpose Code~Yes~~No~Yes~10/30/2000 12:00:00 AM~G~~MO~US~No~~Suspended~303 279 261~Yes~314/557~314~C~261~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+558~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+559~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~11/14/1998 12:00:00 AM~~098~No~~209~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+560~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+561~General Purpose Code~Yes~~No~Yes~~G~~FL~US~Yes~05/13/1996 12:00:00 AM~~311 171 IL96/02-004~No~~407~E~311~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~See Planning Letter 291 for local dialing into the 954-754 NPAs.
+562~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~01/25/1997 12:00:00 AM~~IL94/12-008 IL96/01-012~No~~310~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+563~General Purpose Code~Yes~~No~Yes~11/20/2000 12:00:00 AM~G~~IA~US~Yes~03/25/2001 12:00:00 AM~~253~No~~319~C~253~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+564~General Purpose Code~Yes~~No~Yes~09/20/1999 12:00:00 AM~G~~WA~US~No~~Suspended~298 239 196~Yes~360/564~360~P~~No~Yes~10D~1+10D~10D~1+10D~1+10D~1+10D~1+10D~
+565~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+566~Easily Recognizable Code~Yes~~Yes~Yes~08/05/2011 12:00:00 AM~N~Personal Communication Service (future)~NANP Area~~No~~~424~~500/533/544/566~544~~~~No~~~~~~~~
+567~General Purpose Code~Yes~~No~Yes~07/14/2000 12:00:00 AM~G~~OH~US~Yes~01/01/2002 12:00:00 AM~~249~Yes~419/567~419~E~249~No~No~10D~1+10D~10D~1+10D~1+10D~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+568~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+569~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+570~General Purpose Code~Yes~~No~Yes~~G~~PA~US~Yes~12/05/1998 12:00:00 AM~~409 136~Yes~570/272~717~E~~Yes~No~7D~7D~1+10D~1+10D~1+10D~NA~1+10D~
+571~General Purpose Code~Yes~~No~Yes~06/01/1999 12:00:00 AM~G~~VA~US~Yes~03/01/2000 12:00:00 AM~~177~Yes~703/571~703~E~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+572~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+573~General Purpose Code~Yes~~No~Yes~~G~~MO~US~Yes~01/07/1996 12:00:00 AM~~IL95/08-015~No~~314~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+574~General Purpose Code~Yes~~No~Yes~06/20/2001 12:00:00 AM~G~~IN~US~Yes~01/15/2002 12:00:00 AM~~309 296~No~~219~EC~309~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+575~General Purpose Code~Yes~~No~Yes~11/09/2006 12:00:00 AM~G~~NM~US~Yes~10/07/2007 12:00:00 AM~~380 358 328 312 292~No~~505~M~358~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+576~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+577~Easily Recognizable Code~Yes~~Yes~No~~N~Personal Communication Service (future)~~~No~~~~~~~~~~No~~~~~~~~
+578~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+579~General Purpose Code~Yes~~Yes~Yes~08/04/2009 12:00:00 AM~G~~Quebec~CANADA~Yes~08/21/2010 12:00:00 AM~~401 395~Yes~450/579~450~E~~No~No~10D~1+10D~1+10D~1+10D~NA~NA~NA~
+580~General Purpose Code~Yes~~No~Yes~~G~~OK~US~Yes~11/01/1997 12:00:00 AM~Active~085~No~~405~C~~No~Yes~7D~1+10D~7D~1+10D~NA~NA~NA~
+581~General Purpose Code~Yes~~No~Yes~08/14/2007 12:00:00 AM~G~~Quebec~CANADA~Yes~09/19/2008 12:00:00 AM~~373R1 367~Yes~418/581~418~~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+582~General Purpose Code~Yes~~No~Yes~12/20/2010 12:00:00 AM~G~~PA~US~No~~~~No~~814~E~~No~No~7D~7D~1+10D~1+10D~NA~NA~NA~
+583~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+584~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+585~General Purpose Code~Yes~~No~Yes~03/23/2001 12:00:00 AM~G~~NY~US~Yes~11/15/2001 12:00:00 AM~~278 270~No~~716~E~270~No~No~7D~7D~1+10D~1+10D~NA~NA~NA~
+586~General Purpose Code~Yes~~No~Yes~07/08/1999 12:00:00 AM~G~~MI~US~Yes~09/22/2001 12:00:00 AM~~282 273 265 221 192~No~~810~E~265~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+587~General Purpose Code~Yes~~Yes~Yes~06/14/2007 12:00:00 AM~G~~Alberta~CANADA~Yes~09/19/2008 12:00:00 AM~~374 369 364~Yes~403/780/587~780~M~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+588~Easily Recognizable Code~Yes~~Yes~No~~N~Personal Communication Service (future)~~~No~~~~~~~~~~No~~~~~~~~
+589~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+590~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+591~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+592~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+593~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+594~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+595~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+596~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+597~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+598~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+599~Easily Recognizable Code~No~Expansion Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+600~Easily Recognizable Code~Yes~~No~Yes~~N~Canadian Services~Canada~CANADA~Yes~01/01/1993 12:00:00 AM~~~~~~~~~No~~~~~~~~
+601~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MS~US~Yes~01/01/1947 12:00:00 AM~~~Yes~601/769~~C~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+602~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~AZ~US~Yes~01/01/1947 12:00:00 AM~~216 181 153 IL94-01-030~No~~~M~~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+603~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~NH~US~Yes~01/01/1947 12:00:00 AM~Active~163~No~~~E~~No~Yes~7D~7D~1+10D~1+10D~NA~1+10D~NA~
+604~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~British Columbia~CANADA~Yes~01/01/1947 12:00:00 AM~~428 361 246~Yes~604/778~~P~246~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+605~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~SD~US~Yes~01/01/1947 12:00:00 AM~~~No~~~CM~~No~No~7D~1+10D~7D~1+10D~NA~NA~NA~
+606~General Purpose Code~Yes~~No~Yes~01/01/1955 12:00:00 AM~G~~KY~US~Yes~01/01/1955 12:00:00 AM~~205~No~~~EC~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~Some cross-boundary 7D local dialing exists
+607~General Purpose Code~Yes~~No~Yes~01/01/1954 12:00:00 AM~G~~NY~US~Yes~01/01/1954 12:00:00 AM~~~No~~~E~~No~No~7D~7D~1+10D~1+10D~NA~NA~NA~
+608~General Purpose Code~Yes~~No~Yes~01/01/1955 12:00:00 AM~G~~WI~US~Yes~01/01/1955 12:00:00 AM~~~No~~~C~~No~No~7D~1+10D~1+10D~1+10D~NA~NA~NA~
+609~General Purpose Code~Yes~~No~Yes~01/01/1957 12:00:00 AM~G~~NJ~US~Yes~01/01/1957 12:00:00 AM~~~No~~201~E~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~1+10D~
+610~General Purpose Code~Yes~~No~Yes~~G~~PA~US~Yes~01/08/1994 12:00:00 AM~Active~IL93/01-001~Yes~610/484~215~E~237~No~Yes~10D~10D~(see note)~1+10D~1+10D~NA~1+10D~All calls within and between the 215, 267, 484, and 610 NPAs can be dialed as 10D or 1+10D.  Calls to other NPAs must be dialed as 1+10D.
+611~Easily Recognizable Code~No~N11 Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+612~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MN~US~Yes~01/01/1947 12:00:00 AM~~200~No~~~C~~No~No~7D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+613~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~Ontario~CANADA~Yes~01/01/1947 12:00:00 AM~Active~386 355~Yes~613/343~~E~~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+614~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~OH~US~Yes~01/01/1947 12:00:00 AM~Suspended~317 297 290~Yes~614/380~~E~290~No~Yes~7D~1+10D~10D~1+10D~10D, 1+10D~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+615~General Purpose Code~Yes~~No~Yes~01/01/1954 12:00:00 AM~G~~TN~US~Yes~01/01/1954 12:00:00 AM~Active~081~No~~~C~~No~Yes~7D~1+10D~7D~1+10D~NA~NA~NA~
+616~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MI~US~Yes~01/01/1947 12:00:00 AM~~324 294~No~~~E~294~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+617~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MA~US~Yes~01/01/1947 12:00:00 AM~~234 122~Yes~617/857~~E~234~No~No~10D~1+10D~10D~1+10D~1+10D~1+10D~NA~
+618~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~IL~US~Yes~01/01/1947 12:00:00 AM~Active~~Yes~618/730~~C~~Yes~Yes~7D~1+10D~1+10D~1+10D~NA~NA~NA~
+619~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~01/01/1982 12:00:00 AM~~421 230 128~No~~714~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+620~General Purpose Code~Yes~~No~Yes~09/14/2000 12:00:00 AM~G~~KS~US~Yes~02/03/2001 12:00:00 AM~~245~No~~316~CM~245~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+621~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+622~Easily Recognizable Code~Yes~~Yes~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+623~General Purpose Code~Yes~~No~Yes~01/11/1999 12:00:00 AM~G~~AZ~US~Yes~03/01/1999 12:00:00 AM~~216 181 153~No~~602~M~~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+624~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+625~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+626~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~06/14/1997 12:00:00 AM~~028~No~~818~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+627~General Purpose Code~Yes~~Yes~No~~G~~~US~No~~~~No~~~~~No~No~TBD~TBD~TBD~TBD~TBD~TBD~TBD~
+628~General Purpose Code~Yes~~Yes~No~~G~~~US~No~~~~No~~~~~No~No~TBD~TBD~TBD~TBD~TBD~TBD~TBD~
+629~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+630~General Purpose Code~Yes~~No~Yes~~G~~IL~US~Yes~08/03/1996 12:00:00 AM~~362 357 195 IL95/07-015~Yes~630/331~708~C~~No~No~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+631~General Purpose Code~Yes~~No~Yes~05/05/1999 12:00:00 AM~G~~NY~US~Yes~11/01/1999 12:00:00 AM~Active~300 184~No~~516~E~184~No~Yes~7D~7D~1+10D~1+10D~NA~NA~NA~
+632~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+633~Easily Recognizable Code~Yes~~Yes~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+634~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+635~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+636~General Purpose Code~Yes~~No~Yes~04/15/1999 12:00:00 AM~G~~MO~US~Yes~05/22/1999 12:00:00 AM~~165~No~~314~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+637~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+638~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+639~General Purpose Code~Yes~~No~Yes~08/26/2011 12:00:00 AM~G~~Saskatchewan~CANADA~No~05/25/2013 12:00:00 AM~~~Yes~306/639~306~C~~No~No~10D~1+10D~10D~1+10D~~~~
+640~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+641~General Purpose Code~Yes~~No~Yes~02/25/2000 12:00:00 AM~G~~IA~US~Yes~07/09/2000 12:00:00 AM~~228~No~~515~C~228~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+642~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+643~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+644~Easily Recognizable Code~Yes~~Yes~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+645~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+646~General Purpose Code~Yes~~No~Yes~~G~~NY~US~Yes~07/01/1999 12:00:00 AM~~314 175~Yes~212/646/917~212~E~~No~No~1+10D~1+10D~1+10D~1+10D~10D~NA~NA~
+647~General Purpose Code~Yes~~No~Yes~12/14/1999 12:00:00 AM~G~~Ontario~CANADA~Yes~03/05/2001 12:00:00 AM~~426 218~Yes~416/647/437~416~E~218~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+648~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+649~General Purpose Code~Yes~~No~Yes~~G~~Turks & Caicos Islands~TURKS & CAICOS ISLANDS~Yes~06/01/1997 12:00:00 AM~~029~No~~809~E~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+650~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~08/02/1997 12:00:00 AM~~421 206 193 129 071 022~No~~415~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+651~General Purpose Code~Yes~~No~Yes~~G~~MN~US~Yes~07/12/1998 12:00:00 AM~~120~No~~612~C~~No~No~7D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+652~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+653~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+654~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+655~Easily Recognizable Code~Yes~~Yes~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+656~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+657~General Purpose Code~Yes~~No~Yes~04/01/1999 12:00:00 AM~G~~CA~US~Yes~09/23/2008 12:00:00 AM~~368 206 169~Yes~714/657~714~P~~No~No~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+658~General Purpose Code~Yes~~Yes~No~~G~~Jamaica~JAMAICA~No~~~~No~~~~~No~No~~~~~~~~
+659~General Purpose Code~Yes~~No~Yes~04/12/2001 12:00:00 AM~G~~AL~US~No~~~289 284~Yes~205/659~205~C~284~No~No~10D~1+10D~1+10D~1+10D~NA~NA~NA~
+660~General Purpose Code~Yes~~No~Yes~~G~~MO~US~Yes~10/12/1997 12:00:00 AM~~077~No~~816~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+661~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~02/13/1999 12:00:00 AM~~111~No~~805~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+662~General Purpose Code~Yes~~No~Yes~09/18/1998 12:00:00 AM~G~~MS~US~Yes~04/19/1999 12:00:00 AM~Active~166~No~~601~C~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+663~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+664~General Purpose Code~Yes~~No~Yes~~G~~Montserrat~MONTSERRAT~Yes~07/01/1996 12:00:00 AM~~IL96/04-010~No~~809~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+665~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+666~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+667~General Purpose Code~Yes~~Yes~Yes~01/17/2001 12:00:00 AM~G~~MD~US~No~03/24/2012 12:00:00 AM~Active~427 299 266~Yes~410/443/667~443~E~266~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+668~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+669~General Purpose Code~Yes~~No~Yes~11/20/1998 12:00:00 AM~G~~CA~US~No~~Active~206 149~Yes~408/669~408~P~~No~Yes~TBD~TBD~TBD~TBD~TBD~TBD~TBD~
+670~General Purpose Code~Yes~~No~Yes~~G~~CNMI~US~Yes~07/01/1997 12:00:00 AM~~010~No~~~(UTC+10)~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+671~General Purpose Code~Yes~~No~Yes~~G~~GU~US~Yes~07/01/1997 12:00:00 AM~~004~No~~~(UTC+10)~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+672~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+673~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+674~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+675~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+676~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+677~Easily Recognizable Code~Yes~~Yes~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+678~General Purpose Code~Yes~~No~Yes~~G~~GA~US~Yes~01/06/1998 12:00:00 AM~Active~223 102~Yes~404/770/678/470~770~E~~No~Yes~10D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+679~General Purpose Code~Yes~~No~Yes~09/02/1999 12:00:00 AM~G~~MI~US~No~~Active~227 209~Yes~313/679~313~E~~No~Yes~10D~1+10D~10D~1+10D~10D~NA~NA~
+680~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+681~General Purpose Code~Yes~~No~Yes~01/30/2008 12:00:00 AM~G~~WV~US~Yes~03/28/2009 12:00:00 AM~~375~Yes~304/681~304~E~375~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+682~General Purpose Code~Yes~~No~Yes~01/22/2000 12:00:00 AM~G~~TX~US~Yes~10/07/2000 12:00:00 AM~~219~Yes~817/682~817~C~219~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+683~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+684~General Purpose Code~Yes~~No~Yes~01/24/2003 12:00:00 AM~G~~AS~US~Yes~10/02/2004 12:00:00 AM~~330~No~~~~330~No~No~7D~NA~NA~1+10D~NA~NA~NA~Effective with completion of transition to NANP
+685~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+686~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+687~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+688~Easily Recognizable Code~Yes~~Yes~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+689~General Purpose Code~Yes~~No~Yes~03/26/2002 12:00:00 AM~G~~FL~US~No~~Suspended~325 323~Yes~407/689~407~E~323~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~Dial ECS calls as 1+10D
+690~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+691~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+692~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+693~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+694~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+695~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+696~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+697~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+698~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+699~Easily Recognizable Code~No~Expansion Code~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+700~Easily Recognizable Code~Yes~~No~Yes~01/01/1984 12:00:00 AM~N~Interexchange Carrier Services~NANP area~~Yes~01/01/1984 12:00:00 AM~~SR83/10-076~~~~~~~No~~~~~~~~
+701~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~ND~US~Yes~01/01/1947 12:00:00 AM~~~No~~~CM~~No~No~7D~1+10D~7D~1+10D~NA~NA~NA~
+702~General Purpose Code~Yes~~No~Yes~~G~~NV~US~Yes~01/01/1947 12:00:00 AM~~~No~~~P~~No~No~7D~1+10D~1+10D~1+10D~1+10D~NA~NA~
+703~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~VA~US~Yes~01/01/1947 12:00:00 AM~~~Yes~703/571~~E~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+704~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~NC~US~Yes~01/01/1947 12:00:00 AM~~256 229 204 179~Yes~704/980~~E~229~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+705~General Purpose Code~Yes~~No~Yes~01/01/1957 12:00:00 AM~G~~Ontario~CANADA~Yes~01/01/1957 12:00:00 AM~Active~414 398R1 398~Yes~705/249~~E~398~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+706~General Purpose Code~Yes~~No~Yes~~G~~GA~US~Yes~05/03/1992 12:00:00 AM~~356 353 352 351 348 346 288~Yes~706/762~404~E~346~Yes~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+707~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~01/01/1959 12:00:00 AM~~421 238 210 159~No~~415~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+708~General Purpose Code~Yes~~No~Yes~~G~~IL~US~Yes~11/11/1989 12:00:00 AM~Active~195 IL89/04-028~Yes~708/464~312~C~~No~Yes~7D~1+10D~1+10D~1+10D~NA~NA~NA~
+709~General Purpose Code~Yes~~No~Yes~01/01/1962 12:00:00 AM~G~~Newfoundland~CANADA~Yes~01/01/1962 12:00:00 AM~~~No~~~NA~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+710~General Purpose Code~Yes~~No~Yes~01/01/1984 12:00:00 AM~N~US Government~US~US~Yes~01/01/1984 12:00:00 AM~~~No~~~~~No~No~~~~~~~~
+711~Easily Recognizable Code~No~N11 Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+712~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~IA~US~Yes~01/01/1947 12:00:00 AM~~~No~~~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+713~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~TX~US~Yes~01/01/1947 12:00:00 AM~Active~~Yes~713/281/832~~C~~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+714~General Purpose Code~Yes~~No~Yes~01/01/1951 12:00:00 AM~G~~CA~US~Yes~01/01/1951 12:00:00 AM~~368 206 169 137~Yes~714/657~213~P~~Yes~No~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+715~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~WI~US~Yes~01/01/1947 12:00:00 AM~Active~384~Yes~715/534~~C~~No~Yes~10D~1+10D~1+10D~1+10D~NA~NA~NA~
+716~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~NY~US~Yes~01/01/1947 12:00:00 AM~Active~162~No~~~E~~No~Yes~7D~7D~1+10D~1+10D~NA~NA~NA~
+717~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~PA~US~Yes~01/01/1947 12:00:00 AM~Active~~No~~~E~~No~Yes~7D~7D~1+10D~1+10D~1+10D~NA~1+10D~
+718~General Purpose Code~Yes~~No~Yes~~G~~NY~US~Yes~09/01/1984 12:00:00 AM~~402 314~Yes~718/347/917/929~212~E~~No~No~1+10D~1+10D~1+10D~1+10D~10D~NA~NA~
+719~General Purpose Code~Yes~~No~Yes~~G~~CO~US~Yes~03/05/1988 12:00:00 AM~~IL87/03-045~No~~303~M~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+720~General Purpose Code~Yes~~No~Yes~~G~~CO~US~Yes~06/01/1998 12:00:00 AM~~117~Yes~303/720~303~M~~No~No~10D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+721~General Purpose Code~Yes~~No~Yes~09/30/2009 12:00:00 AM~G~~Sint Maarten~SINT MAARTEN~Yes~09/30/2011 12:00:00 AM~~423 418 404 396~No~~~A~396~No~No~7D~NA~NA~1+10D~NA~~NA~
+722~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+723~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+724~General Purpose Code~Yes~~No~Yes~~G~~PA~US~Yes~02/01/1998 12:00:00 AM~~281 091~Yes~724/878~412~E~~No~No~10D~10D~(see note)~(see note)~1+10D~NA~1+10D~All calls within and between NPAs 412, 724, and 878 can be dialed as 10D or 1+10D.  Calls to other NPAs must be dialed as 1+10D.
+725~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+726~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+727~General Purpose Code~Yes~~No~Yes~~G~~FL~US~Yes~07/01/1998 12:00:00 AM~~133 121 109~No~~813~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+728~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+729~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+730~General Purpose Code~Yes~~No~Yes~04/21/2005 12:00:00 AM~G~~IL~US~No~~Active~~Yes~618/730~618~C~~No~Yes~10D~NA~NA~NA~~~~
+731~General Purpose Code~Yes~~No~Yes~08/17/2000 12:00:00 AM~G~~TN~US~Yes~02/12/2001 12:00:00 AM~~247~No~~901~C~247~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~Note that some local calls may require dialing 10D or 1+10D depending on area and service provider.
+732~General Purpose Code~Yes~~No~Yes~~G~~NJ~US~Yes~06/01/1997 12:00:00 AM~~277 150 037~Yes~732/848~908~E~277~No~No~10D~10D~1+10D~1+10D~1+10D~NA~1+10D~Calls between the 732 and 848 NPAs may be dialed as 10D.
+733~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+734~General Purpose Code~Yes~~No~Yes~~G~~MI~US~Yes~12/13/1997 12:00:00 AM~Active~066~Yes~734/679~313~E~~No~Yes~7D~1+10D~10D~1+10D~10D~NA~NA~
+735~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+736~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+737~General Purpose Code~Yes~~No~Yes~04/25/2000 12:00:00 AM~G~~TX~US~No~~Suspended~276 233~Yes~512/737~512~C~~No~Yes~~~~~~~~
+738~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+739~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+740~General Purpose Code~Yes~~No~Yes~~G~~OH~US~Yes~12/06/1997 12:00:00 AM~Active~101~No~~614~E~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+741~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+742~General Purpose Code~Yes~~No~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+743~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+744~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+745~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+746~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+747~General Purpose Code~Yes~~No~Yes~10/26/1999 12:00:00 AM~G~~CA~US~Yes~05/18/2009 12:00:00 AM~Active~378~Yes~818/747~818~P~378~No~Yes~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+748~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+749~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+750~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+751~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+752~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+753~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+754~General Purpose Code~Yes~~No~Yes~11/20/2000 12:00:00 AM~G~~FL~US~Yes~08/01/2001 12:00:00 AM~~321 318 291~Yes~954/754~954~E~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+755~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+756~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+757~General Purpose Code~Yes~~No~Yes~~G~~VA~US~Yes~07/01/1996 12:00:00 AM~~IL96/02-013~No~~804~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+758~General Purpose Code~Yes~~No~Yes~~G~~St. Lucia~ST. LUCIA~Yes~07/01/1996 12:00:00 AM~~IL96/04-014 IL96/05-004~No~~809~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+759~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+760~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~03/22/1997 12:00:00 AM~Active~381 377 238 194 160 IL96/04-009~Yes~760/442~619~P~~Yes~Yes~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+761~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+762~General Purpose Code~Yes~~Yes~Yes~06/24/2005 12:00:00 AM~G~~GA~US~Yes~05/16/2006 12:00:00 AM~~356 353 352 351 348 346~Yes~706/762~706~E~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+763~General Purpose Code~Yes~~No~Yes~07/22/1999 12:00:00 AM~G~~MN~US~Yes~02/27/2000 12:00:00 AM~~200~No~~612~C~~No~No~7D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+764~General Purpose Code~Yes~~Yes~No~~G~~~US~No~~~~No~~~~~No~No~TBD~TBD~TBD~TBD~TBD~TBD~TBD~
+765~General Purpose Code~Yes~~No~Yes~~G~~IN~US~Yes~02/01/1997 12:00:00 AM~Active~009~No~~317~E~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+766~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+767~General Purpose Code~Yes~~No~Yes~~G~~Dominica~DOMINICA~Yes~10/01/1997 12:00:00 AM~~003~No~~809~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+768~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+769~General Purpose Code~Yes~~No~Yes~03/05/2004 12:00:00 AM~G~~MS~US~Yes~03/14/2005 12:00:00 AM~~335~Yes~601/769~601~C~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+770~General Purpose Code~Yes~~No~Yes~~G~~GA~US~Yes~08/01/1995 12:00:00 AM~Active~IL95/06-008~Yes~770/678/470~404~E~~No~Yes~10D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+771~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+772~General Purpose Code~Yes~~No~Yes~08/25/2001 12:00:00 AM~G~~FL~US~Yes~02/11/2002 12:00:00 AM~~311~No~~561~E~311~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~All ECS calls directed to a presubscribed carrier will be dialed as 1+10D (PL 311)
+773~General Purpose Code~Yes~~No~Yes~~G~~IL~US~Yes~10/12/1996 12:00:00 AM~Active~392 390 195 IL96/02-014 IL96/06-003~Yes~773/872~312~C~~No~Yes~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+774~General Purpose Code~Yes~~No~Yes~05/03/2000 12:00:00 AM~G~~MA~US~Yes~05/02/2001 12:00:00 AM~~234~Yes~508/774~508~E~234~No~No~10D~1+10D~10D~1+10D~1+10D~1+10D~NA~
+775~General Purpose Code~Yes~~No~Yes~~G~~NV~US~Yes~12/12/1998 12:00:00 AM~~118~No~~702~P~~No~No~7D~1+10D~1+10D~1+10D~1+10D~NA~NA~
+776~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+777~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+778~General Purpose Code~Yes~~No~Yes~08/17/2000 12:00:00 AM~G~~British Columbia~CANADA~Yes~11/03/2001 12:00:00 AM~~428 361 246~Yes~604/778/236 250/778/236~604~P~361~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+779~General Purpose Code~Yes~~No~Yes~02/06/2004 12:00:00 AM~G~~IL~US~Yes~03/17/2007 12:00:00 AM~~354~Yes~815/779~815~C~~No~No~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+780~General Purpose Code~Yes~~No~Yes~~G~~Alberta~CANADA~Yes~05/18/1999 12:00:00 AM~~374 364 176 148 084~Yes~780/587/403~403~M~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+781~General Purpose Code~Yes~~No~Yes~~G~~MA~US~Yes~09/01/1997 12:00:00 AM~~234 122 104 095 069~Yes~781/339~617~E~234~No~No~10D~1+10D~10D~1+10D~1+10D~1+10D~NA~
+782~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+783~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+784~General Purpose Code~Yes~~No~Yes~~G~~St. Vincent & Grenadines~ST. VINCENT & GRENADINES~Yes~06/01/1998 12:00:00 AM~~103~No~~809~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+785~General Purpose Code~Yes~~No~Yes~~G~~KS~US~Yes~07/20/1997 12:00:00 AM~~053~No~~913~CM~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+786~General Purpose Code~Yes~~No~Yes~~G~~FL~US~Yes~03/01/1998 12:00:00 AM~Active~287 116~Yes~305/786~305~E~~No~Yes~10D~1+10D~10D~1+10D~NA~NA~1+10D~
+787~General Purpose Code~Yes~~No~Yes~~G~~Puerto Rico~US~Yes~03/01/1996 12:00:00 AM~~259 236 IL95/12-005~Yes~787/939~809~A~236~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+788~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+789~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+790~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+791~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+792~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+793~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+794~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+795~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+796~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+797~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+798~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+799~Easily Recognizable Code~No~Expansion Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+800~Easily Recognizable Code~Yes~~No~Yes~01/01/1966 12:00:00 AM~N~Toll-Free~NANP area~~Yes~01/01/1966 12:00:00 AM~~~~~~~~~No~~~~~~~~
+801~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~UT~US~Yes~01/01/1947 12:00:00 AM~~366 363 337 326 308 248 231~Yes~801/385~~M~231~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+802~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~VT~US~Yes~01/01/1947 12:00:00 AM~~~No~~~E~~No~No~7D~1+10D~1+10D~1+10D~NA~NA~NA~
+803~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~SC~US~Yes~01/01/1947 12:00:00 AM~Active~~No~~~E~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+804~General Purpose Code~Yes~~No~Yes~~G~~VA~US~Yes~06/24/1973 12:00:00 AM~Active~GL72/07-005~No~~~E~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+805~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~01/01/1957 12:00:00 AM~~~No~~415~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+806~General Purpose Code~Yes~~No~Yes~01/01/1957 12:00:00 AM~G~~TX~US~Yes~01/01/1957 12:00:00 AM~~~No~~~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+807~General Purpose Code~Yes~~No~Yes~01/01/1962 12:00:00 AM~G~~Ontario~CANADA~Yes~01/01/1962 12:00:00 AM~~~No~~~EC~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+808~General Purpose Code~Yes~~No~Yes~01/01/1957 12:00:00 AM~G~~HI~US~Yes~01/01/1957 12:00:00 AM~~220~No~~~(UTC-10)~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+809~General Purpose Code~Yes~~No~Yes~01/01/1958 12:00:00 AM~G~~Dominican Republic~Dominican Republic~Yes~01/01/1958 12:00:00 AM~Active~387R1 345 338~Yes~809/829/849~~E~~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+810~General Purpose Code~Yes~~No~Yes~~G~~MI~US~Yes~12/01/1993 12:00:00 AM~~282 221 192 178~No~~313~E~~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+811~Easily Recognizable Code~No~N11 Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+812~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~IN~US~Yes~01/01/1947 12:00:00 AM~Active~~No~~~EC~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+813~General Purpose Code~Yes~~No~Yes~01/01/1953 12:00:00 AM~G~~FL~US~Yes~01/01/1953 12:00:00 AM~~~No~~~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+814~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~PA~US~Yes~01/01/1947 12:00:00 AM~Active~~No~~~E~~No~Yes~7D~7D~1+10D~1+10D~NA~NA~NA~
+815~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~IL~US~Yes~01/01/1947 12:00:00 AM~~354~Yes~815/779~~C~~Yes~No~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+816~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~MO~US~Yes~01/01/1947 12:00:00 AM~Suspended~304 280 262~Yes~816/975~~C~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+817~General Purpose Code~Yes~~No~Yes~01/01/1953 12:00:00 AM~G~~TX~US~Yes~01/01/1953 12:00:00 AM~~219 186~Yes~817/682~~C~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+818~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~01/07/1984 12:00:00 AM~Active~378 130~Yes~818/747~213~P~378~Yes~Yes~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+819~General Purpose Code~Yes~~No~Yes~01/01/1957 12:00:00 AM~G~~Quebec~CANADA~Yes~01/01/1957 12:00:00 AM~Active~425 405 355~Yes~819/873~~E~405~No~Yes~10D~1+10D~1+10D~1+10D~NA~NA~NA~
+820~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+821~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+822~Easily Recognizable Code~Yes~~No~Yes~02/23/2000 12:00:00 AM~N~~~~No~~~214~~~~~~~No~~~~~~~~
+823~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+824~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+825~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+826~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+827~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+828~General Purpose Code~Yes~~No~Yes~~G~~NC~US~Yes~03/22/1998 12:00:00 AM~~114 105~No~~704~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+829~General Purpose Code~Yes~~No~Yes~08/02/2004 12:00:00 AM~G~~Dominican Republic~Dominican Republic~Yes~08/01/2005 12:00:00 AM~Active~387R1 345 338~Yes~809/829/849~809~E~~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+830~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~07/07/1997 12:00:00 AM~~35~No~~210~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+831~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~07/11/1998 12:00:00 AM~~80 63~No~~408~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+832~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~01/16/1999 12:00:00 AM~Active~143~Yes~713/281/832~713~C~~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+833~Easily Recognizable Code~Yes~~No~Yes~02/23/2000 12:00:00 AM~N~~~~No~~~214~~~~~~~No~~~~~~~~
+834~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+835~General Purpose Code~Yes~~Yes~No~~G~~~US~No~~~344 274 267 237~No~~~~~No~No~~~~~~~~
+836~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+837~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+838~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+839~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+840~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+841~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+842~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+843~General Purpose Code~Yes~~No~Yes~~G~~SC~US~Yes~03/22/1998 12:00:00 AM~Active~114 086~No~~803~E~~No~Yes~7D~1+10D~10D~1+10D~NA~NA~NA~
+844~Easily Recognizable Code~Yes~~No~Yes~02/23/2000 12:00:00 AM~N~~~~No~~~214~~~~~~~No~~~~~~~~
+845~General Purpose Code~Yes~~No~Yes~12/03/1999 12:00:00 AM~G~~NY~US~Yes~06/05/2000 12:00:00 AM~~211~No~~914~E~~No~No~7D~7D~1+10D~1+10D~NA~NA~NA~
+846~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+847~General Purpose Code~Yes~~No~Yes~~G~~IL~US~Yes~01/20/1996 12:00:00 AM~~305 IL95/07-015~Yes~847/224~708~C~305~No~No~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+848~General Purpose Code~Yes~~No~Yes~04/02/2001 12:00:00 AM~G~~NJ~US~Yes~12/29/2001 12:00:00 AM~~277~Yes~732/848~732~E~277~No~No~10D~10D~1+10D~1+10D~1+10D~NA~1+10D~Calls between the 732 and 848 NPAs may be dialed as 10D.
+849~General Purpose Code~Yes~~No~Yes~04/01/2009 12:00:00 AM~G~~Dominican Republic~Dominican Republic~Yes~07/01/2009 12:00:00 AM~Active~387R1~Yes~809/829/849~809~E~~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+850~General Purpose Code~Yes~~No~Yes~~G~~FL~US~Yes~06/23/1997 12:00:00 AM~~059~No~~904~EC~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+851~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+852~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+853~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+854~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+855~Easily Recognizable Code~Yes~~No~Yes~11/07/1999 12:00:00 AM~N~Toll-Free~NANP Area~~Yes~10/09/2010 12:00:00 AM~~412 407R1 197~~~800~~~~No~~~~~~~~
+856~General Purpose Code~Yes~~No~Yes~~G~~NJ~US~Yes~06/12/1999 12:00:00 AM~~173~No~~609~E~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~1+10D~
+857~General Purpose Code~Yes~~No~Yes~05/03/2000 12:00:00 AM~G~~MA~US~Yes~05/02/2001 12:00:00 AM~~234~Yes~617/857~617~E~234~No~No~10D~1+10D~10D~1+10D~1+10D~1+10D~NA~
+858~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~06/12/1999 12:00:00 AM~~128~No~~619~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+859~General Purpose Code~Yes~~No~Yes~08/09/1999 12:00:00 AM~G~~KY~US~Yes~04/01/2000 12:00:00 AM~~205~No~~606~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~Some cross-boundary 7D local dialing exists
+860~General Purpose Code~Yes~~No~Yes~~G~~CT~US~Yes~08/28/1995 12:00:00 AM~Active~388 255 217 138 IL95/04-002~Yes~860/959~203~E~217~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+861~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+862~General Purpose Code~Yes~~No~Yes~04/02/2001 12:00:00 AM~G~~NJ~US~Yes~12/29/2001 12:00:00 AM~~277~Yes~973/862~973~E~277~No~No~10D~10D~1+10D~1+10D~1+10D~NA~1+10D~Calls between the 973 and 862 NPAs can be dialed as 10D.
+863~General Purpose Code~Yes~~No~Yes~05/26/1999 12:00:00 AM~G~~FL~US~Yes~09/20/1999 12:00:00 AM~~180~No~~941~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+864~General Purpose Code~Yes~~No~Yes~~G~~SC~US~Yes~12/03/1995 12:00:00 AM~~IL95/03-006~No~~803~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+865~General Purpose Code~Yes~~No~Yes~04/15/1999 12:00:00 AM~G~~TN~US~Yes~11/01/1999 12:00:00 AM~~183~No~~423~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+866~Easily Recognizable Code~Yes~~No~Yes~11/07/1999 12:00:00 AM~N~Toll-Free~NANP area~~Yes~07/29/2000 12:00:00 AM~~197~~~800~~~~No~~~~~~~~
+867~General Purpose Code~Yes~~No~Yes~~G~~Yukon, NW Terr., Nunavut~CANADA~Yes~10/21/1997 12:00:00 AM~~013~No~~403~CMP~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+868~General Purpose Code~Yes~~No~Yes~~G~~Trinidad & Tobago~TRINIDAD AND TOBAGO~Yes~06/01/1997 12:00:00 AM~~IL96/06-001~No~~809~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+869~General Purpose Code~Yes~~No~Yes~~G~~St. Kitts & Nevis~ST. KITTS AND NEVIS~Yes~10/01/1996 12:00:00 AM~~011 001~No~~809~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+870~General Purpose Code~Yes~~No~Yes~~G~~AR~US~Yes~04/14/1997 12:00:00 AM~~400 033~Yes~870/327~501~C~400~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+871~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+872~General Purpose Code~Yes~~No~Yes~07/23/1999 12:00:00 AM~G~~IL~US~Yes~11/07/2009 12:00:00 AM~~392 390 195~Yes~312/773/872~312~C~~No~No~1+10D~1+10D~1+10D~1+10D~NA~NA~NA~
+873~General Purpose Code~Yes~~No~Yes~02/25/2010 12:00:00 AM~G~~Quebec~CANADA~No~09/15/2012 12:00:00 AM~Active~425 405~Yes~819/873~819~E~405~No~Yes~10D~1+10D~1+10D~1+10D~NA~NA~NA~
+874~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+875~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+876~General Purpose Code~Yes~~No~Yes~~G~~Jamaica~JAMAICA~Yes~05/01/1997 12:00:00 AM~~113 091 014~No~~809~E~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+877~Easily Recognizable Code~Yes~~No~Yes~~N~Toll-Free~NANP area~~Yes~04/04/1998 12:00:00 AM~~074~~800/877/866/855~800~~~~No~~~~~~~~
+878~General Purpose Code~Yes~~No~Yes~12/15/1999 12:00:00 AM~G~~PA~US~Yes~08/17/2001 12:00:00 AM~~281 222~Yes~412/724/878~412~E~~No~No~10D~10D~ (see note)~(see note)~1+10D~NA~1+10D~All calls within and between NPAs 412, 724, and 878 can be dialed as 10D or 1+10D.  Calls to other NPAs must be dialed as 1+10D.
+879~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+880~General Purpose Code~No~Set aside for toll free~No~No~~N~Toll-Free~~~No~~~331~No~~~~~No~No~~~~~~~~
+881~General Purpose Code~No~Set aside for toll free~No~No~~N~Toll-Free~~~No~~~331~No~~~~~No~No~~~~~~~~
+882~General Purpose Code~No~Set aside for toll free~No~No~~N~Toll-Free~~~No~~~331~No~~~~~No~No~~~~~~~~
+883~General Purpose Code~No~Set aside for toll free~No~No~~N~Toll-Free~~~No~~~~No~~~~~No~No~~~~~~~~
+884~General Purpose Code~No~Set aside for toll free~No~No~~N~Toll-Free~~~No~~~~No~~~~~No~No~~~~~~~~
+885~General Purpose Code~No~Set aside for toll free~No~No~~N~Toll-Free~~~No~~~~No~~~~~No~No~~~~~~~~
+886~General Purpose Code~No~Set aside for toll free~No~No~~N~Toll-Free~~~No~~~~No~~~~~No~No~~~~~~~~
+887~General Purpose Code~No~Set aside for toll free~No~No~~N~Toll-Free~~~No~~~~No~~~~~No~No~~~~~~~~
+888~Easily Recognizable Code~Yes~~No~Yes~~N~Toll-Free~NANP area~~Yes~03/01/1996 12:00:00 AM~~IL95/05-010~~~800~~~~No~~~~~~~~
+889~General Purpose Code~No~Set aside for toll free~No~No~~N~Toll-Free~~~No~~~~No~~~~~No~No~~~~~~~~
+890~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+891~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+892~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+893~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+894~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+895~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+896~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+897~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+898~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+899~Easily Recognizable Code~No~Expansion Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+900~Easily Recognizable Code~Yes~~No~Yes~01/01/1971 12:00:00 AM~N~Premium Services~NANP area~~Yes~01/01/1971 12:00:00 AM~~~~~~~~~No~~~~~~~~
+901~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~TN~US~Yes~01/01/1947 12:00:00 AM~~247 224~No~~~C~247~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+902~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~Nova Scotia, Prince Edward Island~CANADA~Yes~01/01/1947 12:00:00 AM~~~No~~~A~~No~No~7D~1+10D~NA~1+10D~NA~NA~NA~
+903~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~11/04/1990 12:00:00 AM~~313 IL89/05-038~Yes~903/430~214~C~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+904~General Purpose Code~Yes~~No~Yes~01/01/1965 12:00:00 AM~G~~FL~US~Yes~07/11/1965 12:00:00 AM~~252~No~~~E~252~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+905~General Purpose Code~Yes~~No~Yes~~G~~Ontario~CANADA~Yes~10/04/1993 12:00:00 AM~Active~420 243~Yes~905/289/365~416~E~243~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~Ten digit local dialing mandatory 9 June 2001.
+906~General Purpose Code~Yes~~No~Yes~01/01/1961 12:00:00 AM~G~~MI~US~Yes~03/19/1961 12:00:00 AM~~~No~~~EC~~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+907~General Purpose Code~Yes~~No~Yes~01/01/1957 12:00:00 AM~G~~AK~US~Yes~01/01/1957 12:00:00 AM~~~No~~~(UTC-9)~~No~No~7D~1+10D~1+10D~1+10D~NA~NA~NA~
+908~General Purpose Code~Yes~~No~Yes~~G~~NJ~US~Yes~11/01/1990 12:00:00 AM~~IL89/09-010~No~~201~E~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~1+10D~
+909~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~11/14/1992 12:00:00 AM~~334 215 206 189 115 IL92/02-022~No~~714~P~189~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+910~General Purpose Code~Yes~~No~Yes~~G~~NC~US~Yes~11/14/1993 12:00:00 AM~~~No~~919~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+911~Easily Recognizable Code~No~N11 Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+912~General Purpose Code~Yes~~No~Yes~01/01/1954 12:00:00 AM~G~~GA~US~Yes~01/01/1954 12:00:00 AM~~288 202~No~~~E~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+913~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~KS~US~Yes~01/01/1947 12:00:00 AM~~~No~~~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+914~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~NY~US~Yes~01/01/1947 12:00:00 AM~~232 211 124~No~~~E~~No~No~7D~7D~1+10D~1+10D~NA~NA~NA~
+915~General Purpose Code~Yes~~No~Yes~01/01/1947 12:00:00 AM~G~~TX~US~Yes~01/01/1947 12:00:00 AM~~322~No~~~CM~322~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+916~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~01/01/1947 12:00:00 AM~~~No~~~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+917~General Purpose Code~Yes~~No~Yes~~G~~NY~US~Yes~01/01/1992 12:00:00 AM~~402 314~Yes~212/646//917~212~E~~No~No~1+10D~1+10D~1+10D~1+10D~10D~NA~NA~
+918~General Purpose Code~Yes~~No~Yes~01/01/1953 12:00:00 AM~G~~OK~US~Yes~01/01/1953 12:00:00 AM~~403~Yes~918/539~~C~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+919~General Purpose Code~Yes~~No~Yes~01/01/1954 12:00:00 AM~G~~NC~US~Yes~01/01/1954 12:00:00 AM~Active~422 306 271~Yes~919/984~~E~271~No~Yes~7D~1+10D~10D~1+10D~10D~NA~NA~
+920~General Purpose Code~Yes~~No~Yes~~G~~WI~US~Yes~07/26/1997 12:00:00 AM~Active~417 385 040~Yes~920/274~414~C~~No~Yes~7D~1+10D~1+10D~1+10D~NA~NA~NA~
+921~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+922~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+923~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+924~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+925~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~03/14/1998 12:00:00 AM~~080 061~No~~510~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+926~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+927~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+928~General Purpose Code~Yes~~No~Yes~02/13/2001 12:00:00 AM~G~~AZ~US~Yes~06/23/2001 12:00:00 AM~~268~No~~520~M~268~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+929~General Purpose Code~Yes~~Yes~Yes~~G~~NY~US~Yes~04/16/2011 12:00:00 AM~~402~Yes~718/347/917/929~347~E~~No~No~1+10D~1+10D~1+10D~1+10D~10D~~~
+930~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+931~General Purpose Code~Yes~~No~Yes~~G~~TN~US~Yes~09/15/1997 12:00:00 AM~~081~No~~615~EC~~No~No~7D~1+10D~7D~1+10D~NA~NA~NA~
+932~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+933~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+934~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+935~General Purpose Code~Yes~~Yes~No~~G~~~US~No~~~~No~~~~~No~No~TBD~TBD~TBD~TBD~TBD~TBD~TBD~
+936~General Purpose Code~Yes~~No~Yes~09/02/1999 12:00:00 AM~G~~TX~US~Yes~02/19/2000 12:00:00 AM~~201~No~~409~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+937~General Purpose Code~Yes~~No~Yes~~G~~OH~US~Yes~09/28/1996 12:00:00 AM~~272 IL96/06-011~No~~513~E~272~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~Carriers must provide permissive 1+10D dialing for Foreign NPA Local Calls in areas where they provide optional EAS
+938~General Purpose Code~Yes~~Yes~Yes~~G~~AL~US~Yes~07/10/2010 12:00:00 AM~Active~389~Yes~256/938~256~C~~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+939~General Purpose Code~Yes~~No~Yes~05/31/2000 12:00:00 AM~G~~Puerto Rico~US~Yes~09/15/2001 12:00:00 AM~~293 259 236~Yes~787/939~787~A~236~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+940~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~05/25/1997 12:00:00 AM~~064 034~No~~817~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+941~General Purpose Code~Yes~~No~Yes~~G~~FL~US~Yes~05/28/1995 12:00:00 AM~~307 IL94/09-013~No~~813~E~307~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+942~General Purpose Code~Yes~~Yes~No~~G~~~CANADA~No~~~~No~~~~~No~No~~~~~~~~
+943~General Purpose Code~Yes~~No~No~~G~~~US~No~~~~No~~~~~No~No~~~~~~~~
+944~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+945~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+946~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+947~General Purpose Code~Yes~~No~Yes~09/02/1999 12:00:00 AM~G~~MI~US~Yes~09/07/2002 12:00:00 AM~~320 283 227 209~Yes~248/947~248~E~283~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+948~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+949~General Purpose Code~Yes~~No~Yes~~G~~CA~US~Yes~04/18/1998 12:00:00 AM~~080 071 044~No~~714~P~~No~No~7D~7D~1+10D~1+10D~1+10D~1+10D~NA~
+950~General Purpose Code~No~Carrier Access~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+951~General Purpose Code~Yes~~No~Yes~04/01/1999 12:00:00 AM~G~~CA~US~Yes~07/17/2004 12:00:00 AM~~334 215 206 189~No~~909~P~189~No~No~7D~7D~1+10D~1+10D~1+10D~NA~1+10D~
+952~General Purpose Code~Yes~~No~Yes~07/22/1999 12:00:00 AM~G~~MN~US~Yes~02/27/2000 12:00:00 AM~~200~No~~612~C~~No~No~7D~1+10D~10D~1+10D~1+10D~NA~1+10D~
+953~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+954~General Purpose Code~Yes~~No~Yes~~G~~FL~US~Yes~09/11/1995 12:00:00 AM~~321 318 291 170 IL95/08-011 IL95/11-006~Yes~954/754~305~E~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+955~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+956~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~07/07/1997 12:00:00 AM~~035~No~~210~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+957~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+958~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+959~General Purpose Code~Yes~~No~Yes~10/04/1999 12:00:00 AM~G~~CT~US~No~~Active~255 217~Yes~860/959~860~E~217~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+960~General Purpose Code~No~Reserved by INC~Yes~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+961~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+962~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+963~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+964~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+965~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+966~Easily Recognizable Code~No~Reserved by INC~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
+967~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+968~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+969~General Purpose Code~No~Reserved by INC~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+970~General Purpose Code~Yes~~No~Yes~~G~~CO~US~Yes~04/02/1995 12:00:00 AM~~IL94/09-012~No~~303~M~~No~No~7D~1+10D~10D~1+10D~10D~NA~NA~
+971~General Purpose Code~Yes~~No~Yes~05/01/1999 12:00:00 AM~G~~OR~US~Yes~10/01/2000 12:00:00 AM~~359 203 182~Yes~503/971~503~P~359~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+972~General Purpose Code~Yes~~No~Yes~~G~~TX~US~Yes~09/14/1996 12:00:00 AM~~005~Yes~214/469/972~214~C~~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+973~General Purpose Code~Yes~~No~Yes~~G~~NJ~US~Yes~06/01/1997 12:00:00 AM~~277 151 036~Yes~973/862~201~E~277~No~No~10D~10D~1+10D~1+10D~1+10D~1+10D~1+10D~Calls between the 973 and 862 NPAs can be dialed as 10D.
+974~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+975~General Purpose Code~Yes~~No~Yes~11/01/2000 12:00:00 AM~G~~MO~US~No~~Suspended~304 280 262~Yes~816/975~816~C~262~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+976~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+977~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+978~General Purpose Code~Yes~~No~Yes~~G~~MA~US~Yes~09/01/1997 12:00:00 AM~~234 122 104 095 068~Yes~978/351~508~E~234~No~No~10D~1+10D~10D~1+10D~1+10D~1+10D~NA~
+979~General Purpose Code~Yes~~No~Yes~09/02/1999 12:00:00 AM~G~~TX~US~Yes~02/19/2000 12:00:00 AM~~201~No~~409~C~~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+980~General Purpose Code~Yes~~No~Yes~09/20/1999 12:00:00 AM~G~~NC~US~Yes~04/01/2001 12:00:00 AM~~258 256 229 204~Yes~704/980~704~E~229~No~No~10D~1+10D~10D~1+10D~NA~NA~NA~
+981~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+982~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+983~General Purpose Code~Yes~~No~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+984~General Purpose Code~Yes~~No~Yes~03/26/2001 12:00:00 AM~G~~NC~US~No~04/30/2012 12:00:00 AM~Active~422 306 271~Yes~919/984~919~E~ 422 271~No~Yes~10D~1+10D~10D~1+10D~NA~NA~NA~
+985~General Purpose Code~Yes~~No~Yes~09/13/2000 12:00:00 AM~G~~LA~US~Yes~02/12/2001 12:00:00 AM~~301 242~No~~504~C~242~No~No~7D~1+10D~10D~1+10D~NA~NA~NA~
+986~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+987~General Purpose Code~Yes~~Yes~No~~G~~~~No~~~~No~~~~~No~No~~~~~~~~
+988~Easily Recognizable Code~Yes~~No~No~~N~~~~No~~~~~~~~~~No~~~~~~~~
+989~General Purpose Code~Yes~~No~Yes~09/02/1999 12:00:00 AM~G~~MI~US~Yes~04/07/2001 12:00:00 AM~Active~251 244 226 212~No~~517~E~212~No~Yes~7D~1+10D~10D~1+10D~10D~NA~NA~
+990~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+991~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+992~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+993~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+994~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+995~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+996~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+997~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+998~General Purpose Code~No~Expansion Code~No~No~~~~~~No~~~~No~~~~~No~No~~~~~~~~
+999~Easily Recognizable Code~No~Expansion Code~No~No~~~~~~No~~~~~~~~~~No~~~~~~~~
