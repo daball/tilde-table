@@ -1,2 +1,2 @@
 @echo off
-java Controller %0 %1
+java src\me\daball\tildetable\Controller %0 %1

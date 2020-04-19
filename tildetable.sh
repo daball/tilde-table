@@ -1,2 +1,2 @@
 #!/bin/sh
-java Controller %@
+java src/me/daball/tildetable/Controller %@
