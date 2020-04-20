@@ -14,16 +14,20 @@ use crate::app::handlers::dispatch::DispatchHandler;
 use crate::app::handlers::version::print_version;
 use std::io::{stdin, stdout, Write};
 
+pub fn read() -> String {
+    print!("{}", Colour::Cyan.bold().paint(PS1));
+    stdout().flush();
+    let mut cmd: String = String::from("");
+    stdin().read_line(&mut cmd)
+        .expect("Failed to read standard input.");
+    cmd
+}
+
 pub fn repl() {
     print_version();
     loop {
-        // prompt
-        print!("{}", Colour::Cyan.bold().paint(PS1));
-        stdout().flush();
         // read
-        let mut cmd: String = String::from("");
-        stdin().read_line(&mut cmd)
-            .expect("Failed to read standard input.");
+        let cmd = read();
         // eval/print
         if { let e = DispatchHandler.execute; e(&cmd) } {
             continue; // loop
