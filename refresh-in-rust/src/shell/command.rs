@@ -1,4 +1,4 @@
-use crate::tui::param::FormalParam;
+use crate::shell::param::FormalParam;
 
 pub struct Command {
     aliases: Vec<String>,

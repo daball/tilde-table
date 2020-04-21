@@ -1,11 +1,23 @@
-extern crate ansi_term;
-use ansi_term::Colour;
-use crate::tui::handler::Handler;
+#[cfg(feature="ansi_term")] extern crate ansi_term;
+#[cfg(feature="ansi_term")] use ansi_term::Colour;
+use crate::shell::handler::Handler;
+use crate::app::state::AppState;
 use crate::app::handlers::version::print_version;
+use crate::features;
 use std::clone::Clone;
 use std::cmp;
 use std::collections::HashMap;
 use std::fmt;
+
+const ALIAS_SEPARATOR: &'static str = "|";
+const PARAM_SEPARATOR: &'static str = " ";
+const PARAM_PREFIX: &'static str = "[";
+const PARAM_SUFFIX: &'static str = "]";
+
+const ALIAS_SEPARATOR_LENGTH: usize = ALIAS_SEPARATOR.len();
+const PARAM_SEPARATOR_LENGTH: usize = PARAM_SEPARATOR.len();
+const PARAM_PREFIX_LENGTH: usize = PARAM_PREFIX.len();
+const PARAM_SUFFIX_LENGTH: usize = PARAM_SUFFIX.len();
 
 #[derive(Clone)]
 struct CommandHelp {
@@ -20,36 +32,100 @@ struct Help {
 }
 
 impl Help {
-    fn max_aliases_and_params_combined_length(&self, separator_length: usize, prefix_length: usize, suffix_length: usize) -> usize {
+    fn max_aliases_and_params_combined_length(&self) -> usize {
         let mut max_length_found: usize = 0;
         for (_, cmds) in &self.categories {
             for cmd in cmds {
-                let mut length = cmd.params_combined_length(prefix_length, suffix_length);
-                length += cmd.aliases_combined_length(1);
+                let mut length = cmd.params_combined_length();
+                length += cmd.aliases_combined_length();
                 max_length_found = cmp::max(max_length_found, length);
             }
         }
         max_length_found
     }
+
+    fn print_command_list(&self) {
+        let max_aliases_length = self.max_aliases_and_params_combined_length();
+        for (name, cmds) in &self.categories {
+            println!("{} commands:", name);
+            for cmd in cmds {
+                cmd.print_general_help_line(max_aliases_length);
+            }
+        }
+    }    
 }
 
 impl CommandHelp {
-    fn aliases_combined_length(&self, separator_length: usize) -> usize {
-        let mut length = (self.aliases.len() - 1) * separator_length;
+    fn aliases_combined_length(&self) -> usize {
+        let mut length = (self.aliases.len() - 1) * ALIAS_SEPARATOR_LENGTH;
         for alias in &self.aliases {
             length += alias.len();
         }
         length
     }
-    fn params_combined_length(&self, prefix_length: usize, suffix_length: usize) -> usize {
+    
+    fn params_combined_length(&self) -> usize {
         let mut length = self.params.len();
         if length > 0 {
             length = (length - 1) * 1;
             for param in &self.params {
-                length += param.len() + prefix_length + suffix_length;
+                length += param.len() + PARAM_PREFIX_LENGTH + PARAM_SUFFIX_LENGTH;
             }
         }
         length
+    }
+    
+    fn get_spaces_for_general_help_line(&self, max_aliases_length: usize) -> String {
+        " ".repeat(max_aliases_length - self.aliases_combined_length() - self.params_combined_length() + 1)
+    }
+    
+    fn get_aliases_for_general_help_line_noansi(&self) -> String {
+        self.aliases.join(ALIAS_SEPARATOR)
+    }
+    
+    #[cfg(feature="ansi_term")] 
+    fn get_aliases_for_general_help_line(&self) -> String {
+        let mut modAliases: Vec<String> = Vec::new();
+        for alias in &self.aliases {
+            modAliases.append(&mut vec![Colour::Blue.bold().paint(alias).to_string()]);
+        }
+        modAliases.join(ALIAS_SEPARATOR)
+    }
+
+    #[cfg(not(feature="ansi_term"))]
+    fn get_aliases_for_general_help_line(&self) -> String {
+        self.get_aliases_for_general_help_line_noansi()
+    }
+
+    fn get_params_for_general_help_line_noansi(&self) -> String {
+        let mut modParams: Vec<String> = Vec::new();
+        for param in &self.params {
+            modParams.append(&mut vec![fmt::format(format_args!("{}{}{}", PARAM_PREFIX, param, PARAM_SUFFIX))]);
+        }
+        fmt::format(format_args!(" {}", modParams.join(PARAM_SEPARATOR)))
+    }
+
+    #[cfg(feature="ansi_term")]
+    fn get_params_for_general_help_line(&self) -> String {
+        let mut modParams: Vec<String> = Vec::new();
+        for param in &self.params {
+            let param = Colour::Green.bold().paint(param).to_string();
+            modParams.append(&mut vec![fmt::format(format_args!("{}{}{}", PARAM_PREFIX, param, PARAM_SUFFIX))]);
+        }
+        fmt::format(format_args!(" {}", modParams.join(PARAM_SEPARATOR)))
+    }
+
+    #[cfg(not(feature="ansi_term"))]
+    fn get_params_for_general_help_line(&self) -> String {
+        self.get_params_for_general_help_line_noansi()
+    }
+    
+    fn print_general_help_line(&self, max_aliases_length: usize) {
+        let spaces = self.get_spaces_for_general_help_line(max_aliases_length);
+        let aliases = self.get_aliases_for_general_help_line();
+        let params = self.get_params_for_general_help_line();
+        let short_desc = &self.short_desc;
+        println!("  {}{}{}{}", aliases, params, spaces, short_desc);
     }
 }
 
@@ -177,7 +253,7 @@ impl CommandHelpBuilder {
 
 fn build_general_command_help() -> Help {
     Help::define()
-        .about("Processes spreadsheet data files. To use this application, type a command using the syntax below.")
+        .about(&fmt::format(format_args!("{} To use this application, type a command using the syntax below.", features::description())))
         .category("Basic")
             .command("?")
                 .alias("help")
@@ -223,46 +299,20 @@ fn build_general_command_help() -> Help {
     .build()
 }
 
-fn print_command_list(help: &Help) {
-    let separator = "|";
-    let param_separator = " ";
-    let param_prefix = "[";
-    let param_suffix = "]";
-    let max_aliases_length = help.max_aliases_and_params_combined_length(separator.len(), param_prefix.len(), param_suffix.len());
-    for (name, cmds) in &help.categories {
-        println!("{} commands:", name);
-        for cmd in cmds {
-            let spaces = " ".repeat(max_aliases_length - cmd.aliases_combined_length(separator.len()) - cmd.params_combined_length(param_prefix.len(), param_suffix.len()) + 1);
-            let mut modAliases: Vec<String> = Vec::new();
-            for alias in &cmd.aliases {
-                modAliases.append(&mut vec![Colour::Blue.bold().paint(alias).to_string()]);
-            }
-            let aliases = modAliases.join(separator);
-            let mut modParams: Vec<String> = Vec::new();
-            for param in &cmd.params {
-                let param = Colour::Green.bold().paint(param).to_string();
-                modParams.append(&mut vec![fmt::format(format_args!("{}{}{}", param_prefix, param, param_suffix))]);
-            }
-            let params = fmt::format(format_args!(" {}", modParams.join(param_separator)));
-            println!("  {}{}{}{}", aliases, params, spaces, cmd.short_desc);
-        }
-    }
-}
-
 pub fn print_help() {
     let help: Help = build_general_command_help();
     print_version();
     println!("{}", help.about);
     println!();
-    print_command_list(&help);
+    help.print_command_list();
     println!();
 }
 
-fn validate(cmd: &str) -> bool {
+fn validate(_state: &mut AppState, cmd: &str) -> bool {
     cmd.eq("?") || cmd.eq("help")
 }
 
-fn execute(cmd: &str) -> bool {
+fn execute(_state: &mut AppState, _cmd: &str) -> bool {
     print_help();
     true // continue read-eval-print-loop
 }
