@@ -2,7 +2,7 @@ mod shell;
 mod app;
 mod features;
 
-use std::io::{stdout};
+// use std::io::{stdout};
 // use app::state::AppState;
 // use app::state::AppTerminal;
 

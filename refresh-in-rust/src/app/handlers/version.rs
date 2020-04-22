@@ -50,7 +50,7 @@ fn validate(_state: &mut AppState, cmd: &str) -> bool {
     cmd.eq("ver") || cmd.eq("version")
 }
 
-fn execute(_state: &mut AppState, cmd: &str) -> bool {
+fn execute(_state: &mut AppState, _cmd: &str) -> bool {
     print_version();
     true // continue read-eval-print-loop
 }

@@ -189,13 +189,13 @@ impl HelpCategoryBuilder {
         self.helpBuilder.help.categories.insert(self.name, self.commands);
         self.helpBuilder
     }
-    fn about(mut self, about: &str) -> HelpBuilder {
+    fn about(self, about: &str) -> HelpBuilder {
         self.done().about(about)
     }
-    fn category(mut self, name: &str) -> HelpCategoryBuilder {
+    fn category(self, name: &str) -> HelpCategoryBuilder {
         self.done().category(name)
     }
-    fn build(mut self) -> Help {
+    fn build(self) -> Help {
         self.done().build()
     }
 }
@@ -237,16 +237,16 @@ impl CommandHelpBuilder {
         self.helpCategoryBuilder.commands.append(&mut vec![self.cmd]);
         self.helpCategoryBuilder
     }
-    fn command(mut self, name: &str) -> CommandHelpBuilder {
+    fn command(self, name: &str) -> CommandHelpBuilder {
         self.done().command(name)
     }
-    fn about(mut self, about: &str) -> HelpBuilder {
+    fn about(self, about: &str) -> HelpBuilder {
         self.done().about(about)
     }
-    fn category(mut self, name: &str) -> HelpCategoryBuilder {
+    fn category(self, name: &str) -> HelpCategoryBuilder {
         self.done().category(name)
     }
-    fn build(mut self) -> Help {
+    fn build(self) -> Help {
         self.done().build()
     }
 }

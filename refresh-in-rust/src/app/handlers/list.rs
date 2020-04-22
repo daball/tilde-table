@@ -1,20 +1,27 @@
 #[cfg(feature="ansi_term")] extern crate ansi_term;
-extern crate dirs;
 #[cfg(feature="ansi_term")] use ansi_term::Colour;
+extern crate dirs;
 use crate::shell::handler::Handler;
 use crate::app::state::AppState;
+use crate::app::ui::render::list as render;
+use std::cmp::Ordering;
 use std::path::{Path, PathBuf};
 use std::fmt;
-// use std::io::Write;
 
 #[derive(PartialEq)]
+#[derive(Eq)]
+#[derive(PartialOrd)]
+#[derive(Ord)]
 enum FsItemType {
-    Nothing,
-    Dir,
-    File,
-    SomethingElse,
+    Nothing = 0,
+    Dir = 1,
+    File = 2,
+    SomethingElse = 3,
 }
 
+#[derive(PartialEq)]
+#[derive(Eq)]
+#[derive(Ord)]
 struct FsItem {
     r#type: FsItemType,
     path: PathBuf,
@@ -26,147 +33,210 @@ struct FsItem {
     enumerated_items: Option<Vec<FsItem>>,
 }
 
+impl PartialOrd for FsItem {
+    fn lt(&self, other: &Self) -> bool {
+        let names: (String, String) = (
+            match &self.name {
+                Some(name) => name.to_string(),
+                None => String::default(),
+            },
+            match &other.name {
+                Some(name) => name.to_string(),
+                None => String::default(),
+            }
+        );
+        self.r#type.cmp(&other.r#type) == std::cmp::Ordering::Less ||
+            names.0.cmp(&names.1) == std::cmp::Ordering::Less ||
+            self.path.cmp(&other.path) == std::cmp::Ordering::Less
+    }
+    fn gt(&self, other: &Self) -> bool {
+        let names: (String, String) = (
+            match &self.name {
+                Some(name) => name.to_string(),
+                None => String::default(),
+            },
+            match &other.name {
+                Some(name) => name.to_string(),
+                None => String::default(),
+            }
+        );
+        self.r#type.cmp(&other.r#type) == std::cmp::Ordering::Greater ||
+            names.0.cmp(&names.1) == std::cmp::Ordering::Greater ||
+            self.path.cmp(&other.path) == std::cmp::Ordering::Greater
+    }
+    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
+        if self.lt(other) {
+            Some(Ordering::Less)
+        } else if self.gt(other) {
+            Some(Ordering::Greater)
+        } else {
+            Some(Ordering::Equal)
+        }
+    }
+}
+
 // fn get_home() -> String {
-//     dirs::get_home().expect("Could not get home directory.")
+//     dirs::get_home().unwrap_or(String::new("."))
 // }
 
 impl FsItem {
-    fn print_search_path_noansi(&self) {
-        let s: String = match &self.canonical_path {
-            Some(canonical_path) => fmt::format(format_args!("Search path: {} -> {}",
-                self.path.as_os_str().to_str().unwrap_or("invalid path!"),
-                canonical_path.as_os_str().to_str().unwrap_or("invalid path!")
-            )),
-            None => fmt::format(format_args!("Search path: {}",
-                self.path.as_os_str().to_str().unwrap_or("invalid path!")
-            )),
-        };
-        println!("{}", s);
-    }
-
-    #[cfg(feature="ansi_term")]
-    fn print_search_path(&self) {
-        let s: String = match &self.canonical_path {
-            Some(canonical_path) => fmt::format(format_args!("Search path: {} -> {}",
-                Colour::Red.bold().paint(self.path.as_os_str().to_str().unwrap_or("invalid path!")),
-                Colour::Red.bold().paint(canonical_path.as_os_str().to_str().unwrap_or("invalid path!"))
-            )),
-            None => fmt::format(format_args!("Search path: {}",
-                Colour::Red.bold().paint(self.path.as_os_str().to_str().unwrap_or("invalid path!"))
-            )),
-        };
-        println!("{}", s);
-    }
-
-    #[cfg(not(feature="ansi_term"))]
-    fn print_search_path(&self) {
-        self.print_search_path_noansi();
-    }
-    
-    fn print_item_noansi(&self) {
-        if self.is_symlink {
-            let r#type = match self.r#type {
-                FsItemType::Nothing => String::default(),
-                FsItemType::Dir => String::from("<SYM_D>"),
-                FsItemType::File => match &self.extension {
-                    Some(extension) => fmt::format(format_args!("<SYM>:{}", extension.to_uppercase())),
-                    None => String::default(),
-                },
-                FsItemType::SomethingElse => String::default(),
-            };
-            println!(" {}  {} -> {}",
-                r#type,
-                match &self.name {
-                    Some(name) => name.as_str(),
-                    None => "no-name!",
-                },
-                match &self.canonical_path {
-                    Some(canonical_path) => canonical_path.to_str().unwrap_or(""),
-                    None => "?",
+    fn max_info_width(&self) -> usize {
+        match &self.enumerated_items {
+            None => self.info_area_noansi().len(),
+            Some(enumerated_items) => {
+                let mut max_found: usize = 0;
+                for item in enumerated_items {
+                    max_found = std::cmp::max(max_found, item.max_info_width());           
                 }
-            );
-        } else {
-            let r#type: String = match self.r#type {
-                FsItemType::Nothing => String::default(),
-                FsItemType::Dir => String::from("<DIR>"),
-                FsItemType::File => match &self.extension {
-                    Some(extension) => fmt::format(format_args!("{}", extension.to_uppercase())),
-                    None => String::default(),
-                },
-                FsItemType::SomethingElse => String::default(),
-            };
-            println!(" {}  {}", r#type, match &self.name {
-                Some(name) => name.as_str(),
-                None => "no-name!",
-            });
-        }
-    }
-
-    #[cfg(feature="ansi_term")]
-    fn print_item(&self) {
-        if self.is_symlink {
-            let r#type: String = match self.r#type {
-                FsItemType::Nothing => String::default(),
-                FsItemType::Dir => Colour::Yellow.bold().paint("<SYM_D>").to_string(),
-                FsItemType::File => match &self.extension {
-                    Some(extension) => fmt::format(format_args!("<SYM>:{}", Colour::Cyan.bold().paint(extension.to_uppercase()).to_string())),
-                    None => String::default(),
-                },
-                FsItemType::SomethingElse => String::default(),
-            };
-            println!(" {}  {} -> {}",
-                r#type,
-                match &self.name {
-                    Some(name) => name.as_str(),
-                    None => "no-name!",
-                },
-                match &self.canonical_path {
-                    Some(canonical_path) => canonical_path.to_str().unwrap_or(""),
-                    None => "?",
-                }
-            );
-        } else {
-            let r#type: String = match self.r#type {
-                FsItemType::Nothing => String::default(),
-                FsItemType::Dir => Colour::Green.bold().paint("<DIR>").to_string(),
-                FsItemType::File => match &self.extension {
-                    Some(extension) => fmt::format(format_args!("{}", ansi_term::Colour::Blue.bold().paint(extension.to_uppercase()).to_string())),
-                    None => String::default(),
-                }
-                FsItemType::SomethingElse => String::default(),
-            };
-            println!(" {}  {}",
-                r#type,
-                match &self.name {
-                    Some(name) => name.as_str(),
-                    None => "no-name!",
-                }
-            );
+                max_found
+            }
         }
     }
     
-    #[cfg(not(feature="ansi_term"))]
-    fn print_item(&self) {
-        self.print_item_noansi();
+    fn pad_info_area(&self, max_info_width: usize) -> String {
+        " ".repeat(max_info_width - self.info_area_noansi().len())
+    }
+
+    fn info_area_noansi(&self) -> String {
+        if self.is_symlink {
+            match self.r#type {
+                FsItemType::Nothing => String::default(),
+                FsItemType::Dir => render::symlink::dir::info::from_noansi(),
+                FsItemType::File => {
+                    let extension: String = match &self.extension {
+                        Some(extension) => extension.to_string(),
+                        None => String::from("file"),
+                    };
+                    render::symlink::file::info::from_noansi(&extension)
+                },
+                FsItemType::SomethingElse => String::default()
+            }
+        } else {
+            match self.r#type {
+                FsItemType::Nothing => String::default(),
+                FsItemType::Dir => render::dir::info::from_noansi(),
+                FsItemType::File => {
+                    let extension: String = match &self.extension {
+                        Some(extension) => extension.to_string(),
+                        None => String::from("file"),
+                    };
+                    render::file::info::from_noansi(&extension)
+                },
+                FsItemType::SomethingElse => String::default()
+            }
+        }
+    }
+
+    fn info_area(&self) -> String {
+        if self.is_symlink {
+            match self.r#type {
+                FsItemType::Nothing => String::default(),
+                FsItemType::Dir => render::symlink::dir::info::from(),
+                FsItemType::File => {
+                    let extension: String = match &self.extension {
+                        Some(extension) => extension.to_string(),
+                        None => String::from("file"),
+                    };
+                    render::symlink::file::info::from(&extension)
+                },
+                FsItemType::SomethingElse => String::default()
+            }
+        } else {
+            match self.r#type {
+                FsItemType::Nothing => String::default(),
+                FsItemType::Dir => render::dir::info::from(),
+                FsItemType::File => {
+                    let extension: String = match &self.extension {
+                        Some(extension) => extension.to_string(),
+                        None => String::from("file"),
+                    };
+                    render::file::info::from(&extension)
+                },
+                FsItemType::SomethingElse => String::default()
+            }
+        }
     }
     
-    fn print_items(&self) {
+    fn name_area(&self) -> String {
+        let name = match &self.name {
+            Some(name) => name.to_string(),
+            None => String::default(),
+        };
+        if self.is_symlink {
+            let canonical_path = match &self.canonical_path {
+                Some(canonical_path) => String::from(canonical_path.to_str().unwrap_or_default()),
+                None => String::default(),
+            };
+            match self.r#type {
+                FsItemType::Nothing => name,
+                FsItemType::Dir => render::symlink::to_dir::name::from(&name, &canonical_path),
+                FsItemType::File => render::symlink::to_file::name::from(&name, &canonical_path),
+                FsItemType::SomethingElse => name,
+            }
+        } else {
+            match self.r#type {
+                FsItemType::Nothing => name,
+                FsItemType::Dir => render::dir::name::from(&name),
+                FsItemType::File => render::file::name::from(&name),
+                FsItemType::SomethingElse => name,
+            }
+        }
+    }
+    
+    fn print_search_path(&self) {
+        let path: &str = self.path.as_os_str().to_str().unwrap_or_default();
+        println!("{}", match &self.canonical_path {
+            Some(canonical_path) => {
+                let canonical_path: &str = canonical_path.as_os_str().to_str().unwrap_or_default();
+                if path.eq(canonical_path) {
+                    render::search_path::from(path)
+                } else {
+                    render::search_path::with_canonical_path(path, canonical_path)
+                }
+            },
+            None => render::search_path::from(path),
+        });
+    }
+
+    fn item_line(&self, max_info_width: usize) -> String {
+        let name = self.name_area();
+        let pad_info = self.pad_info_area(max_info_width);
+        let info = self.info_area();
+        format!("{}{} {}", pad_info, info, name)
+    }
+
+    fn items_lines(&self) -> Vec<String> {
+        let max_info_width: usize = self.max_info_width();
+        let mut v_lines: Vec<String> = Vec::new();
         match &self.enumerated_items {
             Some(enumerated_items) => {
                 // print directories first
                 for item in enumerated_items {
                     if item.r#type == FsItemType::Dir {
-                        item.print_item();
+                        v_lines.append(&mut vec![item.item_line(max_info_width)]);
                     }
                 }
                 // print files and symlinks next
                 for item in enumerated_items {
                     if item.r#type == FsItemType::File {
-                        item.print_item();
+                        v_lines.append(&mut vec![item.item_line(max_info_width)]);
                     }
                 }
             },
             None => {},
+        }
+        v_lines
+    }
+
+    fn print_item(&self) {
+        let max_info_width: usize = self.max_info_width();
+        println!("{}", self.item_line(max_info_width));
+    }
+    
+    fn print_items(&self) {
+        let v_lines = self.items_lines();
+        for line in &v_lines {
+            println!("{}", line);
         }
     }
     
@@ -218,7 +288,8 @@ impl FsItem {
                     }
                 },
                 Err(_e) => {}
-            }
+            };
+            v_fsi.sort();
             Some(v_fsi)
         } else {
             None
@@ -248,32 +319,6 @@ impl FsItem {
     }
 }
 
-// fn print_dirs(path: &str) {
-//     let q = std::fs::read_dir(path);
-//     if q.is_err() {
-//         println!("{}", q.err().unwrap());
-//     } else {
-//         let dir: std::fs::ReadDir = q.ok().unwrap();
-//         for entry in dir { // Lap 1: <DIR>
-//             if entry.is_err() {
-//                 println!("{}", entry.err().unwrap());
-//             } else {
-//                 let e = entry.ok().unwrap();
-//                 let etype = e.file_type();
-//                 let name = String::from(e.file_name().to_str().unwrap());
-//                 if etype.is_err() {
-//                     println!("{}", etype.err().unwrap());
-//                 } else if !name.starts_with(".") {
-//                     let etype = etype.ok().unwrap();
-//                     if etype.is_dir() {
-//                         print_dir(name);
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
 fn validate(_state: &mut AppState, cmd: &str) -> bool {
     cmd.starts_with("list") || cmd.starts_with("ls") || cmd.starts_with("dir")
 }
@@ -287,7 +332,8 @@ fn execute(_state: &mut AppState, cmd: &str) -> bool {
     fsi.print_search_path();
     match fsi.r#type {
         FsItemType::Nothing => {
-            println!("nothing! {}", fsi.path.as_os_str().to_str().unwrap_or("no path!"));
+            println!("Invalid file or directory. {} does not exist.", path);
+            // println!("nothing! {}", fsi.path.as_os_str().to_str().unwrap_or("no path!"));
         },
         FsItemType::File => {
             fsi.print_item();
@@ -299,40 +345,6 @@ fn execute(_state: &mut AppState, cmd: &str) -> bool {
             println!("something else! {}", fsi.path.as_os_str().to_str().unwrap_or("no path!"));
         },
     }
-    // fsi.print_items();
-    // print_search_path(&path);
-    // print_dirs(&path);
-    // let q = std::fs::read_dir(path);
-    // if q.is_err() {
-    //     println!("{}", q.err().unwrap());
-    // } else {
-    //     let dir: std::fs::ReadDir = q.ok().unwrap();
-    //     for entry in dir { // Lap 2: everything else
-    //         if entry.is_err() {
-    //             println!("{}", entry.err().unwrap());
-    //         } else {
-    //             let e = entry.ok().unwrap();
-    //             let etype = e.file_type();
-    //             let name = String::from(e.file_name().to_str().unwrap());
-    //             if etype.is_err() {
-    //                 println!("{}", etype.err().unwrap());
-    //             } else if !name.starts_with(".") {
-    //                 let etype = etype.ok().unwrap();
-    //                 if etype.is_symlink() {
-    //                     print_symlink(&name);
-    //                 } else if etype.is_file() {
-    //                     if name.to_lowercase().ends_with(".txt") {
-    //                         println!("  {}   {}", ansi_term::Colour::Blue.bold().paint("TXT"), name);
-    //                     } else if name.to_lowercase().ends_with(".csv") {
-    //                         println!("  {}   {}", ansi_term::Colour::Blue.bold().paint("CSV"), name);
-    //                     } else if name.to_lowercase().ends_with(".tsv") {
-    //                         println!("  {}   {}", ansi_term::Colour::Blue.bold().paint("TSV"), name);
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
     true // continue read-eval-print-loop
 }
 

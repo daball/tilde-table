@@ -4,7 +4,7 @@ use crate::app::state::AppState;
 use crate::app::handlers::utils::always_true as validate;
 use crate::shell::handler::Handler;
 
-fn execute(state: &mut AppState, cmd: &str) -> bool {
+fn execute(_state: &mut AppState, cmd: &str) -> bool {
     println!("Invalid command {}. Enter {} to list possible commands.", cmd, "help"); // invalid command
     true // continue read-eval-print-loop
 }
