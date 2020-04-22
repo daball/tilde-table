@@ -1,12 +1,9 @@
-#[cfg(feature="ansi_term")] extern crate ansi_term;
-#[cfg(feature="ansi_term")] use ansi_term::Colour;
 extern crate dirs;
 use crate::shell::handler::Handler;
 use crate::app::state::AppState;
 use crate::app::ui::render::list as render;
 use std::cmp::Ordering;
 use std::path::{Path, PathBuf};
-use std::fmt;
 
 #[derive(PartialEq)]
 #[derive(Eq)]
@@ -198,6 +195,29 @@ impl FsItem {
         });
     }
 
+    fn item_count(&self) -> usize {
+        match &self.enumerated_items {
+            Some(enumerated_items) => {
+                let mut count = 0;
+                for item in enumerated_items {
+                    count += item.item_count();
+                }
+                count
+            }
+            None => {
+                if self.exists {
+                    1
+                } else {
+                    0
+                }
+            }
+        }
+    }
+    
+    fn count_line(&self) -> String {
+        render::count::from(self.item_count())
+    }
+
     fn item_line(&self, max_info_width: usize) -> String {
         let name = self.name_area();
         let pad_info = self.pad_info_area(max_info_width);
@@ -231,6 +251,10 @@ impl FsItem {
     fn print_item(&self) {
         let max_info_width: usize = self.max_info_width();
         println!("{}", self.item_line(max_info_width));
+    }
+
+    fn print_items_count(&self) {
+        println!("{}", self.count_line())
     }
     
     fn print_items(&self) {
@@ -330,6 +354,7 @@ fn execute(_state: &mut AppState, cmd: &str) -> bool {
     let path = if path.eq("") { "." } else { path };
     let fsi = FsItem::from(path);
     fsi.print_search_path();
+    fsi.print_items_count();
     match fsi.r#type {
         FsItemType::Nothing => {
             println!("Invalid file or directory. {} does not exist.", path);
@@ -348,6 +373,7 @@ fn execute(_state: &mut AppState, cmd: &str) -> bool {
     true // continue read-eval-print-loop
 }
 
+#[allow(non_upper_case_globals)]
 pub const ListHandler: Handler = Handler {
     validate,
     execute,

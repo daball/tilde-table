@@ -40,6 +40,7 @@ pub fn dispatch(state: &mut AppState, cmd: &str) -> bool {
     } else { false }
 }
 
+#[allow(non_upper_case_globals)]
 pub const DispatchHandler: Handler = Handler {
     validate,
     execute: dispatch,

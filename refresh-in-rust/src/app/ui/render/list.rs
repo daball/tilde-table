@@ -1,8 +1,8 @@
 #[cfg(feature="ansi_term")] extern crate ansi_term;
 #[cfg(feature="ansi_term")] use super::style as style;
-use std::fmt;
+#[allow(unused_imports)]
 
-#[cfg(feature="ansi_term")]
+#[cfg(feature="ansi_term")] #[allow(non_upper_case_globals)] #[allow(unused_imports)]
 pub mod colors {
     #[cfg(feature="ansi_term")] use ansi_term::{Colour as Color, Colour::{
         Red, Blue, Green, Yellow, Cyan, Purple, White
@@ -20,7 +20,7 @@ pub mod colors {
     #[cfg(feature="ansi_term")] pub const SymlinkFileNameColor: Color = Purple;
 }
 
-#[cfg(feature="ansi_term")]
+#[cfg(feature="ansi_term")] #[allow(non_snake_case)]
 pub mod styles {
     #[cfg(feature="ansi_term")] use ansi_term::Style;
     #[cfg(feature="ansi_term")] use super::colors::{

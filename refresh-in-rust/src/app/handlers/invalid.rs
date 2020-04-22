@@ -9,6 +9,7 @@ fn execute(_state: &mut AppState, cmd: &str) -> bool {
     true // continue read-eval-print-loop
 }
 
+#[allow(non_upper_case_globals)]
 pub const InvalidHandler: Handler = Handler {
     validate,
     execute,

@@ -24,6 +24,7 @@ fn execute(_state: &mut AppState, _cmd: &str) -> bool {
     false // break read-eval-print-loop
 }
 
+#[allow(non_upper_case_globals)]
 pub const ExitHandler: Handler = Handler {
     validate,
     execute,

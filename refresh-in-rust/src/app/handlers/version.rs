@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 #[cfg(feature="ansi_term")] extern crate ansi_term;
 #[cfg(feature="ansi_term")] use ansi_term::Colour;
 use crate::app::state::AppState;
@@ -55,6 +56,7 @@ fn execute(_state: &mut AppState, _cmd: &str) -> bool {
     true // continue read-eval-print-loop
 }
 
+#[allow(non_upper_case_globals)]
 pub const VersionHandler: Handler = Handler {
     validate,
     execute,

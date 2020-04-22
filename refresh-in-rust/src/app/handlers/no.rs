@@ -8,6 +8,7 @@ fn validate(_state: &mut AppState, cmd: &str) -> bool {
     cmd.is_empty()
 }
 
+#[allow(non_upper_case_globals)]
 pub const NoHandler: Handler = Handler {
     validate,
     execute, // always true
