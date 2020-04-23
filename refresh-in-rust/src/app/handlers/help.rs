@@ -67,7 +67,7 @@ impl CommandHelp {
     fn params_combined_length(&self) -> usize {
         let mut length = self.params.len();
         if length > 0 {
-            length = (length - 1) * 1;
+            length = (length - 1) * PARAM_SEPARATOR_LENGTH;
             for param in &self.params {
                 length += param.len() + PARAM_PREFIX_LENGTH + PARAM_SUFFIX_LENGTH;
             }
@@ -85,11 +85,11 @@ impl CommandHelp {
     
     #[cfg(feature="ansi_term")] 
     fn get_aliases_for_general_help_line(&self) -> String {
-        let mut modAliases: Vec<String> = Vec::new();
+        let mut mod_aliases: Vec<String> = Vec::new();
         for alias in &self.aliases {
-            modAliases.append(&mut vec![Colour::Blue.bold().paint(alias).to_string()]);
+            mod_aliases.append(&mut vec![Colour::Blue.bold().paint(alias).to_string()]);
         }
-        modAliases.join(ALIAS_SEPARATOR)
+        mod_aliases.join(ALIAS_SEPARATOR)
     }
 
     #[cfg(not(feature="ansi_term"))]
@@ -98,21 +98,21 @@ impl CommandHelp {
     }
 
     fn get_params_for_general_help_line_noansi(&self) -> String {
-        let mut modParams: Vec<String> = Vec::new();
+        let mut mod_params: Vec<String> = Vec::new();
         for param in &self.params {
-            modParams.append(&mut vec![fmt::format(format_args!("{}{}{}", PARAM_PREFIX, param, PARAM_SUFFIX))]);
+            mod_params.append(&mut vec![fmt::format(format_args!("{}{}{}", PARAM_PREFIX, param, PARAM_SUFFIX))]);
         }
-        fmt::format(format_args!(" {}", modParams.join(PARAM_SEPARATOR)))
+        fmt::format(format_args!(" {}", mod_params.join(PARAM_SEPARATOR)))
     }
 
     #[cfg(feature="ansi_term")]
     fn get_params_for_general_help_line(&self) -> String {
-        let mut modParams: Vec<String> = Vec::new();
+        let mut mod_params: Vec<String> = Vec::new();
         for param in &self.params {
             let param = Colour::Green.bold().paint(param).to_string();
-            modParams.append(&mut vec![fmt::format(format_args!("{}{}{}", PARAM_PREFIX, param, PARAM_SUFFIX))]);
+            mod_params.append(&mut vec![fmt::format(format_args!("{}{}{}", PARAM_PREFIX, param, PARAM_SUFFIX))]);
         }
-        fmt::format(format_args!(" {}", modParams.join(PARAM_SEPARATOR)))
+        fmt::format(format_args!(" {}", mod_params.join(PARAM_SEPARATOR)))
     }
 
     #[cfg(not(feature="ansi_term"))]
@@ -159,7 +159,7 @@ impl Help {
 // HelpCategoryBuilder builder facet
 
 struct HelpCategoryBuilder {
-    helpBuilder: HelpBuilder,
+    help_builder: HelpBuilder,
     name: String,
     commands: Vec<CommandHelp>,
 }
@@ -170,13 +170,13 @@ impl HelpBuilder {
             let name = String::from(name);
             let commands = self.help.categories.get(&name).unwrap().to_vec();
             HelpCategoryBuilder {
-                helpBuilder: self,
+                help_builder: self,
                 name: name,
                 commands: commands,
             }
         } else {
             HelpCategoryBuilder {
-                helpBuilder: self,
+                help_builder: self,
                 name: String::from(name),
                 commands: Vec::default(),
             }
@@ -186,8 +186,8 @@ impl HelpBuilder {
 
 impl HelpCategoryBuilder {
     fn done(mut self) -> HelpBuilder {
-        self.helpBuilder.help.categories.insert(self.name, self.commands);
-        self.helpBuilder
+        self.help_builder.help.categories.insert(self.name, self.commands);
+        self.help_builder
     }
     fn about(self, about: &str) -> HelpBuilder {
         self.done().about(about)
@@ -203,14 +203,14 @@ impl HelpCategoryBuilder {
 // CommandHelpBuilder builder facet
 
 struct CommandHelpBuilder {
-    helpCategoryBuilder: HelpCategoryBuilder,
+    help_category_builder: HelpCategoryBuilder,
     cmd: CommandHelp,
 }
 
 impl HelpCategoryBuilder {
     fn command(self, alias: &str) -> CommandHelpBuilder {
         CommandHelpBuilder {
-            helpCategoryBuilder: self,
+            help_category_builder: self,
             cmd: CommandHelp {
                 aliases: vec![String::from(alias)],
                 params: Vec::new(),
@@ -234,8 +234,8 @@ impl CommandHelpBuilder {
         self
     }
     fn done(mut self) -> HelpCategoryBuilder {
-        self.helpCategoryBuilder.commands.append(&mut vec![self.cmd]);
-        self.helpCategoryBuilder
+        self.help_category_builder.commands.append(&mut vec![self.cmd]);
+        self.help_category_builder
     }
     fn command(self, name: &str) -> CommandHelpBuilder {
         self.done().command(name)

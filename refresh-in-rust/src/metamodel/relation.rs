@@ -1,15 +1,37 @@
+
+
 // Enumerable intrinsic types allowable
 // TODO: Add more types
 #[derive(PartialEq, Debug)]
 pub enum Type {
     Text,
     Boolean(String, String),
+    // DefaultBoolean,
 }
 
-impl Type {
-    fn as_string(&self) -> String {
+// pub struct TextValue {
+//     r#type: 
+// }
+
+// pub struct Boolean {
+    
+// }
+
+pub trait Printable {
+    fn to_string(&self) -> String;
+}
+
+// pub struct BooleanText {
+    
+// }
+
+impl Printable for Type {
+    fn to_string(&self) -> String {
         match self {
             Type::Text => String::from("Text"),
+            // Type::DefaultBoolean => String::from(
+            //     "Boolean(True: \"true\", False: \"false\")"
+            // ),
             Type::Boolean(when_true, when_false) => format!(
                 "Boolean(True: \"{}\", False: \"{}\")",
                 when_true.as_str(),
@@ -19,12 +41,26 @@ impl Type {
     }
 }
 
-// pub enum StringValue {
+
+// pub enum TypeValue<T> {
+//     T
+// };
+
+// pub struct Value {
+//     Type:
+// }
+
+// pub enum
+
+// pub enum TextValue {
 //     String,
 // }
 
+// pub struct CustomBooleanValue
+
 // pub enum BooleanValue {
 //     bool,
+//     (bool, String, String),
 // }
 
 // pub struct TypeValue<T, V> {
@@ -105,14 +141,14 @@ impl Type {
 
 #[cfg(test)]
 mod tests {
-    use super::Type;
+    use super::{Type, Printable};
 
     #[test]
     fn inspect_type_text() {
         let expected_type: Type = Type::Text;
         const EXPECTED_TYPE_STRING: &'static str = "Text";
         let actual_type: Type = Type::Text;
-        let actual_type_string: String = actual_type.as_string();
+        let actual_type_string: String = actual_type.to_string();
         assert_eq!(actual_type, expected_type);
         assert_eq!(actual_type_string, String::from(EXPECTED_TYPE_STRING));
     }
@@ -131,10 +167,10 @@ mod tests {
         let actual_type_2: Type = Type::Boolean(String::from("yes"), String::from("no"));
         let actual_type_3: Type = Type::Boolean(String::from("on"), String::from("off"));
         let actual_type_4: Type = Type::Boolean(String::from("1"), String::from("0"));
-        let actual_type_1_string: String = actual_type_1.as_string();
-        let actual_type_2_string: String = actual_type_2.as_string();
-        let actual_type_3_string: String = actual_type_3.as_string();
-        let actual_type_4_string: String = actual_type_4.as_string();
+        let actual_type_1_string: String = actual_type_1.to_string();
+        let actual_type_2_string: String = actual_type_2.to_string();
+        let actual_type_3_string: String = actual_type_3.to_string();
+        let actual_type_4_string: String = actual_type_4.to_string();
         assert_eq!(actual_type_1, expected_type_1);
         assert_eq!(actual_type_2, expected_type_2);
         assert_eq!(actual_type_3, expected_type_3);

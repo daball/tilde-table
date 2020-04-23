@@ -1,3 +1,5 @@
+use super::command::{Command, CommandDefinition};
+
 pub struct CommandBuilder {
     command: Command
 }
@@ -6,11 +8,13 @@ impl Command {
     pub fn define() -> CommandBuilder {
         CommandBuilder {
             command: Command {
-                aliases: Vec::new(),
-                category: String::new(),
-                short_description: String::new(),
-                long_description: String::new(),
-                params: Vec::new()
+                definition: CommandDefinition {
+                    aliases: Vec::new(),
+                    category: String::new(),
+                    short_description: String::new(),
+                    long_description: String::new(),
+                    params: Vec::new()
+                }
             }
         }
     }

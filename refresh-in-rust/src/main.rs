@@ -1,6 +1,7 @@
 pub mod shell;
 pub mod app;
 pub mod features;
+pub mod io;
 pub mod metamodel;
 
 // use std::io::{stdout};
