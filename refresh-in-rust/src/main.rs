@@ -1,6 +1,7 @@
-mod shell;
-mod app;
-mod features;
+pub mod shell;
+pub mod app;
+pub mod features;
+pub mod metamodel;
 
 // use std::io::{stdout};
 // use app::state::AppState;
