@@ -16,6 +16,9 @@ pub fn print_version_noansi() {
     println!("features: {}",
         version::features_noansi()
     );
+    println!("dependencies: {}",
+        version::dependencies_noansi()
+    );
     println!("web: {}, repo: {}",
         version::homepage_noansi(),
         version::repository_noansi()
@@ -37,6 +40,9 @@ pub fn print_version() {
     );
     println!("features: {}",
         version::features()
+    );
+    println!("dependencies: {}",
+        version::dependencies()
     );
     println!("web: {}, repo: {}",
         version::homepage(),

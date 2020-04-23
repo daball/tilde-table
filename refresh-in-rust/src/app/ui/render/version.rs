@@ -15,6 +15,8 @@ pub mod colors {
     #[cfg(feature="ansi_term")] pub const TargetFamilyColor: Color = Green;
     #[cfg(feature="ansi_term")] pub const FeaturesColor: Color = Yellow;
     #[cfg(feature="ansi_term")] pub const FeaturesSeparatorColor: Color = White;
+    #[cfg(feature="ansi_term")] pub const DependenciesColor: Color = Red;
+    #[cfg(feature="ansi_term")] pub const DependenciesSeparatorColor: Color = White;
     #[cfg(feature="ansi_term")] pub const HomepageColor: Color = Blue;
     #[cfg(feature="ansi_term")] pub const RepositoryColor: Color = Purple;
 }
@@ -25,7 +27,9 @@ pub mod styles {
     #[cfg(feature="ansi_term")] use super::colors::{
         FriendlyNameColor, PackageNameColor, AuthorsColor,
         VersionColor, TargetOsColor, TargetFamilyColor,
-        FeaturesColor, FeaturesSeparatorColor, HomepageColor, RepositoryColor
+        FeaturesColor, FeaturesSeparatorColor,
+        DependenciesColor, DependenciesSeparatorColor,
+        HomepageColor, RepositoryColor
     };
     // alias styles
     #[cfg(feature="ansi_term")] pub fn FriendlyNameStyle() -> Style { Style::new().fg(FriendlyNameColor).bold() }
@@ -36,6 +40,8 @@ pub mod styles {
     #[cfg(feature="ansi_term")] pub fn TargetFamilyStyle() -> Style { Style::new().fg(TargetFamilyColor).bold() }
     #[cfg(feature="ansi_term")] pub fn FeaturesStyle() -> Style { Style::new().fg(FeaturesColor).bold() }
     #[cfg(feature="ansi_term")] pub fn FeaturesSeparatorStyle() -> Style { Style::new().fg(FeaturesSeparatorColor).bold() }
+    #[cfg(feature="ansi_term")] pub fn DependenciesStyle() -> Style { Style::new().fg(DependenciesColor).bold() }
+    #[cfg(feature="ansi_term")] pub fn DependenciesSeparatorStyle() -> Style { Style::new().fg(DependenciesSeparatorColor).bold() }
     #[cfg(feature="ansi_term")] pub fn HomepageStyle() -> Style { Style::new().fg(HomepageColor).bold() }
     #[cfg(feature="ansi_term")] pub fn RepositoryStyle() -> Style { Style::new().fg(RepositoryColor).bold() }
 }
@@ -215,33 +221,35 @@ mod features {
     use super::styles::{FeaturesStyle, FeaturesSeparatorStyle};
     pub const FEATURES_SEPARATOR: &'static str = ", ";
     
-    pub fn collate_features_noansi() -> String {
+    pub fn collate_noansi() -> String {
         format!(
             "{}",
             style::plain(
-                &features::vec_string_features_enabled()
+                &features::vec_string_features()
                     .join(FEATURES_SEPARATOR)
             )
         )
     }
     
     #[cfg(not(feature="ansi_term"))]
-    pub use collate_features_noansi as collate_features;
+    pub use collate_noansi as collate;
 
     #[cfg(feature="ansi_term")]
-    pub fn collate_features() -> String {
-        let mut v_s: Vec<String> = features::vec_string_features_enabled();
+    pub fn collate() -> String {
+        let mut v_s: Vec<String> = features::vec_string_features();
         for sf in v_s.iter_mut() {
             *sf = format!(
                 "{}",
                 style::apply(&sf, &FeaturesStyle())
             );
         }
-        v_s.join(", ")
+        v_s.join(&style::apply(
+            FEATURES_SEPARATOR, &FeaturesSeparatorStyle()
+        ))
     }
 
     pub fn to_string_noansi() -> String {
-        collate_features_noansi()
+        collate_noansi()
     }
 
     #[cfg(not(feature="ansi_term"))]
@@ -249,12 +257,64 @@ mod features {
 
     #[cfg(feature="ansi_term")]
     pub fn to_string() -> String {
-        collate_features()
+        collate()
     }
 }
 
 pub use features::to_string_noansi as features_noansi;
 pub use features::to_string as features;
+
+mod dependencies {
+    use crate::features;
+    use super::style;
+    #[cfg(feature="ansi_term")]
+    use super::styles::{DependenciesStyle, DependenciesSeparatorStyle};
+    pub const DEPENDENCIES_SEPARATOR: &'static str = ", ";
+    
+    pub fn collate_noansi() -> String {
+        format!(
+            "{}",
+            style::plain(
+                &features::vec_string_dependencies()
+                    .join(&style::plain(
+                        DEPENDENCIES_SEPARATOR
+                    ))
+            )
+        )
+    }
+    
+    #[cfg(not(feature="ansi_term"))]
+    pub use collate_noansi as collate;
+
+    #[cfg(feature="ansi_term")]
+    pub fn collate() -> String {
+        let mut v_s: Vec<String> = features::vec_string_dependencies();
+        for sf in v_s.iter_mut() {
+            *sf = format!(
+                "{}",
+                style::apply(&sf, &DependenciesStyle())
+            );
+        }
+        v_s.join(&style::apply(
+            DEPENDENCIES_SEPARATOR, &DependenciesSeparatorStyle()
+        ))
+    }
+
+    pub fn to_string_noansi() -> String {
+        collate_noansi()
+    }
+
+    #[cfg(not(feature="ansi_term"))]
+    pub use to_string_noansi as to_string;
+
+    #[cfg(feature="ansi_term")]
+    pub fn to_string() -> String {
+        collate()
+    }
+}
+
+pub use dependencies::to_string_noansi as dependencies_noansi;
+pub use dependencies::to_string as dependencies;
 
 mod homepage {
     use crate::features;
