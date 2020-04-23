@@ -253,7 +253,7 @@ impl CommandHelpBuilder {
 
 fn build_general_command_help() -> Help {
     Help::define()
-        .about(&fmt::format(format_args!("{} To use this application, type a command using the syntax below.", features::description())))
+        .about(&fmt::format(format_args!("{} Type a command using the syntax below.", features::description())))
         .category("Basic")
             .command("?")
                 .alias("help")
