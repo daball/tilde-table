@@ -182,7 +182,7 @@ pub mod file {
         }
 
         #[cfg(not(feature="ansi_term"))]
-        pub use from as from_noansi;
+        pub use from_noansi as from;
 
         #[cfg(feature="ansi_term")]
         pub fn from(name: &str) -> String {

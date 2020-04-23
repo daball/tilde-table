@@ -21,6 +21,7 @@ pub mod styles {
     #[cfg(feature="ansi_term")] pub fn GoodbyeStyle() -> Style { Style::new().fg(GoodbyeColor).bold() }
 }
 
+#[cfg(feature="ansi_term")]
 use styles::GoodbyeStyle;
 
 pub fn goodbye_noansi() -> String {
