@@ -1,45 +1,46 @@
-#[allow(dead_code)]
-#[cfg(feature="ansi_term")] extern crate ansi_term;
-#[cfg(feature="ansi_term")] use ansi_term::Colour;
 use crate::app::state::AppState;
 use crate::shell::handler::Handler;
-use crate::features;
+use crate::app::ui::render::version;
 
-#[cfg(feature="ansi_term")]
-pub fn print_version() {
+pub fn print_version_noansi() {
     println!("{} ({}) by {}",
-        Colour::Blue.bold().paint(features::friendly_name()),
-        Colour::Cyan.bold().paint(features::name()),
-        Colour::Green.bold().paint(features::authors())
+        version::friendly_name_noansi(),
+        version::package_name_noansi(),
+        version::authors_noansi()
     );
-    println!("version: {}, os: {}; family: {}; features: {}",
-        Colour::Blue.bold().paint(features::version()),
-        Colour::Cyan.bold().paint(features::target_os()),
-        Colour::Green.bold().paint(features::target_family()),
-        Colour::Yellow.bold().paint(features::features_enabled())
+    println!("version: {}, os: {}; family: {}",
+        version::version_noansi(),
+        version::target_os_noansi(),
+        version::target_family_noansi()
+    );
+    println!("features: {}",
+        version::features_noansi()
     );
     println!("web: {}, repo: {}",
-        Colour::Blue.bold().paint(features::homepage()),
-        Colour::Purple.bold().paint(features::repository())
+        version::homepage_noansi(),
+        version::repository_noansi()
     );
     println!("");
 }
 
-pub fn print_version_noansi() {
+#[cfg(feature="ansi_term")]
+pub fn print_version() {
     println!("{} ({}) by {}",
-        features::friendly_name(),
-        features::name(),
-        features::authors()
+        version::friendly_name(),
+        version::package_name(),
+        version::authors()
     );
-    println!("version: {}, os: {}; family: {}; features: {}",
-        features::version(),
-        features::target_os(),
-        features::target_family(),
-        features::features_enabled()
+    println!("version: {}, os: {}; family: {}",
+        version::version(),
+        version::target_os(),
+        version::target_family()
+    );
+    println!("features: {}",
+        version::features()
     );
     println!("web: {}, repo: {}",
-        features::homepage(),
-        features::repository()
+        version::homepage(),
+        version::repository()
     );
     println!("");
 }

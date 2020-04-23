@@ -1,6 +1,6 @@
+#![allow(unused_imports)]
 #[cfg(feature="ansi_term")] extern crate ansi_term;
-#[cfg(feature="ansi_term")] use super::style as style;
-#[allow(unused_imports)]
+use super::style as style;
 
 #[cfg(feature="ansi_term")] #[allow(non_upper_case_globals)] #[allow(unused_imports)]
 pub mod colors {
@@ -42,8 +42,9 @@ pub mod styles {
 }
 
 pub mod search_path {
+    use super::style;
     #[cfg(feature="ansi_term")]
-    use super::{style, styles::SearchPathStyle};
+    use super::styles::SearchPathStyle;
     
     pub fn from_noansi(path: &str) -> String {
         format!(
@@ -85,8 +86,9 @@ pub mod search_path {
 }
 
 pub mod count {
+    use super::style;
     #[cfg(feature="ansi_term")]
-    use super::{style, styles::CountStyle};
+    use super::styles::CountStyle;
 
     pub fn from_noansi(count: usize) -> String {
         format!(
@@ -108,12 +110,14 @@ pub mod count {
 }
 
 pub mod dir {
+    use super::style;
     #[cfg(feature="ansi_term")]
-    use super::{style, styles};
+    use super::styles;
     
     pub mod name {
+        use super::style;
         #[cfg(feature="ansi_term")]
-        use super::{style, styles::DirNameStyle};
+        use super::styles::DirNameStyle;
         
         pub fn from_noansi(name: &str) -> String {
             format!(
@@ -135,8 +139,9 @@ pub mod dir {
     }
     
     pub mod info {
+        use super::style;
         #[cfg(feature="ansi_term")]
-        use super::{style, styles::DirInfoStyle};
+        use super::styles::DirInfoStyle;
         const DIR_INFO: &'static str = "DIR";
         
         pub fn from_noansi() -> String {
@@ -160,12 +165,14 @@ pub mod dir {
 }
 
 pub mod file {
+    use super::style;
     #[cfg(feature="ansi_term")]
-    use super::{style, styles};
+    use super::styles;
     
     pub mod name {
+        use super::style;
         #[cfg(feature="ansi_term")]
-        use super::{style, styles::FileNameStyle};
+        use super::styles::FileNameStyle;
 
         pub fn from_noansi(name: &str) -> String {
             format!(
@@ -186,8 +193,9 @@ pub mod file {
         }
     }
     pub mod info {
+        use super::style;
         #[cfg(feature="ansi_term")]
-        use super::{style, styles::FileInfoStyle};
+        use super::styles::FileInfoStyle;
         
         pub fn from_noansi(extension: &str) -> String {
             format!(
@@ -210,16 +218,19 @@ pub mod file {
 }
 
 pub mod symlink {
+    use super::style;
     #[cfg(feature="ansi_term")]
-    use super::{style, styles};
+    use super::styles;
 
     pub mod dir {
+        use super::style;
         #[cfg(feature="ansi_term")]
-        use super::{style, styles};
+        use super::styles;
 
         pub mod name {
+            use super::style;
             #[cfg(feature="ansi_term")]
-            use super::{style, styles::SymlinkDirNameStyle};
+            use super::styles::SymlinkDirNameStyle;
 
             pub fn from_noansi(name: &str) -> String {
                 format!(
@@ -241,8 +252,9 @@ pub mod symlink {
         }
         
         pub mod info {
+            use super::style;
             #[cfg(feature="ansi_term")]
-            use super::{style, styles::SymlinkDirInfoStyle};
+            use super::styles::SymlinkDirInfoStyle;
             const SYMD_INFO: &'static str = "SYMD";
             
             pub fn from_noansi() -> String {
@@ -276,12 +288,14 @@ pub mod symlink {
     }
     
     pub mod file {
+        use super::style;
         #[cfg(feature="ansi_term")]
-        use super::{style, styles};
+        use super::styles;
 
         pub mod name {
+            use super::style;
             #[cfg(feature="ansi_term")]
-            use super::{style, styles::SymlinkFileNameStyle};
+            use super::styles::SymlinkFileNameStyle;
 
             pub fn from_noansi(name: &str) -> String {
                 format!(
@@ -303,8 +317,9 @@ pub mod symlink {
         }
         
         pub mod info {
+            use super::style;
             #[cfg(feature="ansi_term")]
-            use super::{style, styles::SymlinkFileInfoStyle};
+            use super::styles::SymlinkFileInfoStyle;
             pub const SYM_INFO: &'static str = "SYM";
             
             pub fn from_noansi(extension: &str) -> String {

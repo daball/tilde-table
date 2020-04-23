@@ -43,14 +43,26 @@ pub const VERSION_PRE: &'static str = env!("CARGO_PKG_VERSION_PRE");
 #[cfg(feature="crossterm")]             pub const USE_FEATURE_CROSSTERM: bool = true;
 #[cfg(not(feature="crossterm"))]        pub const USE_FEATURE_CROSSTERM: bool = false;
 
+#[cfg(feature="csv")]                   pub const USE_FEATURE_CSV: bool = true;
+#[cfg(not(feature="csv"))]              pub const USE_FEATURE_CSV: bool = false;
+
 #[cfg(feature="http")]                  pub const USE_FEATURE_HTTP: bool = true;
 #[cfg(not(feature="http"))]             pub const USE_FEATURE_HTTP: bool = false;
+
+#[cfg(feature="json")]                  pub const USE_FEATURE_JSON: bool = true;
+#[cfg(not(feature="json"))]             pub const USE_FEATURE_JSON: bool = false;
 
 #[cfg(feature="default")]               pub const USE_FEATURE_DEFAULT: bool = true;
 #[cfg(not(feature="default"))]          pub const USE_FEATURE_DEFAULT: bool = false;
 
 #[cfg(feature="responsive_tui")]        pub const USE_FEATURE_RESPONSIVE_TUI: bool = true;
 #[cfg(not(feature="responsive_tui"))]   pub const USE_FEATURE_RESPONSIVE_TUI: bool = false;
+
+#[cfg(feature="serde")]                 pub const USE_FEATURE_SERDE: bool = true;
+#[cfg(not(feature="serde"))]            pub const USE_FEATURE_SERDE: bool = false;
+
+#[cfg(feature="serde_json")]            pub const USE_FEATURE_SERDE_JSON: bool = true;
+#[cfg(not(feature="serde_json"))]       pub const USE_FEATURE_SERDE_JSON: bool = false;
 
 #[cfg(feature="tokio")]                 pub const USE_FEATURE_TOKIO: bool = true;
 #[cfg(not(feature="tokio"))]            pub const USE_FEATURE_TOKIO: bool = false;
@@ -72,9 +84,13 @@ pub enum Feature {
     AnsiTerm,
     AsyncIo,
     Crossterm,
+    Csv,
     Http,
+    Json,
     None,
     ResponsiveTui,
+    Serde,
+    SerdeJson,
     Termion,
     Tokio,
     WebClient,
@@ -88,9 +104,13 @@ impl Feature {
             Feature::AnsiTerm => "ansi_term",
             Feature::AsyncIo => "async_io",
             Feature::Crossterm => "crossterm",
+            Feature::Csv => "csv",
             Feature::Http => "http",
+            Feature::Json => "json",
             Feature::None => "none",
             Feature::ResponsiveTui => "responsive_tui",
+            Feature::Serde => "serde",
+            Feature::SerdeJson => "serde_json",
             Feature::Termion => "termion",
             Feature::Tokio => "tokio",
             Feature::WebClient => "web_client",
@@ -154,11 +174,23 @@ pub fn vec_features_enabled() -> Vec<Feature> {
     if USE_FEATURE_CROSSTERM {
         v_f.append(&mut vec![Feature::Crossterm]);
     }
+    if USE_FEATURE_CSV {
+        v_f.append(&mut vec![Feature::Csv]);
+    }
     if USE_FEATURE_HTTP {
         v_f.append(&mut vec![Feature::Http]);
     }
+    if USE_FEATURE_JSON {
+        v_f.append(&mut vec![Feature::Json]);
+    }
     if USE_FEATURE_RESPONSIVE_TUI {
         v_f.append(&mut vec![Feature::ResponsiveTui]);
+    }
+    if USE_FEATURE_SERDE {
+        v_f.append(&mut vec![Feature::Serde]);
+    }
+    if USE_FEATURE_SERDE_JSON {
+        v_f.append(&mut vec![Feature::SerdeJson]);
     }
     if USE_FEATURE_TERMION {
         v_f.append(&mut vec![Feature::Termion]);
@@ -175,11 +207,12 @@ pub fn vec_features_enabled() -> Vec<Feature> {
     v_f
 }
 
-pub fn features_enabled() -> String {
+pub fn vec_string_features_enabled() -> Vec<String> {
     let v_f = vec_features_enabled();
-    let mut v_s = Vec::with_capacity(v_f.len());
+    let mut v_s: Vec<String> = Vec::with_capacity(v_f.len());
     for f in v_f {
         v_s.append(&mut vec![f.to_string()]);
     }
-    v_s.join(", ")
+    v_s.sort();
+    v_s
 }
