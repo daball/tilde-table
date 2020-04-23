@@ -1,22 +1,21 @@
 use crate::shell::command::{Command, CommandDefinition};
+use crate::app::handlers::utils::print_not_implemented;
 use crate::app::state::AppState;
-use crate::app::ui::render::clear as render;
 
-pub struct ClearCommand { }
+pub struct SampleCommand { }
 
-impl Command for ClearCommand
-{
+impl Command for SampleCommand {
     fn definition(&self) -> CommandDefinition {
-        CommandDefinition::define("clear").alias("cls")
-            .short_desc("Clears the screen.")
+        CommandDefinition::define("sample")
+            .short_desc("Runs the sample routine.")
             .category("Basic")
             .definition()
     }
     fn validate(&self, _state: &mut AppState, cmd: &str) -> bool {
-        cmd.eq("cls") || cmd.eq("clear")
+        cmd.eq("sample")
     }
     fn execute(&self, _state: &mut AppState, _cmd: &str) -> bool {
-        print!("{}", render::clear_screen());
-        true // continue read-eval-print-loop    
+        print_not_implemented();
+        true
     }
 }

@@ -1,5 +1,5 @@
 extern crate dirs;
-use crate::shell::handler::Handler;
+use crate::shell::command::{Command, CommandDefinition};
 use crate::app::state::AppState;
 use crate::app::ui::render::list as render;
 use std::cmp::Ordering;
@@ -343,38 +343,43 @@ impl FsItem {
     }
 }
 
-fn validate(_state: &mut AppState, cmd: &str) -> bool {
-    cmd.starts_with("list") || cmd.starts_with("ls") || cmd.starts_with("dir")
-}
+pub struct ListCommand { }
 
-fn execute(_state: &mut AppState, cmd: &str) -> bool {
-    let path = cmd.trim();
-    let searchAt = if cmd.starts_with("list") { 4 } else if cmd.starts_with("dir") { 3 } else if cmd.starts_with("ls") { 2 } else { 0 };
-    let path = path[searchAt..].trim();
-    let path = if path.eq("") { "." } else { path };
-    let fsi = FsItem::from(path);
-    fsi.print_search_path();
-    fsi.print_items_count();
-    match fsi.r#type {
-        FsItemType::Nothing => {
-            println!("Invalid file or directory. {} does not exist.", path);
-            // println!("nothing! {}", fsi.path.as_os_str().to_str().unwrap_or("no path!"));
-        },
-        FsItemType::File => {
-            fsi.print_item();
-        },
-        FsItemType::Dir => {
-            fsi.print_items();
-        },
-        FsItemType::SomethingElse => {
-            println!("something else! {}", fsi.path.as_os_str().to_str().unwrap_or("no path!"));
-        },
+impl Command for ListCommand {
+    fn definition(&self) -> CommandDefinition {
+        CommandDefinition::define("ls")
+            .alias("list").alias("dir")
+            .param("path")
+            .short_desc("Lists all valid (*.txt) files to read at optional path.")
+            .category("Basic")
+            .definition()
     }
-    true // continue read-eval-print-loop
+    fn validate(&self, _state: &mut AppState, cmd: &str) -> bool {
+        cmd.starts_with("list") || cmd.starts_with("ls") || cmd.starts_with("dir")
+    }
+    fn execute(&self, _state: &mut AppState, cmd: &str) -> bool {
+        let path = cmd.trim();
+        let searchAt = if cmd.starts_with("list") { 4 } else if cmd.starts_with("dir") { 3 } else if cmd.starts_with("ls") { 2 } else { 0 };
+        let path = path[searchAt..].trim();
+        let path = if path.eq("") { "." } else { path };
+        let fsi = FsItem::from(path);
+        fsi.print_search_path();
+        fsi.print_items_count();
+        match fsi.r#type {
+            FsItemType::Nothing => {
+                println!("Invalid file or directory. {} does not exist.", path);
+                // println!("nothing! {}", fsi.path.as_os_str().to_str().unwrap_or("no path!"));
+            },
+            FsItemType::File => {
+                fsi.print_item();
+            },
+            FsItemType::Dir => {
+                fsi.print_items();
+            },
+            FsItemType::SomethingElse => {
+                println!("something else! {}", fsi.path.as_os_str().to_str().unwrap_or("no path!"));
+            },
+        }
+        true // continue read-eval-print-loop
+    }
 }
-
-#[allow(non_upper_case_globals)]
-pub const ListHandler: Handler = Handler {
-    validate,
-    execute,
-};

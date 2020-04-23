@@ -130,3 +130,6 @@ pub trait Command {
     fn definition(&self) -> CommandDefinition;
     // fn handler() -> CH;
 }
+
+// pub trait Command<CH: CommandHandler> {
+// }

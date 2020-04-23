@@ -6,8 +6,8 @@ pub struct ExitCommand { }
 
 impl Command for ExitCommand {
     fn definition(&self) -> CommandDefinition {
-        CommandDefinition::define("?")
-            .alias("help")
+        CommandDefinition::define("exit")
+            .alias("quit").alias("qui").alias("qu").alias("q")
             .short_desc("Prints this help page.")
             .category("Basic")
             .definition()
@@ -17,6 +17,6 @@ impl Command for ExitCommand {
     }
     fn execute(&self, _state: &mut AppState, _cmd: &str) -> bool {
         render::goodbye();
-        true // continue read-eval-print-loop    
+        false // continue read-eval-print-loop    
     }
 }

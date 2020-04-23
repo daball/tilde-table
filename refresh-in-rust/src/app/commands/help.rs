@@ -1,8 +1,8 @@
 #[cfg(feature="ansi_term")] extern crate ansi_term;
 #[cfg(feature="ansi_term")] use ansi_term::Colour;
-use crate::shell::handler::Handler;
+use crate::shell::command::{Command, CommandDefinition};
 use crate::app::state::AppState;
-use crate::app::handlers::version::print_version;
+use crate::app::commands::version::print_version;
 use crate::features;
 use std::clone::Clone;
 use std::cmp;
@@ -308,17 +308,20 @@ pub fn print_help() {
     println!();
 }
 
-fn validate(_state: &mut AppState, cmd: &str) -> bool {
-    cmd.eq("?") || cmd.eq("help")
-}
+pub struct HelpCommand { }
 
-fn execute(_state: &mut AppState, _cmd: &str) -> bool {
-    print_help();
-    true // continue read-eval-print-loop
+impl Command for HelpCommand {
+    fn definition(&self) -> CommandDefinition {
+        CommandDefinition::define("?").alias("help")
+            .short_desc("Prints this help page.")
+            .category("Basic")
+            .definition()
+    }
+    fn validate(&self, _state: &mut AppState, cmd: &str) -> bool {
+        cmd.eq("?") || cmd.eq("help")
+    }
+    fn execute(&self, _state: &mut AppState, _cmd: &str) -> bool {
+        print_help();
+        true
+    }
 }
-
-#[allow(non_upper_case_globals)]
-pub const HelpHandler: Handler = Handler {
-    validate,
-    execute,
-};

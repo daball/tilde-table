@@ -1,5 +1,5 @@
 use crate::app::state::AppState;
-use crate::shell::handler::Handler;
+use crate::shell::command::{Command, CommandDefinition};
 use crate::app::ui::render::version;
 
 pub fn print_version_noansi() {
@@ -54,17 +54,20 @@ pub fn print_version() {
 #[cfg(not(feature="ansi_term"))]
 pub const print_version: fn() = print_version_noansi;
 
-fn validate(_state: &mut AppState, cmd: &str) -> bool {
-    cmd.eq("ver") || cmd.eq("version")
-}
+pub struct VersionCommand { }
 
-fn execute(_state: &mut AppState, _cmd: &str) -> bool {
-    print_version();
-    true // continue read-eval-print-loop
+impl Command for VersionCommand {
+    fn definition(&self) -> CommandDefinition {
+        CommandDefinition::define("version").alias("ver")
+            .short_desc("Prints version information.")
+            .category("Basic")
+            .definition()
+    }
+    fn validate(&self, _state: &mut AppState, cmd: &str) -> bool {
+        cmd.eq("ver") || cmd.eq("version")
+    }
+    fn execute(&self, _state: &mut AppState, _cmd: &str) -> bool {
+        print_version();
+        true // continue read-eval-print-loop
+    }
 }
-
-#[allow(non_upper_case_globals)]
-pub const VersionHandler: Handler = Handler {
-    validate,
-    execute,
-};

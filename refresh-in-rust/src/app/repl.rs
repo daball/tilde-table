@@ -1,6 +1,6 @@
 #[cfg(feature="ansi_term")] use ansi_term::Colour;
 use crate::app::handlers::dispatch::DispatchHandler;
-use crate::app::handlers::version;
+use crate::app::commands::version;
 use crate::app::state::AppState;
 use std::io::{stdin, stdout, Write};
 use std::fmt;
