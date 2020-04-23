@@ -4,7 +4,8 @@ use crate::app::state::AppState;
 use crate::shell::command::Command;
 // use crate::app::handlers::clear::ClearHandler;
 use crate::app::commands::clear::ClearCommand;
-use crate::app::handlers::exit::ExitHandler;
+// use crate::app::handlers::exit::ExitHandler;
+use crate::app::commands::exit::ExitCommand;
 use crate::app::handlers::help::HelpHandler;
 use crate::app::handlers::invalid::InvalidHandler;
 use crate::app::handlers::list::ListHandler;
@@ -16,11 +17,12 @@ use crate::app::handlers::utils::always_true as validate;
 
 pub fn dispatch(state: &mut AppState, cmd: &str) -> bool {
     let clear_command: ClearCommand = ClearCommand {};
+    let exit_command: ExitCommand = ExitCommand {};
     let cmd = cmd.trim();
     if { let v = NoHandler.validate; v(state, cmd) } {
         let e = NoHandler.execute; e(state, cmd)
-    } else if { let v = ExitHandler.validate; v(state, cmd) } {
-        let e = ExitHandler.execute; e(state, cmd)
+    } else if exit_command.validate(state, cmd) {
+        exit_command.execute(state, cmd)
     } else if clear_command.validate(state, cmd) {
         clear_command.execute(state, cmd)
     } else if { let v = HelpHandler.validate; v(state, cmd) } {

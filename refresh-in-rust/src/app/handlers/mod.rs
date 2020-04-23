@@ -1,8 +1,8 @@
 // extern crate ansi_term;
 // pub const PS1: &str = "≈ % ";
-pub mod clear;
+// pub mod clear;
 pub mod dispatch;
-pub mod exit;
+// pub mod exit;
 pub mod help;
 pub mod invalid;
 pub mod list;
