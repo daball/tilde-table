@@ -57,13 +57,6 @@ pub const print_version: fn() = print_version_noansi;
 pub struct VersionCommand {}
 
 impl VersionCommand {
-    pub fn validator(_state: &mut AppState, cmd: &str) -> ValidatorResult {
-        if cmd.eq("ver") || cmd.eq("version") {
-            ValidatorResult::Valid
-        } else {
-            ValidatorResult::Invalid
-        }
-    }
     pub fn handler(_state: &mut AppState, _cmd: &str) -> HandlerResult {
         print_version();
         HandlerResult::ContinueLoop
@@ -75,7 +68,6 @@ impl CommandConfig for VersionCommand {
         Command::configure("version").alias("ver")
             .short_desc("Prints version information.")
             .category("Basic")
-            .validate(VersionCommand::validator)
             .handle(VersionCommand::handler)
             .configured()
     }

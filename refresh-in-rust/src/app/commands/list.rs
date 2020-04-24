@@ -346,13 +346,6 @@ impl FsItem {
 pub struct ListCommand { }
 
 impl ListCommand {
-    pub fn validator(_state: &mut AppState, cmd: &str) -> ValidatorResult {
-        if cmd.starts_with("list") || cmd.starts_with("ls") || cmd.starts_with("dir") {
-            ValidatorResult::Valid
-        } else {
-            ValidatorResult::Invalid
-        }
-    }
     pub fn handler(_state: &mut AppState, cmd: &str) -> HandlerResult {
         let path = cmd.trim();
         let searchAt = if cmd.starts_with("list") { 4 } else if cmd.starts_with("dir") { 3 } else if cmd.starts_with("ls") { 2 } else { 0 };
@@ -386,7 +379,6 @@ impl CommandConfig for ListCommand {
             .param("path").desc("Path to search.").optional()
             .short_desc("Lists all valid (*.txt) files to read at optional path.")
             .category("Basic")
-            .validate(ListCommand::validator)
             .handle(ListCommand::handler)
             .configured()
     }

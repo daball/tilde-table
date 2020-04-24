@@ -4,13 +4,6 @@ use crate::app::state::AppState;
 pub struct HistoryCommand { }
 
 impl HistoryCommand {
-    pub fn validator(_state: &mut AppState, cmd: &str) -> ValidatorResult {
-        if cmd.starts_with("history") {
-            ValidatorResult::Valid
-        } else {
-            ValidatorResult::Invalid
-        }
-    }
     pub fn handler(state: &mut AppState, cmd: &str) -> HandlerResult {
         let cmd = cmd.trim();
         let search_at = if cmd.starts_with("history") { 7 } else { cmd.len() - 1 };
@@ -41,7 +34,6 @@ impl CommandConfig for HistoryCommand {
             .param("n").desc("Number of items to display.").optional()
             .short_desc("Displays up to optional number of history items.")
             .category("Basic")
-            .validate(HistoryCommand::validator)
             .handle(HistoryCommand::handler)
             .configured()
     }

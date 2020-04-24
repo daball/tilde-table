@@ -314,13 +314,6 @@ pub fn print_help() {
 pub struct HelpCommand { }
 
 impl HelpCommand {
-    pub fn validator(_state: &mut AppState, cmd: &str) -> ValidatorResult {
-        if cmd.eq("?") || cmd.eq("help") {
-            ValidatorResult::Valid
-        } else {
-            ValidatorResult::Invalid
-        }
-    }
     pub fn handler(_state: &mut AppState, _cmd: &str) -> HandlerResult {
         print_help();
         HandlerResult::ContinueLoop
@@ -332,7 +325,6 @@ impl CommandConfig for HelpCommand {
         Command::configure("?").alias("help")
             .short_desc("Prints this help page.")
             .category("Basic")
-            .validate(HelpCommand::validator)
             .handle(HelpCommand::handler)
             .configured()
     }

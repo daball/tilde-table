@@ -51,9 +51,6 @@ impl FormalParamBuilder {
     pub fn category(self, category: &str) -> CommandBuilder {
         self.done().category(category)
     }
-    pub fn validate(self, validator_fn: ValidatorFn) -> CommandBuilder {
-        self.done().validate(validator_fn)
-    }
     pub fn handle(self, handler_fn: HandlerFn) -> CommandBuilder {
         self.done().handle(handler_fn)
     }
@@ -71,15 +68,17 @@ pub struct Command {
     pub short_desc: String,
     pub long_desc: String,
     pub params: Vec<FormalParam>,
-    pub validator: ValidatorFn,
     pub handler: HandlerFn,
 }
 
 impl Command {
     pub fn validate(&self, state: &mut AppState, cmd: &str) -> ValidatorResult {
-        // validator => λ anonymous function
-        let validator: ValidatorFn = self.validator;
-        validator(state, &cmd)
+        for alias in &self.aliases {
+            if cmd.trim().to_lowercase().starts_with(alias.trim().to_lowercase().as_str()) {
+                return ValidatorResult::Valid
+            }
+        }
+        ValidatorResult::Invalid
     }
     pub fn handle(&self, state: &mut AppState, cmd: &str) -> HandlerResult {
         // handler => λ anonymous function
@@ -125,10 +124,6 @@ impl CommandBuilder {
         self.command.category = String::from(category);
         self
     }
-    pub fn validate(mut self, validator_fn: ValidatorFn) -> CommandBuilder {
-        self.command.validator = validator_fn;
-        self
-    }
     pub fn handle(mut self, handler_fn: HandlerFn) -> CommandBuilder {
         self.command.handler = handler_fn;
         self
@@ -136,10 +131,6 @@ impl CommandBuilder {
     pub fn configured(self) -> Command {
         self.command
     }
-}
-
-fn default_validator(_state: &mut AppState, _cmd: &str) -> ValidatorResult {
-    ValidatorResult::Invalid
 }
 
 fn default_handler(_state: &mut AppState, _cmd: &str) -> HandlerResult {
@@ -158,7 +149,6 @@ impl Command {
                 short_desc: String::default(),
                 long_desc: String::default(),
                 params: Vec::default(),
-                validator: default_validator,
                 handler: default_handler,
             },
         }
