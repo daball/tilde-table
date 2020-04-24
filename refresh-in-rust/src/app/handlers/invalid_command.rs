@@ -1,15 +1,24 @@
 use crate::app::state::{AppState, CommandRoutes};
-use crate::shell::handler::Handler;
+use crate::shell::handler::{Handler, HandlerConfig, HandlerResult, ValidatorResult};
 use crate::app::ui::render::invalid as render;
 
 pub struct InvalidCommandHandler {}
 
-impl Handler for InvalidCommandHandler {
-    fn validate(&self, _command_routes: &mut CommandRoutes, _state: &mut AppState, cmd: &str) -> bool {
-        true
+impl InvalidCommandHandler {
+    pub fn validator(_command_routes: &mut CommandRoutes, _state: &mut AppState, cmd: &str) -> ValidatorResult {
+        ValidatorResult::Valid
     }
-    fn handle(&self, _command_routes: &mut CommandRoutes, _state: &mut AppState, cmd: &str) -> bool {
+    pub fn handler(_command_routes: &mut CommandRoutes, _state: &mut AppState, cmd: &str) -> HandlerResult {
         println!("{}", render::invalid(cmd.trim()));
-        true // continue read-eval-print-loop
+        HandlerResult::ContinueLoop
     }    
+}
+
+impl HandlerConfig for InvalidCommandHandler {
+    fn config() -> Handler {
+        Handler::configure()
+            .validate(InvalidCommandHandler::validator)
+            .handle(InvalidCommandHandler::handler)
+            .configured()
+    }
 }

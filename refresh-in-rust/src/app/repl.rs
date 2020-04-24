@@ -1,11 +1,10 @@
 #[cfg(feature="ansi_term")] use ansi_term::Colour;
 use crate::app::commands::version;
 use super::state::{AppState, CommandRoutes, CommandHandler, CommandHandlers};
-use crate::shell::handler::Handler;
+use crate::shell::handler::{Handler, HandlerResult, ValidatorResult};
 use std::io::{stdin, stdout, Write};
 use std::fmt;
 use std::iter::FromIterator;
-use std::rc::Rc;
 
 pub const PS1: &str = "≈ % ";
 
@@ -41,7 +40,7 @@ pub fn repl() { //-> Result<(), Box<dyn std::error::Error>> {
     let mut handlers: Vec<&CommandHandler> = Vec::from_iter(handlers.keys());
     handlers.sort();
     let handlers = handlers;
-    'outer: loop {
+    'repl: loop {
         // read
         let cmd = read();
         for handler in &handlers {
@@ -58,14 +57,15 @@ pub fn repl() { //-> Result<(), Box<dyn std::error::Error>> {
                     }
                 }
             }
-            let handler: &dyn Handler = command_handlers.handlers.get(handler).unwrap().as_ref();
-            if handler.validate(&mut command_routes, &mut app_state, &cmd) {
-                if handler.handle(&mut command_routes, &mut app_state, &cmd) {
-                    continue 'outer;
-                }
-                else {
-                    break 'outer;
-                }
+            let handler: &Handler = command_handlers.handlers.get(handler).unwrap();
+            match handler.validate(&mut command_routes, &mut app_state, &cmd) {
+                ValidatorResult::Valid => {
+                    match handler.handle(&mut command_routes, &mut app_state, &cmd) {
+                        HandlerResult::ContinueLoop => continue 'repl,
+                        HandlerResult::Exit => break 'repl,
+                    }
+                },
+                ValidatorResult::Invalid => {}
             }
         }
     }

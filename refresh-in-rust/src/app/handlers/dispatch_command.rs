@@ -1,29 +1,44 @@
 use crate::shell::command::Command;
-use crate::shell::handler::Handler;
+use crate::shell::handler::{Handler, HandlerConfig, HandlerResult, ValidatorResult};
 use crate::app::state::{AppState, CommandRoutes};
 
 pub struct DispatchCommandHandler {}
 
-impl Handler for DispatchCommandHandler {
-    fn validate(&self, command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> bool {
+impl DispatchCommandHandler {
+    pub fn validator(command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> ValidatorResult {
         let cmd = cmd.trim();
         for command in &mut command_routes.commands {
             let command: &dyn Command = command.as_ref(); 
             if command.validate(state, cmd) {
-                return true
+                return ValidatorResult::Valid
             }
         }
-        false
+        ValidatorResult::Invalid
     }
     
-    fn handle(&self, command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> bool {
+    pub fn handler(command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> HandlerResult {
         let cmd = cmd.trim();
         for command in &mut command_routes.commands {
             let command: &dyn Command = command.as_ref(); 
             if command.validate(state, cmd) {
-                return command.execute(state, cmd)
+                let exec: bool = command.execute(state, cmd);
+                state.command_history.append(&mut vec![cmd.to_string()]);
+                if exec {
+                    return HandlerResult::ContinueLoop
+                } else {
+                    return HandlerResult::Exit
+                }
             }
         }
-        false
+        HandlerResult::ContinueLoop
+    }
+}
+
+impl HandlerConfig for DispatchCommandHandler {
+    fn config() -> Handler {
+        Handler::configure()
+            .validate(DispatchCommandHandler::validator)
+            .handle(DispatchCommandHandler::handler)
+            .configured()
     }
 }
