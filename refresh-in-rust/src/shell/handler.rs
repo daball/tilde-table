@@ -22,65 +22,59 @@ impl ValidatorResult {
 #[derive(Eq)]
 pub enum HandlerResult {
     ContinueLoop,
-    Exit,
+    ExitLoop,
 }
 
 impl HandlerResult {
-    // returns true if ContinueLoop, false if Exit
+    // returns true if ContinueLoop, false if ExitLoop
     pub fn should_continue_loop(&self) -> bool {
         self == &HandlerResult::ContinueLoop
     }
-    // returns true if Exit, false if ContinueLoop
-    pub fn should_exit(&self) -> bool {
-        self == &HandlerResult::Exit
+    // returns true if ExitLoop, false if ContinueLoop
+    pub fn should_exit_loop(&self) -> bool {
+        self == &HandlerResult::ExitLoop
     }
 }
 
-pub type ValidatorFunction = fn(command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> ValidatorResult;
-pub type HandlerFunction = fn(command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> HandlerResult;
+pub type ValidatorFn = fn (command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> ValidatorResult;
+pub type HandlerFn = fn (command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> HandlerResult;
 
 // Stores configuration for a Handler
 pub struct Handler {
     // return Invalid to try the next handler, return Valid if handler will handle it
     // by returning Invalid, the handler function will not be called
     // by returning Valid, the handler function will be called
-    validator: ValidatorFunction, //fn (command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> ValidatorResult,
+    pub validator: ValidatorFn, //fn (command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> ValidatorResult,
     // return Exit to exit the application, return Ok to keep running
     // by returning Exit, the application will exit normally
     // by returning Loop, the application will continue to loop
-    handler: HandlerFunction, //fn (command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> HandlerResult,
+    pub handler: HandlerFn, //fn (command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> HandlerResult,
 }
 
-// Implement Handler helpers for ValidatorResult
-impl ValidatorResult {
-    pub fn never_valid(_command_routes: &mut CommandRoutes, _state: &mut AppState, _cmd: &str) -> ValidatorResult {
-        ValidatorResult::Invalid
+fn default_validator(_command_routes: &mut CommandRoutes, _state: &mut AppState, _cmd: &str) -> ValidatorResult {
+    if cfg!(feature="debug") {
+        eprintln!("[error: Handler] This handler has not been configured with a validator function.");
     }
-    pub fn always_valid(_command_routes: &mut CommandRoutes, _state: &mut AppState, _cmd: &str) -> ValidatorResult {
-        ValidatorResult::Valid
-    }
+    ValidatorResult::Invalid
 }
 
-// Implement Handler helpers for ValidatorResult
-impl HandlerResult {
-    pub fn do_continue_loop(_command_routes: &mut CommandRoutes, _state: &mut AppState, _cmd: &str) -> HandlerResult {
-        HandlerResult::ContinueLoop
+fn default_handler(_command_routes: &mut CommandRoutes, _state: &mut AppState, _cmd: &str) -> HandlerResult {
+    if cfg!(feature="debug") {
+        eprintln!("[error: Handler] This handler has not been configured with a handler function.");
     }
-    pub fn do_exit(_command_routes: &mut CommandRoutes, _state: &mut AppState, _cmd: &str) -> HandlerResult {
-        HandlerResult::Exit
-    }
+    HandlerResult::ContinueLoop
 }
 
 // Implements Handler
 impl Handler {
     pub fn validate(&self, command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> ValidatorResult {
         // validator => λ anonymous function
-        let validator: ValidatorFunction = self.validator;
+        let validator: ValidatorFn = self.validator;
         validator(command_routes, state, &cmd)
     }
     pub fn handle(&self, command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> HandlerResult {
         // handler => λ anonymous function
-        let handler: HandlerFunction = self.handler;
+        let handler: HandlerFn = self.handler;
         handler(command_routes, state, &cmd)
     }
 }
@@ -90,11 +84,11 @@ pub struct HandlerBuilder {
 }
 
 impl HandlerBuilder {
-    pub fn validate(mut self, validator_fn: ValidatorFunction) -> HandlerBuilder {
+    pub fn validate(mut self, validator_fn: ValidatorFn) -> HandlerBuilder {
         self.handler.validator = validator_fn;
         self
     }
-    pub fn handle(mut self, handler_fn: HandlerFunction) -> HandlerBuilder {
+    pub fn handle(mut self, handler_fn: HandlerFn) -> HandlerBuilder {
         self.handler.handler = handler_fn;
         self
     }
@@ -107,8 +101,8 @@ impl Handler {
     pub fn configure() -> HandlerBuilder {
         HandlerBuilder {
             handler: Handler {
-                validator: ValidatorResult::never_valid,
-                handler: HandlerResult::do_exit,
+                validator: default_validator,
+                handler: default_handler,
             }
         }
     }

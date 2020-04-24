@@ -1,19 +1,19 @@
 use crate::app::state::AppState;
-// pub use super::builder;
+pub use super::handler::{ValidatorResult, HandlerResult};
 
 pub struct ActualParam {
-    name: String,
-    value: String,
+    pub name: String,
+    pub value: String,
 }
 
 pub struct FormalParam {
-    name: String,
-    desc: String,
-    is_optional: bool,
+    pub name: String,
+    pub desc: String,
+    pub is_optional: bool,
 }
 
 pub struct FormalParamBuilder {
-    command_definition_builder: CommandDefinitionBuilder,
+    command_builder: CommandBuilder,
     formal_param: FormalParam,
 }
 
@@ -30,66 +30,76 @@ impl FormalParamBuilder {
         self.formal_param.is_optional = false;
         self
     }
-    pub fn done(mut self) -> CommandDefinitionBuilder {
-        self.command_definition_builder.command_definition.params.append(
+    pub fn done(mut self) -> CommandBuilder {
+        self.command_builder.command.params.append(
             &mut vec![self.formal_param]
         );
-        self.command_definition_builder
+        self.command_builder
     }
-    pub fn alias(mut self, alias: &str) -> CommandDefinitionBuilder {
+    pub fn alias(self, alias: &str) -> CommandBuilder {
         self.done().alias(alias)
     }
-    pub fn param(mut self, name: &str) -> FormalParamBuilder {
+    pub fn param(self, name: &str) -> FormalParamBuilder {
         self.done().param(name)
     }
-    pub fn short_desc(mut self, short_desc: &str) -> CommandDefinitionBuilder {
+    pub fn short_desc(self, short_desc: &str) -> CommandBuilder {
         self.done().short_desc(short_desc)
     }
-    pub fn long_desc(mut self, long_desc: &str) -> CommandDefinitionBuilder {
+    pub fn long_desc(self, long_desc: &str) -> CommandBuilder {
         self.done().short_desc(long_desc)
     }
-    pub fn category(mut self, category: &str) -> CommandDefinitionBuilder {
+    pub fn category(self, category: &str) -> CommandBuilder {
         self.done().category(category)
     }
-    pub fn definition(mut self) -> CommandDefinition {
-        self.done().definition()
+    pub fn validate(self, validator_fn: ValidatorFn) -> CommandBuilder {
+        self.done().validate(validator_fn)
+    }
+    pub fn handle(self, handler_fn: HandlerFn) -> CommandBuilder {
+        self.done().handle(handler_fn)
+    }
+    pub fn configured(self) -> Command {
+        self.done().configured()
     }
 }
 
-pub struct CommandDefinition {
-    aliases: Vec<String>,
-    category: String,
-    short_desc: String,
-    long_desc: String,
-    params: Vec<FormalParam>,
+pub type ValidatorFn = fn (state: &mut AppState, cmd: &str) -> ValidatorResult;
+pub type HandlerFn = fn (state: &mut AppState, cmd: &str) -> HandlerResult;
+
+pub struct Command {
+    pub aliases: Vec<String>,
+    pub category: String,
+    pub short_desc: String,
+    pub long_desc: String,
+    pub params: Vec<FormalParam>,
+    pub validator: ValidatorFn,
+    pub handler: HandlerFn,
 }
 
-pub struct CommandDefinitionBuilder {
-    command_definition: CommandDefinition,
-}
-
-impl CommandDefinition {
-    pub fn define(name: &str) -> CommandDefinitionBuilder {
-        CommandDefinitionBuilder {
-            command_definition: CommandDefinition {
-                aliases: vec![String::from(name)],
-                category: String::default(),
-                short_desc: String::default(),
-                long_desc: String::default(),
-                params: Vec::default(),
-            },
-        }
+impl Command {
+    pub fn validate(&self, state: &mut AppState, cmd: &str) -> ValidatorResult {
+        // validator => λ anonymous function
+        let validator: ValidatorFn = self.validator;
+        validator(state, &cmd)
+    }
+    pub fn handle(&self, state: &mut AppState, cmd: &str) -> HandlerResult {
+        // handler => λ anonymous function
+        let handler: HandlerFn = self.handler;
+        handler(state, &cmd)
     }
 }
 
-impl CommandDefinitionBuilder {
-    pub fn alias(mut self, alias: &str) -> CommandDefinitionBuilder {
-        self.command_definition.aliases.append(&mut vec![String::from(alias)]);
+pub struct CommandBuilder {
+    command: Command,
+}
+
+impl CommandBuilder {
+    pub fn alias(mut self, alias: &str) -> CommandBuilder {
+        self.command.aliases.append(&mut vec![String::from(alias)]);
         self
     }
-    pub fn param(mut self, param: &str) -> FormalParamBuilder {
+    pub fn param(self, param: &str) -> FormalParamBuilder {
         FormalParamBuilder {
-            command_definition_builder: self,
+            command_builder: self,
             formal_param: FormalParam {
                 name: String::from(param),
                 desc: String::default(),
@@ -97,39 +107,68 @@ impl CommandDefinitionBuilder {
             }
         }
     }
-    pub fn short_desc(mut self, short_desc: &str) -> CommandDefinitionBuilder {
-        self.command_definition.short_desc = String::from(short_desc);
-        if self.command_definition.long_desc.is_empty() {
-            self.command_definition.long_desc = String::from(short_desc);
+    pub fn short_desc(mut self, short_desc: &str) -> CommandBuilder {
+        self.command.short_desc = String::from(short_desc);
+        if self.command.long_desc.is_empty() {
+            self.command.long_desc = String::from(short_desc);
         }
         self
     }
-    pub fn long_desc(mut self, long_desc: &str) -> CommandDefinitionBuilder {
-        self.command_definition.long_desc = String::from(long_desc);
-        if self.command_definition.short_desc.is_empty() {
-            self.command_definition.short_desc = String::from(long_desc);
+    pub fn long_desc(mut self, long_desc: &str) -> CommandBuilder {
+        self.command.long_desc = String::from(long_desc);
+        if self.command.short_desc.is_empty() {
+            self.command.short_desc = String::from(long_desc);
         }
         self
     }
-    pub fn category(mut self, category: &str) -> CommandDefinitionBuilder {
-        self.command_definition.category = String::from(category);
+    pub fn category(mut self, category: &str) -> CommandBuilder {
+        self.command.category = String::from(category);
         self
     }
-    pub fn definition(mut self) -> CommandDefinition {
-        self.command_definition
+    pub fn validate(mut self, validator_fn: ValidatorFn) -> CommandBuilder {
+        self.command.validator = validator_fn;
+        self
+    }
+    pub fn handle(mut self, handler_fn: HandlerFn) -> CommandBuilder {
+        self.command.handler = handler_fn;
+        self
+    }
+    pub fn configured(self) -> Command {
+        self.command
     }
 }
 
-pub trait Command {
-// pub trait CommandHandler {
-    fn validate(&self, state: &mut AppState, cmd: &str) -> bool;
-    fn execute(&self, state: &mut AppState, cmd: &str) -> bool;
-// }
-
-// pub trait Command<CH: CommandHandler> {
-    fn definition(&self) -> CommandDefinition;
-    // fn handler() -> CH;
+fn default_validator(_state: &mut AppState, _cmd: &str) -> ValidatorResult {
+    ValidatorResult::Invalid
 }
 
-// pub trait Command<CH: CommandHandler> {
-// }
+fn default_handler(_state: &mut AppState, _cmd: &str) -> HandlerResult {
+    if cfg!(feature="debug") {
+        eprintln!("[error: Command] This command has not been configured with a handler function.");
+    }
+    HandlerResult::ContinueLoop
+}
+
+impl Command {
+    pub fn configure(name: &str) -> CommandBuilder {
+        CommandBuilder {
+            command: Command {
+                aliases: vec![String::from(name)],
+                category: String::default(),
+                short_desc: String::default(),
+                long_desc: String::default(),
+                params: Vec::default(),
+                validator: default_validator,
+                handler: default_handler,
+            },
+        }
+    }
+}
+
+
+// This trait will be used as an inversion of control.
+// The config function, when implemented will return a configured Handler struct.
+// Use Handler::build() to use a builder to construct a Handler.
+pub trait CommandConfig {
+    fn config() -> Command;
+}

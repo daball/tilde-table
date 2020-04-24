@@ -8,14 +8,20 @@ use std::iter::FromIterator;
 
 pub const PS1: &str = "≈ % ";
 
+pub fn get_prompt_noansi() -> String {
+    String::from(PS1)
+}
+
+#[cfg(not(feature="ansi_term"))]
+pub use get_prompt_noansi as get_prompt;
+
 #[cfg(feature="ansi_term")]
 pub fn get_prompt() -> String {
     fmt::format(format_args!("{}", Colour::Cyan.bold().paint(PS1)))
 }
 
-#[cfg(not(feature="ansi_term"))]
-pub fn get_prompt() -> String {
-    String::from(PS1)
+pub fn print_prompt_noansi() {
+    print!("{}", get_prompt_noansi());
 }
 
 pub fn print_prompt() {
@@ -47,13 +53,13 @@ pub fn repl() { //-> Result<(), Box<dyn std::error::Error>> {
             if cfg!(feature="debug") {
                 match handler {
                     CommandHandler::DispatchCommand => {
-                        println!("[debug] Trying DispatchCommandHandler.");
+                        println!("[debug: repl] Trying DispatchCommandHandler.");
                     },
                     CommandHandler::EmptyCommand => {
-                        println!("[debug] Trying EmptyCommandHandler.");
+                        println!("[debug: repl] Trying EmptyCommandHandler.");
                     },
                     CommandHandler::InvalidCommand => {
-                        println!("[debug] Trying InvalidCommandHandler.");
+                        println!("[debug: repl] Trying InvalidCommandHandler.");
                     }
                 }
             }
@@ -62,7 +68,7 @@ pub fn repl() { //-> Result<(), Box<dyn std::error::Error>> {
                 ValidatorResult::Valid => {
                     match handler.handle(&mut command_routes, &mut app_state, &cmd) {
                         HandlerResult::ContinueLoop => continue 'repl,
-                        HandlerResult::Exit => break 'repl,
+                        HandlerResult::ExitLoop => break 'repl,
                     }
                 },
                 ValidatorResult::Invalid => {}

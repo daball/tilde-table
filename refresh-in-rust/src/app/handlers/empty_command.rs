@@ -12,8 +12,8 @@ impl EmptyCommandHandler {
         }
     }
     pub fn handler(command_routes: &mut CommandRoutes, state: &mut AppState, cmd: &str) -> HandlerResult {
-        if !cfg!(test) && Self::validator(command_routes, state, cmd) == ValidatorResult::Invalid {
-            eprintln!("Warning! Invalid data passed to empty command handler.");
+        if cfg!(feature="debug") && Self::validator(command_routes, state, cmd) == ValidatorResult::Invalid {
+            eprintln!("[debug: EmptyCommandHandler] Invalid data passed to empty command handler.");
         }
         HandlerResult::ContinueLoop
     }

@@ -1,5 +1,5 @@
 use crate::app::state::AppState;
-use crate::shell::command::{Command, CommandDefinition};
+use crate::shell::command::{Command, CommandConfig, HandlerResult, ValidatorResult};
 use crate::app::ui::render::version;
 
 pub fn print_version_noansi() {
@@ -54,20 +54,29 @@ pub fn print_version() {
 #[cfg(not(feature="ansi_term"))]
 pub const print_version: fn() = print_version_noansi;
 
-pub struct VersionCommand { }
+pub struct VersionCommand {}
 
-impl Command for VersionCommand {
-    fn definition(&self) -> CommandDefinition {
-        CommandDefinition::define("version").alias("ver")
+impl VersionCommand {
+    pub fn validator(_state: &mut AppState, cmd: &str) -> ValidatorResult {
+        if cmd.eq("ver") || cmd.eq("version") {
+            ValidatorResult::Valid
+        } else {
+            ValidatorResult::Invalid
+        }
+    }
+    pub fn handler(_state: &mut AppState, _cmd: &str) -> HandlerResult {
+        print_version();
+        HandlerResult::ContinueLoop
+    }
+}
+
+impl CommandConfig for VersionCommand {
+    fn config() -> Command {
+        Command::configure("version").alias("ver")
             .short_desc("Prints version information.")
             .category("Basic")
-            .definition()
-    }
-    fn validate(&self, _state: &mut AppState, cmd: &str) -> bool {
-        cmd.eq("ver") || cmd.eq("version")
-    }
-    fn execute(&self, _state: &mut AppState, _cmd: &str) -> bool {
-        print_version();
-        true // continue read-eval-print-loop
+            .validate(VersionCommand::validator)
+            .handle(VersionCommand::handler)
+            .configured()
     }
 }

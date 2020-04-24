@@ -5,7 +5,7 @@ use crate::app::ui::render::invalid as render;
 pub struct InvalidCommandHandler {}
 
 impl InvalidCommandHandler {
-    pub fn validator(_command_routes: &mut CommandRoutes, _state: &mut AppState, cmd: &str) -> ValidatorResult {
+    pub fn validator(_command_routes: &mut CommandRoutes, _state: &mut AppState, _cmd: &str) -> ValidatorResult {
         ValidatorResult::Valid
     }
     pub fn handler(_command_routes: &mut CommandRoutes, _state: &mut AppState, cmd: &str) -> HandlerResult {

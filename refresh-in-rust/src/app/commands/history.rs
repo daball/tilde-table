@@ -1,23 +1,20 @@
-use crate::shell::command::{Command, CommandDefinition};
+use crate::shell::command::{Command, CommandConfig, HandlerResult, ValidatorResult};
 use crate::app::state::AppState;
 
 pub struct HistoryCommand { }
 
-impl Command for HistoryCommand {
-    fn definition(&self) -> CommandDefinition {
-        CommandDefinition::define("history")
-            .param("n").desc("Number of items to display.").optional()
-            .short_desc("Displays up to optional number of history items.")
-            .category("Basic")
-            .definition()
+impl HistoryCommand {
+    pub fn validator(_state: &mut AppState, cmd: &str) -> ValidatorResult {
+        if cmd.starts_with("history") {
+            ValidatorResult::Valid
+        } else {
+            ValidatorResult::Invalid
+        }
     }
-    fn validate(&self, _state: &mut AppState, cmd: &str) -> bool {
-        cmd.starts_with("history")
-    }
-    fn execute(&self, state: &mut AppState, cmd: &str) -> bool {
+    pub fn handler(state: &mut AppState, cmd: &str) -> HandlerResult {
         let cmd = cmd.trim();
-        let searchAt = if cmd.starts_with("history") { 7 } else { cmd.len() - 1 };
-        let n: &str = cmd[searchAt..].trim();
+        let search_at = if cmd.starts_with("history") { 7 } else { cmd.len() - 1 };
+        let n: &str = cmd[search_at..].trim();
         let mut n: usize = if n.eq("") { 0 } else {
             match n.parse::<usize>() {
                 Ok(n) => n,
@@ -34,6 +31,18 @@ impl Command for HistoryCommand {
                 None => "",
             });
         } 
-        true
+        HandlerResult::ContinueLoop
+    }
+}
+
+impl CommandConfig for HistoryCommand {
+    fn config() -> Command {
+        Command::configure("history")
+            .param("n").desc("Number of items to display.").optional()
+            .short_desc("Displays up to optional number of history items.")
+            .category("Basic")
+            .validate(HistoryCommand::validator)
+            .handle(HistoryCommand::handler)
+            .configured()
     }
 }

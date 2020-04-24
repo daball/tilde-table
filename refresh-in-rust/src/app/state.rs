@@ -8,8 +8,7 @@ use crate::app::commands::version::{VersionCommand};
 use super::handlers::empty_command::EmptyCommandHandler;
 use super::handlers::dispatch_command::DispatchCommandHandler;
 use super::handlers::invalid_command::InvalidCommandHandler;
-use crate::shell::{command::Command, handler::{Handler, HandlerConfig}};
-use std::rc::Rc;
+use crate::shell::{command::{Command, CommandConfig}, handler::{Handler, HandlerConfig}};
 use std::collections::HashMap;
 use std::hash::Hash;
 
@@ -41,22 +40,22 @@ impl CommandHandlers {
 }
 
 pub struct CommandRoutes {
-    pub commands: Vec<Rc<dyn Command>>,
+    pub commands: Vec<Command>,
 }
 
 impl CommandRoutes {
     pub fn create() -> CommandRoutes {
-        let mut commands: Vec<Rc<dyn Command>> = vec![
-            Rc::new(ExitCommand {}),
-            Rc::new(HelpCommand {}),
-            Rc::new(HistoryCommand {}),
-            Rc::new(ListCommand {}),
-            Rc::new(SampleCommand {}),
-            Rc::new(VersionCommand {}),
+        let mut commands: Vec<Command> = vec![
+            ExitCommand::config(),
+            HelpCommand::config(),
+            HistoryCommand::config(),
+            ListCommand::config(),
+            SampleCommand::config(),
+            VersionCommand::config(),
         ];
         if crate::features::USE_ANSI {
             commands.append(&mut vec![
-                Rc::new(ClearCommand {})
+                ClearCommand::config()
             ]);
         }
         CommandRoutes {

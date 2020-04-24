@@ -1,3 +1,3 @@
 pub struct Category {
-    name: String
+    pub name: String,
 }

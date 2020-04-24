@@ -1,6 +1,6 @@
 #[cfg(feature="ansi_term")] extern crate ansi_term;
 #[cfg(feature="ansi_term")] use ansi_term::Colour;
-use crate::shell::command::{Command, CommandDefinition};
+use crate::shell::command::{Command, CommandConfig, HandlerResult, ValidatorResult};
 use crate::app::state::AppState;
 use crate::app::commands::version::print_version;
 use crate::features;
@@ -313,18 +313,27 @@ pub fn print_help() {
 
 pub struct HelpCommand { }
 
-impl Command for HelpCommand {
-    fn definition(&self) -> CommandDefinition {
-        CommandDefinition::define("?").alias("help")
+impl HelpCommand {
+    pub fn validator(_state: &mut AppState, cmd: &str) -> ValidatorResult {
+        if cmd.eq("?") || cmd.eq("help") {
+            ValidatorResult::Valid
+        } else {
+            ValidatorResult::Invalid
+        }
+    }
+    pub fn handler(_state: &mut AppState, _cmd: &str) -> HandlerResult {
+        print_help();
+        HandlerResult::ContinueLoop
+    }
+}
+
+impl CommandConfig for HelpCommand {
+    fn config() -> Command {
+        Command::configure("?").alias("help")
             .short_desc("Prints this help page.")
             .category("Basic")
-            .definition()
-    }
-    fn validate(&self, _state: &mut AppState, cmd: &str) -> bool {
-        cmd.eq("?") || cmd.eq("help")
-    }
-    fn execute(&self, _state: &mut AppState, _cmd: &str) -> bool {
-        print_help();
-        true
+            .validate(HelpCommand::validator)
+            .handle(HelpCommand::handler)
+            .configured()
     }
 }
