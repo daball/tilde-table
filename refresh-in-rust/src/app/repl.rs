@@ -1,9 +1,11 @@
 #[cfg(feature="ansi_term")] use ansi_term::Colour;
-use crate::app::handlers::dispatch::DispatchHandler;
 use crate::app::commands::version;
-use crate::app::state::AppState;
+use super::state::{AppState, CommandRoutes, CommandHandler, CommandHandlers};
+use crate::shell::handler::Handler;
 use std::io::{stdin, stdout, Write};
 use std::fmt;
+use std::iter::FromIterator;
+use std::rc::Rc;
 
 pub const PS1: &str = "≈ % ";
 
@@ -33,16 +35,38 @@ pub fn read() -> String {
 pub fn repl() { //-> Result<(), Box<dyn std::error::Error>> {
     version::print_version();
     let mut app_state = AppState::new();
-    loop {
+    let mut command_routes = CommandRoutes::create();
+    let command_handlers = CommandHandlers::create();
+    let handlers = &command_handlers.handlers;
+    let mut handlers: Vec<&CommandHandler> = Vec::from_iter(handlers.keys());
+    handlers.sort();
+    let handlers = handlers;
+    'outer: loop {
         // read
         let cmd = read();
-        // eval/print
-        let eval_print = DispatchHandler.execute;
-        let continue_loop = eval_print(&mut app_state, &cmd);
-        if continue_loop {
-            continue; // loop
-        } else {
-            break; // exit loop
+        for handler in &handlers {
+            if cfg!(feature="debug") {
+                match handler {
+                    CommandHandler::DispatchCommand => {
+                        println!("[debug] Trying DispatchCommandHandler.");
+                    },
+                    CommandHandler::EmptyCommand => {
+                        println!("[debug] Trying EmptyCommandHandler.");
+                    },
+                    CommandHandler::InvalidCommand => {
+                        println!("[debug] Trying InvalidCommandHandler.");
+                    }
+                }
+            }
+            let handler: &dyn Handler = command_handlers.handlers.get(handler).unwrap().as_ref();
+            if handler.validate(&mut command_routes, &mut app_state, &cmd) {
+                if handler.handle(&mut command_routes, &mut app_state, &cmd) {
+                    continue 'outer;
+                }
+                else {
+                    break 'outer;
+                }
+            }
         }
     }
     // Ok(())

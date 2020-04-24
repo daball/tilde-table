@@ -1,8 +1,8 @@
 // extern crate ansi_term;
 // pub const PS1: &str = "≈ % ";
-pub mod dispatch;
-pub mod invalid;
-pub mod no;
+pub mod dispatch_command;
+pub mod invalid_command;
+pub mod empty_command;
 pub mod utils;
 // use ansi_term::Colour;
 // use crate::app::handlers::dispatch::DispatchHandler;

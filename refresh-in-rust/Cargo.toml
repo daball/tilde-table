@@ -15,6 +15,7 @@ use_async_io = ["tokio"]
 use_csv = ["csv", "serde"]
 use_json = ["serde_json"]
 use_http = ["http"]
+debug = []
 default = ["use_ansi", "use_csv", "use_json", "use_http"]
 
 # TODO: The tui implementation is currently broken and experimental.

@@ -1,3 +1,82 @@
+use crate::app::commands::clear::ClearCommand;
+use crate::app::commands::exit::ExitCommand;
+use crate::app::commands::help::HelpCommand;
+use crate::app::commands::list::ListCommand;
+use crate::app::commands::sample::SampleCommand;
+use crate::app::commands::version::{VersionCommand};
+use super::handlers::empty_command::EmptyCommandHandler;
+use super::handlers::dispatch_command::DispatchCommandHandler;
+use super::handlers::invalid_command::InvalidCommandHandler;
+use crate::shell::{command::Command, handler::Handler};
+use std::rc::Rc;
+use std::collections::HashMap;
+use std::hash::Hash;
+
+#[derive(PartialEq)]
+#[derive(Eq)]
+#[derive(Hash)]
+#[derive(PartialOrd)]
+#[derive(Ord)]
+pub enum CommandHandler {
+    EmptyCommand = 1,
+    DispatchCommand = 2,
+    InvalidCommand = 3,
+}
+
+pub struct CommandHandlers {
+    pub handlers: HashMap<CommandHandler, Rc<dyn Handler>>,
+}
+
+impl CommandHandlers {
+    pub fn create() -> CommandHandlers {
+        let mut handlers: HashMap<CommandHandler, Rc<dyn Handler>> = HashMap::new();
+        handlers.insert(CommandHandler::EmptyCommand, Rc::new(EmptyCommandHandler {}));
+        handlers.insert(CommandHandler::DispatchCommand, Rc::new(DispatchCommandHandler {}));
+        handlers.insert(CommandHandler::InvalidCommand, Rc::new(InvalidCommandHandler {}));
+        CommandHandlers {
+            handlers
+        }
+    }
+}
+
+pub struct CommandRoutes {
+    pub commands: Vec<Rc<dyn Command>>,
+}
+
+impl CommandRoutes {
+    pub fn create() -> CommandRoutes {
+        let mut commands: Vec<Rc<dyn Command>> = vec![
+            Rc::new(ExitCommand {}),
+            Rc::new(HelpCommand {}),
+            Rc::new(ListCommand {}),
+            Rc::new(SampleCommand {}),
+            Rc::new(VersionCommand {}),
+        ];
+        if crate::features::USE_ANSI {
+            commands.append(&mut vec![
+                Rc::new(ClearCommand {})
+            ]);
+        }
+        CommandRoutes {
+            commands,
+        }
+    }
+}
+
+pub struct AppState {
+    // pub appTerminal: AppTerminal,
+    pub name: String,
+}
+
+impl AppState {
+    pub fn new() -> AppState {
+        AppState {
+            name: String::new(),
+            // appTerminal: AppTerminal::create(),
+        }
+    }
+}
+
 // use std::io;
 // use tui::Terminal;
 // use tui::widgets::{Widget, Block, Borders};
@@ -46,17 +125,3 @@
 //         }
 //     }
 // }
-
-pub struct AppState {
-    // pub appTerminal: AppTerminal,
-    pub name: String,
-}
-
-impl AppState {
-    pub fn new() -> AppState {
-        AppState {
-            name: String::new(),
-            // appTerminal: AppTerminal::create(),
-        }
-    }
-}

@@ -16,7 +16,7 @@ impl Command for ExitCommand {
         cmd.eq("exit") || cmd.eq("quit") || cmd.eq("qui") || cmd.eq("qu") || cmd.eq("q")
     }
     fn execute(&self, _state: &mut AppState, _cmd: &str) -> bool {
-        render::goodbye();
+        println!("{}", render::goodbye());
         false // continue read-eval-print-loop    
     }
 }
