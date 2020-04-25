@@ -31,7 +31,7 @@ impl HistoryCommand {
 impl CommandConfig for HistoryCommand {
     fn config() -> Command {
         Command::configure("history")
-            .param("n").desc("Number of items to display.").optional()
+            .arg("n").desc("Number of items to display.").optional()
             .short_desc("Displays up to optional number of history items.")
             .category("Basic")
             .handle(HistoryCommand::handler)

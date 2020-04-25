@@ -323,6 +323,7 @@ impl HelpCommand {
 impl CommandConfig for HelpCommand {
     fn config() -> Command {
         Command::configure("?").alias("help")
+            .arg("cmd").desc("The command to display help about").optional()
             .short_desc("Prints this help page.")
             .category("Basic")
             .handle(HelpCommand::handler)

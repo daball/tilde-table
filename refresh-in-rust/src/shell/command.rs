@@ -1,46 +1,46 @@
 use crate::app::state::AppState;
 pub use super::handler::{ValidatorResult, HandlerResult};
 
-pub struct ActualParam {
+pub struct ActualArg {
     pub name: String,
     pub value: String,
 }
 
-pub struct FormalParam {
+pub struct FormalArg {
     pub name: String,
     pub desc: String,
     pub is_optional: bool,
 }
 
-pub struct FormalParamBuilder {
+pub struct FormalArgBuilder {
     command_builder: CommandBuilder,
-    formal_param: FormalParam,
+    formal_arg: FormalArg,
 }
 
-impl FormalParamBuilder {
-    pub fn desc(mut self, desc: &str) -> FormalParamBuilder {
-        self.formal_param.desc = String::from(desc);
+impl FormalArgBuilder {
+    pub fn desc(mut self, desc: &str) -> FormalArgBuilder {
+        self.formal_arg.desc = String::from(desc);
         self
     }
-    pub fn optional(mut self) -> FormalParamBuilder {
-        self.formal_param.is_optional = true;
+    pub fn optional(mut self) -> FormalArgBuilder {
+        self.formal_arg.is_optional = true;
         self
     }
-    pub fn not_optional(mut self) -> FormalParamBuilder {
-        self.formal_param.is_optional = false;
+    pub fn not_optional(mut self) -> FormalArgBuilder {
+        self.formal_arg.is_optional = false;
         self
     }
     pub fn done(mut self) -> CommandBuilder {
-        self.command_builder.command.params.append(
-            &mut vec![self.formal_param]
+        self.command_builder.command.args.append(
+            &mut vec![self.formal_arg]
         );
         self.command_builder
     }
     pub fn alias(self, alias: &str) -> CommandBuilder {
         self.done().alias(alias)
     }
-    pub fn param(self, name: &str) -> FormalParamBuilder {
-        self.done().param(name)
+    pub fn arg(self, name: &str) -> FormalArgBuilder {
+        self.done().arg(name)
     }
     pub fn short_desc(self, short_desc: &str) -> CommandBuilder {
         self.done().short_desc(short_desc)
@@ -67,7 +67,7 @@ pub struct Command {
     pub category: String,
     pub short_desc: String,
     pub long_desc: String,
-    pub params: Vec<FormalParam>,
+    pub args: Vec<FormalArg>,
     pub handler: HandlerFn,
 }
 
@@ -96,11 +96,11 @@ impl CommandBuilder {
         self.command.aliases.append(&mut vec![String::from(alias)]);
         self
     }
-    pub fn param(self, param: &str) -> FormalParamBuilder {
-        FormalParamBuilder {
+    pub fn arg(self, arg: &str) -> FormalArgBuilder {
+        FormalArgBuilder {
             command_builder: self,
-            formal_param: FormalParam {
-                name: String::from(param),
+            formal_arg: FormalArg {
+                name: String::from(arg),
                 desc: String::default(),
                 is_optional: false,
             }
@@ -148,7 +148,7 @@ impl Command {
                 category: String::default(),
                 short_desc: String::default(),
                 long_desc: String::default(),
-                params: Vec::default(),
+                args: Vec::default(),
                 handler: default_handler,
             },
         }

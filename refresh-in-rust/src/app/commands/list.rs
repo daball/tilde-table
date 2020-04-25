@@ -376,7 +376,7 @@ impl CommandConfig for ListCommand {
     fn config() -> Command {
         Command::configure("ls")
             .alias("list").alias("dir")
-            .param("path").desc("Path to search.").optional()
+            .arg("path").desc("Path to search.").optional()
             .short_desc("Lists all valid (*.txt) files to read at optional path.")
             .category("Basic")
             .handle(ListCommand::handler)
