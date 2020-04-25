@@ -3,6 +3,7 @@ use crate::app::commands::exit::ExitCommand;
 use crate::app::commands::help::HelpCommand;
 use crate::app::commands::history::HistoryCommand;
 use crate::app::commands::list::ListCommand;
+use crate::app::commands::open::OpenCommand;
 use crate::app::commands::sample::SampleCommand;
 use crate::app::commands::version::{VersionCommand};
 use super::handlers::empty_command::EmptyCommandHandler;
@@ -50,6 +51,7 @@ impl CommandRoutes {
             HelpCommand::config(),
             HistoryCommand::config(),
             ListCommand::config(),
+            OpenCommand::config(),
             SampleCommand::config(),
             VersionCommand::config(),
         ];

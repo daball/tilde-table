@@ -1,6 +1,6 @@
 #[cfg(feature="ansi_term")] extern crate ansi_term;
 #[cfg(feature="ansi_term")] use ansi_term::Colour;
-use crate::shell::command::{Command, CommandConfig, HandlerResult, ValidatorResult};
+use crate::shell::command::{Command, CommandConfig, HandlerResult};
 use crate::app::state::AppState;
 use crate::app::commands::version::print_version;
 use crate::features;
@@ -292,7 +292,7 @@ fn build_general_command_help() -> Help {
                 .short_desc("Renames a relation.")
             .command("filter")
                 .param("rel")
-                .short_desc("Applies filters on a relationn as a separate relation.")
+                .short_desc("Applies filters on a relation as a separate relation.")
             .command("project")
                 .param("rel")
                 .short_desc("Prints the contents of the relation.")

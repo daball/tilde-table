@@ -1,4 +1,4 @@
-use crate::shell::command::{Command, CommandConfig, HandlerResult, ValidatorResult};
+use crate::shell::command::{Command, CommandConfig, HandlerResult};
 use crate::app::handlers::utils::print_not_implemented;
 use crate::app::state::AppState;
 

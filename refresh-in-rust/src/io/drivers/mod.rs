@@ -28,10 +28,10 @@ pub trait Reader<RC: ReaderContext<U>, U> {
 
 pub trait Driver
 {
-    fn options(&self) -> Vec<DriverOption>;
+    fn options() -> Vec<DriverOption>;
 }
 
 pub trait ReadDriver<R: Reader<RC, U>, RC: ReaderContext<U>, U>
 {
-    fn reader(&self) -> R;
+    fn reader() -> R;
 }

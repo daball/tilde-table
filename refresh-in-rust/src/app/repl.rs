@@ -20,16 +20,8 @@ pub fn get_prompt() -> String {
     fmt::format(format_args!("{}", Colour::Cyan.bold().paint(PS1)))
 }
 
-pub fn print_prompt_noansi() {
-    print!("{}", get_prompt_noansi());
-}
-
-pub fn print_prompt() {
-    print!("{}", get_prompt());
-}
-
-pub fn read() -> String {
-    print_prompt();
+pub fn prompt(p: &str) -> String {
+    print!("{}", p);
     stdout().flush();
     let mut cmd: String = String::from("");
     stdin().read_line(&mut cmd)
@@ -48,7 +40,7 @@ pub fn repl() { //-> Result<(), Box<dyn std::error::Error>> {
     let handlers = handlers;
     'repl: loop {
         // read
-        let cmd = read();
+        let cmd = prompt(&get_prompt());
         for handler in &handlers {
             if cfg!(feature="debug") {
                 match handler {

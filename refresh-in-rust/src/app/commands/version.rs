@@ -1,5 +1,5 @@
 use crate::app::state::AppState;
-use crate::shell::command::{Command, CommandConfig, HandlerResult, ValidatorResult};
+use crate::shell::command::{Command, CommandConfig, HandlerResult};
 use crate::app::ui::render::version;
 
 pub fn print_version_noansi() {

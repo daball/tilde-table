@@ -1,4 +1,4 @@
-use crate::shell::command::{Command, CommandConfig, HandlerResult, ValidatorResult};
+use crate::shell::command::{Command, CommandConfig, HandlerResult};
 use crate::app::state::AppState;
 use crate::app::ui::render::clear as render;
 

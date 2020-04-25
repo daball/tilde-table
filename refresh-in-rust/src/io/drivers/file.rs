@@ -73,7 +73,7 @@ impl Reader<FileReaderContext, File> for FileReader {
 pub struct FileDriver {}
 
 impl Driver for FileDriver {
-    fn options(&self) -> Vec<DriverOption> {
+    fn options() -> Vec<DriverOption> {
         vec![
             DriverOption {
                 name: String::from("path"),
@@ -86,7 +86,7 @@ impl Driver for FileDriver {
 }
 
 impl ReadDriver<FileReader, FileReaderContext, File> for FileDriver {
-    fn reader(&self) -> FileReader {
+    fn reader() -> FileReader {
         FileReader {}
     }
 }

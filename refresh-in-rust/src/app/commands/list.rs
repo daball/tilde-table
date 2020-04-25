@@ -1,5 +1,5 @@
 extern crate dirs;
-use crate::shell::command::{Command, CommandConfig, HandlerResult, ValidatorResult};
+use crate::shell::command::{Command, CommandConfig, HandlerResult};
 use crate::app::state::AppState;
 use crate::app::ui::render::list as render;
 use std::cmp::Ordering;
@@ -348,8 +348,8 @@ pub struct ListCommand { }
 impl ListCommand {
     pub fn handler(_state: &mut AppState, cmd: &str) -> HandlerResult {
         let path = cmd.trim();
-        let searchAt = if cmd.starts_with("list") { 4 } else if cmd.starts_with("dir") { 3 } else if cmd.starts_with("ls") { 2 } else { 0 };
-        let path = path[searchAt..].trim();
+        let search_at = if cmd.starts_with("list") { 4 } else if cmd.starts_with("dir") { 3 } else if cmd.starts_with("ls") { 2 } else { 0 };
+        let path = path[search_at..].trim();
         let path = if path.eq("") { "." } else { path };
         let fsi = FsItem::from(path);
         fsi.print_search_path();
